@@ -10,7 +10,7 @@ import {
 import App from './App';
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
-import RegisterScreen from './pages/Register/RegisterScreen';
+// import RegisterScreen from './pages/Register/RegisterScreen';
 import { Teste1, Teste2 } from './pages/Landing/Testezin';
 
 const root = ReactDOM.createRoot(
@@ -22,7 +22,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="HomeScreen" element={<HomeScreen />} />
       <Route path="LoginScreen" element={<LoginScreen />} />
-      <Route path="RegisterScreen" element={<RegisterScreen />} />
+      {/* <Route path="RegisterScreen" element={<RegisterScreen />} /> */}
       <Route path="Teste1" element={<Teste1 />} />
       <Route path="Teste2" element={<Teste2 />} />
     </Routes>
