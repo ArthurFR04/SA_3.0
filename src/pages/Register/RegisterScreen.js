@@ -1,64 +1,72 @@
-// import React, { Component } from 'react';
+import React from 'react';
 // import { Link } from "react-router-dom";
-// import ReactDOM from "react-dom/client";
-// import { useState } from "react";
 
-// function Register() {
+let inputs = document.querySelector('input')
 
-//     const [inputs, setInputs] = useState({});
+let validar = () => {
+    let inputs = document.querySelectorAll('input');
+    console.log(inputs);
+    for (let i=0 ; i<inputs.length ; i++) {
+        if (inputs[i].value != false) {
 
-//     const handleChange = (event) => {
-//         const name = event.target.name;
-//         const value = event.target.value;
-//         setInputs(values => ({ ...values, [name]: value }))
-//     }
+            if (inputs[3].value == inputs[4].value) {
+                let usuario ={
+                    nome: inputs[0].value
+                }
+                console.log(usuario);
+            } else {
+                console.log('As senhas devem ser iguais');
+            }
 
-//     const handleSubmit = (event) => {
-//         event.preventDefault();
-//         console.log(inputs);
-//     }
+        } else {
+            console.log('Preencha todos os inputs');
+        }
+    }
+}
 
-//     class RegisterScreen extends Component {
+let cadastrar = () => {
 
-//         render() {
-//             return (
+    validar()
+    
+    fetch('http://localhost:3000/api/usuario', {
+        method: 'post'
+    })
+}
 
-//                 <div className="title" style={{ marginLeft: "300px" }}>
-//                     <h4>Registro</h4>
-//                     <p>Aqui é o Registro sabe ? Bora criar uma continha</p>
-//                     <Link to="/HomeScreen">Dale pro Home</Link>                         <br /><br /><br />
+const LoginScreen = () => (
+    <div>
 
-//                     <form onSubmit={handleSubmit}>
-//                         <input
-//                             type="text"
-//                             value={inputs.username || ""}
-//                             onChange={handleChange}
-//                             placeholder="Nome"
-//                         />                                                                             <br /><br />
-//                         {/* <input type="text" placeholder="Sobrenome"></input>                      <br /><br /> */}
-//                         <input
-//                             type="password"
-//                             value={inputs.senha || ""}
-//                             onChange={handleChange}
-//                         />                                                                              <br /><br />
-//                         {/* <input type="password" placeholder="Confirmar senha"></input>       <br /><br /> */}
-//                         <input type="submit" />
-//                     </form>
+        <input
+            type="text"
+            placeholder='Nome'
+        />
 
-//                 </div>
-//             )
-//         }
-//     }
-// }
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Register />);
-//     export default RegisterScreen;
+        <input
+            type="text"
+            placeholder='Sobrenome'
+        />
 
+        <input
+            type="text"
+            placeholder='Email'
+        />
 
+        <input
+            type="password"
+            placeholder='Senha'
+        />
 
+        <input
+            type="password"
+            placeholder='Repita a senha'
+        />   
 
+        <button onClick={cadastrar}>
+            Salvar
+        </button>
 
+    </div>
+);
 
-
-
+export default LoginScreen;
 
