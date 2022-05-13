@@ -1,19 +1,15 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 
-let inputs = document.querySelector('input')
+let validado = false
+let inputs = document.querySelectorAll('input');
 
-let validar = () => {
-    let inputs = document.querySelectorAll('input');
-    console.log(inputs);
+let validar = () => {    
     for (let i=0 ; i<inputs.length ; i++) {
-        if (inputs[i].value != false) {
 
-            if (inputs[3].value == inputs[4].value) {
-                let usuario ={
-                    nome: inputs[0].value
-                }
-                console.log(usuario);
+        if (inputs[i].value !== false) {
+            if (inputs[3].value === inputs[4].value) {
+                validado = true
             } else {
                 console.log('As senhas devem ser iguais');
             }
@@ -27,10 +23,24 @@ let validar = () => {
 let cadastrar = () => {
 
     validar()
-    
-    fetch('http://localhost:3000/api/usuario', {
-        method: 'post'
-    })
+
+    if (validado === true) {
+console.log('validou');
+        fetch('http://localhost:3000/api/usuario', {
+            method: 'POST',
+            body: JSON.stringify({
+                nome: inputs[0].value ,
+                sobrenome: inputs[1].value ,
+                email: inputs[2].value ,
+                senha: inputs[3].value 
+            }),
+            headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+    }
 }
 
 const LoginScreen = () => (
