@@ -1,20 +1,20 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 
-let findAll = fetch("http://localhost:3000/api/usuario")
-    .then(data => {
-        return data.json();
-    })
+// let findAll = fetch("http://localhost:3000/api/usuario")
+//     .then(data => {
+//         return data.json();
+//     })
 
 
-let RequesitarNoBackzin = () => {console.log(findAll)}
+// let RequesitarNoBackzin = () => {console.log(findAll)}
 
 const LoginScreen = () => (
     <div>
 
-        <button onClick={RequesitarNoBackzin}>
+        {/* <button onClick={RequesitarNoBackzin}>
             Enviar
-        </button>
+        </button> */}
 
     </div>
 );

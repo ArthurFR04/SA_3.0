@@ -1,0 +1,7 @@
+.centralizar {
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
