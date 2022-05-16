@@ -10,6 +10,8 @@ let validar = () => {
         if (inputs[i].value !== false) {
             if (inputs[3].value === inputs[4].value) {
                 validado = true
+                                                                                    console.log('validado');
+                return false
             } else {
                 alert('As senhas devem ser iguais')
                 return false
@@ -19,7 +21,7 @@ let validar = () => {
             alert('Preencha todos os inputs');
             return false
         }
-console.log('oi');
+// console.log('oi');
     }
 }
 
@@ -40,13 +42,13 @@ let cadastrar = () => {
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
-            },
+            },   
         })
+        .catch(
+            alert('Erro ao salvar usuário')
+        )
             .then((response) => response.json())
-            .then((json) => console.log(json));
-
-        alert('Usuário cadastrado com sucesso')
-
+            .then((json) => console.log(json))
     }
 }
 
