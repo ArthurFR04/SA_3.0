@@ -26,9 +26,9 @@ let validar = () => {
 }
 
 let cadastrar = () => {
-
+console.log('cadastrando');
     validar()
-
+console.log('validado', validado);
     if (validado === true) {
 
         fetch('http://localhost:3000/api/usuario', {
@@ -42,10 +42,15 @@ let cadastrar = () => {
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
+
+                                                        //https://developer.mozilla.org/pt-BR/docs/Web/API/fetch
+                                                        //https://dio.dev/usando-promises-com-fetch-no-javascript
             },   
         })
-        .catch(
-            alert('Erro ao salvar usuário')
+        .catch((error) => {
+            console.log(error)
+        }
+            
         )
             .then((response) => response.json())
             .then((json) => console.log(json))
