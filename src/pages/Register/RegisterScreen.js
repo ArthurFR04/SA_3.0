@@ -7,10 +7,10 @@ let inputs = document.querySelectorAll('input');
 let validar = () => {
     for (let i = 0; i < inputs.length; i++) {
 
-        if (inputs[i].value !== false) {
+        if (inputs[i].value !== false) {                                            console.log('conferindo inputs')
             if (inputs[3].value === inputs[4].value) {
                 validado = true
-                                                                                    console.log('validado');
+                                                                                    console.log('segundo if');
                 return false
             } else {
                 alert('As senhas devem ser iguais')
