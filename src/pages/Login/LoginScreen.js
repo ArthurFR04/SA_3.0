@@ -3,16 +3,16 @@ import React from 'react';
 
 import './LoginStyle.css'
 
-let findAll = () => {
+// let findAll = () => {
 
-    fetch('http://localhost:3000/api/usuario',)
+//     fetch('http://localhost:3000/api/usuario',)
 
-        .catch(
-            alert('Erro ao salvar usuário')
-        )
-        .then((response) => response.json())
-        .then((json) => console.log(json))
-}
+//         .catch(
+//             alert('Erro ao salvar usuário')
+//         )
+//         .then((response) => response.json())
+//         .then((json) => console.log(json))
+// }
 
 // let RequesitarNoBackzin = () => {console.log(findAll)}
 
