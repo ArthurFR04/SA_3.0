@@ -1,16 +1,31 @@
-body {
-    margin: 0;
-    background-color: #2E2E2E;
-    font-family: Arial, Helvetica, sans-serif;
+/* @import url('../../assets/fonts/COMFORTAA-LIGHT'); */
+@font-face {
+    font-family: 'comfortaa-light';
+    src: url('../../assets/fonts/COMFORTAA-LIGHT.TTF');
+}
+@font-face {
+    font-family: 'comfortaa-regular';
+    src: url('../../assets/fonts/COMFORTAA-REGULAR.TTF');
+}
+@font-face {
+    font-family: 'comfortaa-bold';
+    src: url('../../assets/fonts/COMFORTAA-BOLD.TTF');
 }
 
-.container {
+body {
+    margin: 0;
+    font-family: 'comfortaa-bold'
+}
+
+.login-container {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    
+    background-color: #2E2E2E;
     color: #fff;
 }
 

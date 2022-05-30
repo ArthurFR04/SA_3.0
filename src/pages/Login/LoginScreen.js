@@ -3,17 +3,20 @@ import React from 'react';
 
 import './LoginStyle.css'
 
-let usuario;
 
-let findAll = () => {
+let findAll = async () => {
 
-    usuario = fetch('http://localhost:3000/api/usuario',)
+    let usuario = await fetch('http://localhost:3001/api/usuario',)
 
         // .catch(
         //     alert('Erro ao pesquisar o usuário')
         // )
         .then((response) => response.json())  
     
+        console.log(usuario);
+        console.log(usuario.data);
+        console.log(usuario.data[0]);
+        console.log(usuario.data[0].nome);
 }
 
 // let RequesitarNoBackzin = () => {console.log(findAll)}
@@ -22,7 +25,6 @@ let entrar = () => {
 
     // validar()
     findAll()
-    console.log(usuario);
 }
 
 
@@ -31,7 +33,7 @@ let alerta = () => {
 }
 
 const LoginScreen = () => (
-    <div className="container">
+    <div className="login-container">
         <div className="col-central">
 
             <h1 className="login">
