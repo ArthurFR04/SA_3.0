@@ -3,28 +3,44 @@ import React from 'react';
 
 import './LoginStyle.css'
 
+let usuario;
+let inputs;
 
 let findAll = async () => {
 
-    let usuario = await fetch('http://localhost:3001/api/usuario',)
+    usuario = await fetch('http://localhost:3001/api/usuario',)
 
         // .catch(
         //     alert('Erro ao pesquisar o usuário')
         // )
         .then((response) => response.json())  
-    
-        console.log(usuario);
-        console.log(usuario.data);
-        console.log(usuario.data[0]);
-        console.log(usuario.data[0].nome);
 }
 
-// let RequesitarNoBackzin = () => {console.log(findAll)}
+let inps = () => { 
+    inputs = document.querySelectorAll('input') 
+}
 
-let entrar = () => {
+let entrar = async () => {
 
     // validar()
-    findAll()
+    await findAll()
+    inps()
+
+    for ( let i = 0 ; i < usuario.data.length ; i++ ) {
+
+        if ( usuario.data[i].email === inputs[0].value || usuario.data[i].login === inputs[0].value ) {
+
+            if ( usuario.data[i].senha === inputs[1].value ) {
+                alert('Logado papi')
+            }
+            else {
+                alert('Senha incorreta')
+            }
+        }
+        else {
+            alert('Usuário não encontrado')
+        }
+    }
 }
 
 

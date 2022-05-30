@@ -5,6 +5,8 @@ let validado = false
 let inputs = document.querySelectorAll('input');
 
 let validar = () => {
+
+console.log('começando validação');
     for (let i = 0; i < inputs.length; i++) {
 
         if (inputs[i].value !== false) {                                            console.log('conferindo inputs')
@@ -25,13 +27,13 @@ let validar = () => {
     }
 }
 
-let cadastrar = () => {
+let cadastrar = async () => {
 console.log('cadastrando');
-    validar()
+    await validar()
 console.log('validado', validado);
     if (validado === true) {
 
-        fetch('http://localhost:3000/api/usuario', {
+        fetch('http://localhost:3001/api/usuario', {
             method: 'POST',
             body: JSON.stringify({
                 nome: inputs[0].value,
