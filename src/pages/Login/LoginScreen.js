@@ -26,21 +26,25 @@ let entrar = async () => {
     await findAll()
     inps()
 
+    let statusLogin;
+
     for ( let i = 0 ; i < usuario.data.length ; i++ ) {
 
         if ( usuario.data[i].email === inputs[0].value || usuario.data[i].login === inputs[0].value ) {
 
             if ( usuario.data[i].senha === inputs[1].value ) {
-                alert('Logado papi')
+                statusLogin = 'Logado papi'
             }
             else {
-                alert('Senha incorreta')
+                statusLogin = 'Senha incorreta'
             }
         }
         else {
-            alert('Usuário não encontrado')
+            statusLogin = 'Usuário não encontrado'
         }
     }
+
+    alert(statusLogin);
 }
 
 

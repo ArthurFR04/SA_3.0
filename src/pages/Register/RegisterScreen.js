@@ -2,17 +2,16 @@ import React from 'react';
 import './RegisterStyle.css';
 
 let validado = false
-let inputs = document.querySelectorAll('input');
+let inputs
 
 let validar = () => {
 
 console.log('começando validação');
     for (let i = 0; i < inputs.length; i++) {
-
-        if (inputs[i].value !== false) {                                            console.log('conferindo inputs')
+console.log(inputs[i]);
+        if (inputs[i].value !== false) {
             if (inputs[3].value === inputs[4].value) {
                 validado = true
-                                                                                    console.log('segundo if');
                 return false
             } else {
                 alert('As senhas devem ser iguais')
@@ -23,14 +22,15 @@ console.log('começando validação');
             alert('Preencha todos os inputs');
             return false
         }
-// console.log('oi');
     }
 }
 
 let cadastrar = async () => {
-console.log('cadastrando');
+
+    inputs = document.querySelectorAll('input');
+
     await validar()
-console.log('validado', validado);
+
     if (validado === true) {
 
         fetch('http://localhost:3001/api/usuario', {
@@ -44,19 +44,16 @@ console.log('validado', validado);
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
-
-                                                        //https://developer.mozilla.org/pt-BR/docs/Web/API/fetch
-                                                        //https://dio.dev/usando-promises-com-fetch-no-javascript
-            },   
+            },
         })
         .catch((error) => {
             console.log(error)
-        }
-            
-        )
+        })
             .then((response) => response.json())
             .then((json) => console.log(json))
     }
+
+    validado = false
 }
 
 const RegisterScreen = () => (
