@@ -39,7 +39,6 @@ let cadastrar = async () => {
                 nome: inputs[0].value,
                 sobrenome: inputs[1].value,
                 email: inputs[2].value,
-                login: inputs[0].value,
                 senha: inputs[3].value
             }),
             headers: {
