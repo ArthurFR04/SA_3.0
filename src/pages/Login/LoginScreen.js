@@ -1,96 +1,107 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { Link } from "react-router-dom";
 
 import './LoginStyle.css'
 
-let usuario;
-let inputs;
+const LoginScreen = () => {
 
-let findAll = async () => {
+    let validado = false;
 
-    usuario = await fetch('http://localhost:3001/api/usuario',)
 
-        // .catch(
-        //     alert('Erro ao pesquisar o usuário')
-        // )
-        .then((response) => response.json())  
-}
+    const [values, setValues] = useState('')
 
-let inps = () => { 
-    inputs = document.querySelectorAll('input') 
-}
+    const changeInput = (value) => {
+        setValues((prevValue) => ({
+            ...prevValue,
+            [value.target.name]: value.target.value,
+        }))
+    }
 
-let entrar = async () => {
+    let validar = () => {
 
-    // validar()
-    await findAll()
-    inps()
 
-    let statusLogin;
-
-    for ( let i = 0 ; i < usuario.data.length ; i++ ) {
-
-        if ( usuario.data[i].email === inputs[0].value || usuario.data[i].login === inputs[0].value ) {
-
-            if ( usuario.data[i].senha === inputs[1].value ) {
-                statusLogin = 'Logado papi'
-            }
-            else {
-                statusLogin = 'Senha incorreta'
-            }
-        }
-        else {
-            statusLogin = 'Usuário não encontrado'
+        if (values.email !== false & values.senha !== false) {
+            validado = true
+        } else {
+            alert('Preencha todos os inputs');
+            validado = false
+            return false
         }
     }
 
-    alert(statusLogin);
-}
+    let entrar = async () => {
+
+        validar()
+        if (validado === true) {
+
+            fetch('http://localhost:3001/api/login', {
+                method: 'POST',
+                body: JSON.stringify({
+
+                    email: values.email,
+                    senha: values.senha
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .catch((error) => {
+                    console.log(error)
+                })
+                .then((response) => response.json())
+                .then((json) => console.log(json))
+        }
+    }
+
+    let alerta = () => {
+        alert('Não sei fazer isso ainda ksks')
+    }
 
 
-let alerta = () => {
-    alert('Não sei fazer isso ainda ksks')
-}
+    return (
+        <div className="login-container">
+            <div className="col-central">
 
-const LoginScreen = () => (
-    <div className="login-container">
-        <div className="col-central">
+                <h1 className="login">
+                    LOGIN
+                </h1>
 
-            <h1 className="login">
-                LOGIN
-            </h1>
+                <input
+                    type="text"
+                    name="email"
+                    onChange={changeInput}
+                    className="email"
+                    placeholder="  email"
+                />
+                <br></br>
 
-            <input
-                className="email-user"
-                type="text"
-                placeholder="  email ou usuário"
-            />
-            <br></br>
+                <input
+                    type="password"
+                    name="senha"
+                    onChange={changeInput}
+                    className="senha"
+                    placeholder="  senha"
+                />
+                <br></br>
 
-            <input
-                className="senha"
-                type="password"
-                placeholder="  senha"
-            />
-            <br></br>
+                <div className="btn">
+                    <button
+                        className="btn_entrar"
+                        onClick={entrar}
+                    >
+                        ENTRAR
+                    </button>
+                </div>
 
-            <div className="btn">
-                <button
-                    className="btn_entrar"
-                onClick={entrar}
-                >
-                    ENTRAR
-                </button>
+                <p>OU</p>
+
+                <p onClick={alerta}>
+                    entrar com Google
+                </p>
+
             </div>
-
-            <p>OU</p>
-
-            <p onClick={alerta}>
-                entrar com Google
-            </p>
-
         </div>
-    </div>
-);
+    )
+};
 
 export default LoginScreen;
