@@ -1,4 +1,4 @@
-import React, { useState , useContext } from 'react';
+import React, { useState, useContext } from 'react';
 // import { Link } from "react-router-dom";
 import Context from "../../Context"
 
@@ -32,7 +32,7 @@ let LoginScreen = () => {
     }
 
     let entrar = async () => {
-console.log(usuario);
+        console.log(usuario);
         validar()
         if (validado === true) {
 
@@ -63,28 +63,41 @@ console.log(usuario);
     return (
         <Context.Provider>
             <div className="login-container">
-                <div className="col-central">
+
+                <div className='banner-login'>
+                </div>
+
+
+                <div className='info-login'>
 
                     <h1 className="login">
                         LOGIN
                     </h1>
 
-                    <input
-                        type="text"
-                        name="email"
-                        onChange={changeInput}
-                        className="email"
-                        placeholder="  email"
-                    />
-                    <br></br>
+                    <div className='div-input'>
+                        <input
+                            type="text"
+                            name="email"
+                            onChange={changeInput}
+                            className="input-login email"
+                            placeholder="  email"
+                        />
+                    </div>
 
-                    <input
-                        type="password"
-                        name="senha"
-                        onChange={changeInput}
-                        className="senha"
-                        placeholder="  senha"
-                    />
+
+                    <br></br>
+                    <div className='div-input'>
+                        <input
+                            type="password"
+                            name="senha"
+                            onChange={changeInput}
+                            className="input-login senha"
+                            placeholder="  senha"
+                        />
+
+
+                    </div>
+
                     <br></br>
 
                     <div className="btn">
@@ -105,6 +118,7 @@ console.log(usuario);
                 </div>
             </div>
         </Context.Provider>
+
     )
 };
 
