@@ -5,8 +5,10 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
-import App from './App';
+
+// import App from './App';
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
@@ -19,7 +21,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Navigate replace to="/HomeScreen" />} />
       <Route path="HomeScreen" element={<HomeScreen />} />
       <Route path="LoginScreen" element={<LoginScreen />} />
       <Route path="RegisterScreen" element={<RegisterScreen />} />

@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState , useContext } from 'react';
 // import { Link } from "react-router-dom";
+import Context from "../../Context"
 
 import './LoginStyle.css'
 
-const LoginScreen = () => {
+let LoginScreen = () => {
 
     let validado = false;
 
 
     const [values, setValues] = useState('')
+    const [usuario, setUsuario] = useContext(Context);
 
     const changeInput = (value) => {
         setValues((prevValue) => ({
@@ -30,7 +32,7 @@ const LoginScreen = () => {
     }
 
     let entrar = async () => {
-
+console.log(usuario);
         validar()
         if (validado === true) {
 
@@ -49,7 +51,7 @@ const LoginScreen = () => {
                     console.log(error)
                 })
                 .then((response) => response.json())
-                .then((json) => console.log(json))
+                .then((json) => setUsuario(json))
         }
     }
 
@@ -59,48 +61,50 @@ const LoginScreen = () => {
 
 
     return (
-        <div className="login-container">
-            <div className="col-central">
+        <Context.Provider>
+            <div className="login-container">
+                <div className="col-central">
 
-                <h1 className="login">
-                    LOGIN
-                </h1>
+                    <h1 className="login">
+                        LOGIN
+                    </h1>
 
-                <input
-                    type="text"
-                    name="email"
-                    onChange={changeInput}
-                    className="email"
-                    placeholder="  email"
-                />
-                <br></br>
+                    <input
+                        type="text"
+                        name="email"
+                        onChange={changeInput}
+                        className="email"
+                        placeholder="  email"
+                    />
+                    <br></br>
 
-                <input
-                    type="password"
-                    name="senha"
-                    onChange={changeInput}
-                    className="senha"
-                    placeholder="  senha"
-                />
-                <br></br>
+                    <input
+                        type="password"
+                        name="senha"
+                        onChange={changeInput}
+                        className="senha"
+                        placeholder="  senha"
+                    />
+                    <br></br>
 
-                <div className="btn">
-                    <button
-                        className="btn_entrar"
-                        onClick={entrar}
-                    >
-                        ENTRAR
-                    </button>
+                    <div className="btn">
+                        <button
+                            className="btn_entrar"
+                            onClick={entrar}
+                        >
+                            ENTRAR
+                        </button>
+                    </div>
+
+                    <p>OU</p>
+
+                    <p onClick={alerta}>
+                        entrar com Google
+                    </p>
+
                 </div>
-
-                <p>OU</p>
-
-                <p onClick={alerta}>
-                    entrar com Google
-                </p>
-
             </div>
-        </div>
+        </Context.Provider>
     )
 };
 
