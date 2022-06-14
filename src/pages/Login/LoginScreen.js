@@ -57,49 +57,62 @@ const LoginScreen = () => {
         alert('Não sei fazer isso ainda ksks')
     }
 
-
+    
     return (
         <div className="login-container">
-            <div className="col-central">
 
-                <h1 className="login">
-                    LOGIN
-                </h1>
-
-                <input
-                    type="text"
-                    name="email"
-                    onChange={changeInput}
-                    className="email"
-                    placeholder="  email"
-                />
-                <br></br>
-
-                <input
-                    type="password"
-                    name="senha"
-                    onChange={changeInput}
-                    className="senha"
-                    placeholder="  senha"
-                />
-                <br></br>
-
-                <div className="btn">
-                    <button
-                        className="btn_entrar"
-                        onClick={entrar}
-                    >
-                        ENTRAR
-                    </button>
-                </div>
-
-                <p>OU</p>
-
-                <p onClick={alerta}>
-                    entrar com Google
-                </p>
-
+            <div className='banner-login'>
             </div>
+
+
+                <div className='info-login'>
+
+                    <h1 className="login">
+                        LOGIN
+                    </h1>
+
+                    <div className='div-input'>
+                        <input
+                            type="text"
+                            name="email"
+                            onChange={changeInput}
+                            className="input-login email"
+                            placeholder="  email"
+                        />
+                    </div>
+
+
+                    <br></br>
+                    <div className='div-input'>
+                        <input
+                            type="password"
+                            name="senha"
+                            onChange={changeInput}
+                            className="input-login senha"
+                            placeholder="  senha"
+                        />
+
+
+                    </div>
+
+                    <br></br>
+
+                    <div className="btn">
+                        <button
+                            className="btn_entrar"
+                            onClick={entrar}
+                        >
+                            ENTRAR
+                        </button>
+                    </div>
+
+                    <p>OU</p>
+
+                    <p onClick={alerta}>
+                        entrar com Google
+                    </p>
+
+                </div>
         </div>
     )
 };
