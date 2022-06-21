@@ -18,16 +18,20 @@ import { Teste1, Teste2 } from './pages/Landing/Testezin';
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
+
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Navigate replace to="/HomeScreen" />} />
-      <Route path="HomeScreen" element={<HomeScreen />} />
-      <Route path="LoginScreen" element={<LoginScreen />} />
-      <Route path="RegisterScreen" element={<RegisterScreen />} />
-      <Route path="NewPost" element={<NewPost />} />
-      <Route path="Teste1" element={<Teste1 />} />
-      <Route path="Teste2" element={<Teste2 />} />
-    </Routes>
-  </BrowserRouter>
+  <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/HomeScreen" />} />
+        <Route path="HomeScreen" element={<HomeScreen />} />
+        <Route path="LoginScreen" element={<LoginScreen />} />
+        <Route path="RegisterScreen" element={<RegisterScreen />} />
+        <Route path="NewPost" element={<NewPost />} />
+        <Route path="Teste1" element={<Teste1 />} />
+        <Route path="Teste2" element={<Teste2 />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+
 );
