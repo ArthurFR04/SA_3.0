@@ -33,7 +33,7 @@ let cadastrar = async () => {
 
     if (validado === true) {
 
-        fetch('http://localhost:3001/api/usuario', {
+        fetch('https://sa-3-back.herokuapp.com/api/usuario', {
             method: 'POST',
             body: JSON.stringify({
                 nome: inputs[0].value,
