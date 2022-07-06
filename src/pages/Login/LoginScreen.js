@@ -12,7 +12,7 @@ let LoginScreen = () => {
 
 
     const [values, setValues] = useState('')
-    const [usuario, setUsuario] = useContext(Context);
+    // const [usuario, setUsuario] = useContext(Context);
 
     const changeInput = (value) => {
         setValues((prevValue) => ({
@@ -34,11 +34,11 @@ let LoginScreen = () => {
     }
 
     let entrar = async () => {
-        console.log(usuario);
+        // console.log(usuario);
         validar()
         if (validado === true) {
 
-            fetch('http://localhost:3001/api/login', {
+            fetch('https://sa-3-back.herokuapp.com/api/login', {
                 method: 'POST',
                 body: JSON.stringify({
 
@@ -53,7 +53,8 @@ let LoginScreen = () => {
                     console.log(error)
                 })
                 .then((response) => response.json())
-                .then((json) => setUsuario(json))
+                .then((json) => console.log(json))
+                // .then((json) => setUsuario(json))
         }
     }
 
