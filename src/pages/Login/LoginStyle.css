@@ -40,7 +40,7 @@ body {
 .banner-login {
     position: absolute;
     right: 0;
-    width: 30vw;
+    width: 36vw;
     height: 100vh;
     background-color: #2399AA;
 
@@ -54,12 +54,40 @@ body {
 
 .div-input{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+
+}
+
+.div-input #inpSenha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.iconCadeado{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+}
+
+#cadeado{
+    color: #2E2E2E;
 }
 
 .input-login {
-    padding: 10px;
+    width: 20vw;
+    height: 5vh;
     border-radius: 10px;
     border: none;
 
@@ -116,3 +144,5 @@ p {
 
     font-size: 18px;
 }
+
+

@@ -4,6 +4,8 @@ import Context from "../../Context"
 
 import './LoginStyle.css'
 
+import { RiLock2Fill } from 'react-icons/ri';
+
 let LoginScreen = () => {
 
     let validado = false;
@@ -75,26 +77,31 @@ let LoginScreen = () => {
                     </h1>
 
                     <div className='div-input'>
+                        <div id='inpEmail'>
+
                         <input
                             type="text"
                             name="email"
                             onChange={changeInput}
                             className="input-login email"
                             placeholder="  email"
-                        />
-                    </div>
+                            />
+            
+                            </div>
+                            <div id='inpSenha'>
 
-
-                    <br></br>
-                    <div className='div-input'>
-                        <input
-                            type="password"
-                            name="senha"
-                            onChange={changeInput}
-                            className="input-login senha"
-                            placeholder="  senha"
-                        />
-
+                            <input
+                                type="password"
+                                // name="senha"
+                                onChange={changeInput}
+                                className="input-login senha"
+                                placeholder="  senha"
+                                />
+                            <div className='iconCadeado'>
+                                <RiLock2Fill id='cadeado' />
+                            </div>
+                                </div>
+                               
 
                     </div>
 
