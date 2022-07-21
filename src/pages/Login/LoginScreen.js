@@ -1,6 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';           
 // import { Link } from "react-router-dom";
-import Context from "../../Context"
+
+import { Login_user } from "../../Context"
 
 import './LoginStyle.css'
 
@@ -12,7 +13,6 @@ let LoginScreen = () => {
 
 
     const [values, setValues] = useState('')
-    // const [usuario, setUsuario] = useContext(Context);
 
     const changeInput = (value) => {
         setValues((prevValue) => ({
@@ -23,6 +23,10 @@ let LoginScreen = () => {
 
     let validar = () => {
 
+        console.log(values);
+        
+        console.log('email:' + values.email);
+        console.log('senha:' + values.senha);
 
         if (values.email !== false & values.senha !== false) {
             validado = true
@@ -53,18 +57,20 @@ let LoginScreen = () => {
                     console.log(error)
                 })
                 .then((response) => response.json())
-                .then((json) => console.log(json))
-                // .then((json) => setUsuario(json))
+                // .then((json) => console.log(json))
+                .then((json) => Login_user.value = json.data[0])
         }
     }
 
     let alerta = () => {
+console.log(Login_user.value);
+
         alert('Não sei fazer isso ainda ksks')
     }
 
 
     return (
-        <Context.Provider>
+        // <Login_user.Provider>
             <div className="login-container">
 
                 <div className='banner-login'>
@@ -93,7 +99,7 @@ let LoginScreen = () => {
 
                             <input
                                 type="password"
-                                // name="senha"
+                                name="senha"
                                 onChange={changeInput}
                                 className="input-login senha"
                                 placeholder="  senha"
@@ -125,7 +131,7 @@ let LoginScreen = () => {
 
                 </div>
             </div>
-        </Context.Provider>
+        // </Login_user.Provider>
 
     )
 };

@@ -1,7 +1,16 @@
 import { createContext } from 'react';
 
-const Context = createContext([]);
+export const Login_user = createContext("");
 
-export default Context;
+
+
+
+
+// import { React } from 'react';
+
+// export const Context = React.createContext(
+//     ''
+//   );
+
 
 // CFBCursos
