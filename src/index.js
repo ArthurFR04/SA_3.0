@@ -10,7 +10,8 @@ import {
 
 // import App from './App';
 import HomeScreen from './pages/Home/HomeScreen';
-import LoginScreen from './pages/Login/LoginScreen';
+import { LoginScreen } from './pages/Login/LoginScreen';
+// import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPost from './pages/New Post/NewPost';
 import { Teste1, Teste2 } from './pages/Landing/Testezin';

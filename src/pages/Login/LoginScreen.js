@@ -1,16 +1,15 @@
-import React, { useState } from 'react';           
-// import { Link } from "react-router-dom";
+import React , { useState }  from 'react';
 
-import { Login_user } from "../../Context"
+import {entrar , alerta } from "./LoginLogic"
 
 import './LoginStyle.css'
 
 import { RiLock2Fill } from 'react-icons/ri';
 
-let LoginScreen = () => {
+import { Login_values } from "../../Context"
 
-    let validado = false;
 
+export let LoginScreen = () => {
 
     const [values, setValues] = useState('')
 
@@ -19,55 +18,8 @@ let LoginScreen = () => {
             ...prevValue,
             [value.target.name]: value.target.value,
         }))
+        Login_values.value = values
     }
-
-    let validar = () => {
-
-        console.log(values);
-        
-        console.log('email:' + values.email);
-        console.log('senha:' + values.senha);
-
-        if (values.email !== false & values.senha !== false) {
-            validado = true
-        } else {
-            alert('Preencha todos os inputs');
-            validado = false
-            return false
-        }
-    }
-
-    let entrar = async () => {
-        // console.log(usuario);
-        validar()
-        if (validado === true) {
-
-            fetch('https://sa-3-back.herokuapp.com/api/login', {
-                method: 'POST',
-                body: JSON.stringify({
-
-                    email: values.email,
-                    senha: values.senha
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
-                .catch((error) => {
-                    console.log(error)
-                })
-                .then((response) => response.json())
-                // .then((json) => console.log(json))
-                .then((json) => Login_user.value = json.data[0])
-        }
-    }
-
-    let alerta = () => {
-console.log(Login_user.value);
-
-        alert('Não sei fazer isso ainda ksks')
-    }
-
 
     return (
         // <Login_user.Provider>
@@ -75,7 +27,6 @@ console.log(Login_user.value);
 
                 <div className='banner-login'>
                 </div>
-
 
                 <div className='info-login'>
 
@@ -136,4 +87,4 @@ console.log(Login_user.value);
     )
 };
 
-export default LoginScreen;
+// export default LoginScreen;
