@@ -1,6 +1,6 @@
-import React , { useState }  from 'react';
+import React, { useState } from 'react';
 
-import {entrar , alerta } from "./LoginLogic"
+import { entrar, alerta } from "./LoginLogic"
 
 import './LoginStyle.css'
 
@@ -8,8 +8,9 @@ import { RiLock2Fill } from 'react-icons/ri';
 
 import { Login_values } from "../../Context"
 
+export let values2
 
-export let LoginScreen = () => {
+let LoginScreen = () => {
 
     const [values, setValues] = useState('')
 
@@ -18,24 +19,29 @@ export let LoginScreen = () => {
             ...prevValue,
             [value.target.name]: value.target.value,
         }))
-        Login_values.value = values
     }
 
+    const salvar = () => {
+        values2 = values
+        Login_values.value = values
+        entrar()
+    }
+
+
     return (
-        // <Login_user.Provider>
-            <div className="login-container">
+        <div className="login-container">
 
-                <div className='banner-login'>
-                </div>
+            <div className='banner-login'>
+            </div>
 
-                <div className='info-login'>
+            <div className='info-login'>
 
-                    <h1 className="login">
-                        LOGIN
-                    </h1>
+                <h1 className="login">
+                    LOGIN
+                </h1>
 
-                    <div className='div-input'>
-                        <div id='inpEmail'>
+                <div className='div-input'>
+                    <div id='inpEmail'>
 
                         <input
                             type="text"
@@ -43,48 +49,46 @@ export let LoginScreen = () => {
                             onChange={changeInput}
                             className="input-login email"
                             placeholder="  email"
-                            />
-            
-                            </div>
-                            <div id='inpSenha'>
-
-                            <input
-                                type="password"
-                                name="senha"
-                                onChange={changeInput}
-                                className="input-login senha"
-                                placeholder="  senha"
-                                />
-                            <div className='iconCadeado'>
-                                <RiLock2Fill id='cadeado' />
-                            </div>
-                                </div>
-                               
+                        />
 
                     </div>
+                    <div id='inpSenha'>
 
-                    <br></br>
-
-                    <div className="btn">
-                        <button
-                            className="btn_entrar"
-                            onClick={entrar}
-                        >
-                            ENTRAR
-                        </button>
+                        <input
+                            type="password"
+                            name="senha"
+                            onChange={changeInput}
+                            className="input-login senha"
+                            placeholder="  senha"
+                        />
+                        <div className='iconCadeado'>
+                            <RiLock2Fill id='cadeado' />
+                        </div>
                     </div>
 
-                    <p>OU</p>
-
-                    <p onClick={alerta}>
-                        entrar com Google
-                    </p>
 
                 </div>
-            </div>
-        // </Login_user.Provider>
 
+                <br></br>
+
+                <div className="btn">
+                    <button
+                        className="btn_entrar"
+                        onClick={salvar}
+                    >
+                        ENTRAR
+                    </button>
+                </div>
+
+                <p>OU</p>
+
+                <p onClick={alerta}>
+                    entrar com Google
+                </p>
+
+            </div>
+        </div>
     )
 };
 
-// export default LoginScreen;
+export default LoginScreen;

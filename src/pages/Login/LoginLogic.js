@@ -3,52 +3,45 @@
 
 import { Login_values, Login_user, setLocal } from "../../Context"
 
-let values = Login_values.value
+
+let validado = false;
 
 
-// let validado = false;
+let validar = () => {
 
+    console.log('email:' + Login_values.value.email);
+    console.log('senha:' + Login_values.value.senha);
 
-// let validar = () => {
-
-//     console.log(values);
-
-//     console.log('email:' + values.email);
-//     console.log('senha:' + values.senha);
-
-//     if (values.email !== false & values.senha !== false) {
-//         validado = true
-//     } else {
-//         alert('Preencha todos os inputs');
-//         validado = false
-//         return false
-//     }
-// }
+    if (Login_values.value.email !== false & Login_values.value.senha !== false) {
+        validado = true
+    } else {
+        alert('Preencha todos os inputs');
+        validado = false
+        return false
+    }
+}
 
 export let entrar = () => {
-//     // console.log(usuario);
-//     validar()
-//     if (validado === true) {
 
-//         fetch('https://sa-3-back.herokuapp.com/api/login', {
-//             method: 'POST',
-//             body: JSON.stringify({
+    validar()
+    if (validado === true) {
 
-//                 email: values.email,
-//                 senha: values.senha
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//             },
-//         })
-//             .catch((error) => {
-//                 console.log(error)
-//             })
-//             .then((response) => response.json())
-//             // .then((json) => console.log(json))
-//             .then((json) => Login_user.value = json.data[0])
-//         setLocal()
-//     }
+        fetch('https://sa-3-back.herokuapp.com/api/login', {
+            method: 'POST',
+            body: JSON.stringify({
+
+                email: Login_values.value.email,
+                senha: Login_values.value.senha
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => Login_user.value = json.data === undefined ? (null) : (json.data[0]) ) // caso o login seja valido, iguala as informacoes retornadas pelo fetch, caso nao seja, iguala a null
+            .then((json) => console.log(json))
+            setLocal()
+    }
 }
 
 export let alerta = () => {
