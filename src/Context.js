@@ -4,13 +4,7 @@ export const Login_user = createContext("");
 
 export const Login_values = createContext("");
 
-export const setLocal = () => {
-    setTimeout(() => {
 
-        localStorage.setItem('Login', JSON.stringify(Login_user.value))
-    }, 1000);
-    
-} 
 
 
 

@@ -1,11 +1,40 @@
 
 // // // import { Link } from "react-router-dom";
 
-import { Login_values, Login_user, setLocal } from "../../Context"
+import { Login_values, Login_user } from "../../Context"
 
 
 let validado = false;
 
+let localLogin
+
+let letJson
+
+
+let log_entrar = async () => {
+
+    Login_user.value = letJson.data === undefined ? (null) : (letJson.data[0]) // caso o login seja valido, iguala as informacoes retornadas pelo fetch, caso nao seja, iguala a null
+    
+    localStorage.setItem('Login', JSON.stringify(Login_user.value))
+
+    localLogin = JSON.parse(localStorage.getItem('Login'))
+
+    alert(letJson.message)
+
+    // if (Login_values.value.email !== undefined) {
+
+    //     console.log('local ' + localLogin.email);
+    //     console.log(Login_values.value.email);
+
+    //     if (localLogin.email === Login_values.value.email) {
+    //         alert('Login efetuado com sucesso')
+    //     }
+    //     else {
+    //         alert('Ocorreu algum erro, por favor tente novamente')
+    //     }
+    // }
+
+}
 
 let validar = () => {
 
@@ -38,9 +67,13 @@ export let entrar = () => {
             },
         })
             .then((response) => response.json())
-            .then((json) => Login_user.value = json.data === undefined ? (null) : (json.data[0]) ) // caso o login seja valido, iguala as informacoes retornadas pelo fetch, caso nao seja, iguala a null
-            .then((json) => console.log(json))
-            setLocal()
+            .then((json) => {
+                // setTimeout(() => {
+                letJson = json
+                console.log(letJson);
+                // }, 1)
+                log_entrar()
+            })
     }
 }
 
