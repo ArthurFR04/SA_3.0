@@ -24,9 +24,8 @@ const HomeScreen = () => (
             <div className='Textooo'>
                 <h4>Home</h4>
                 <p>Aqui é o Home sabe ?</p>
-                <Link to="/LoginScreen">Bora pro login ??</Link>                    <br></br>
-                <Link to="/">Quem sabe, voltar pro App ? ?</Link>                   <br></br>
-                <Link to="/Teste1">Testar é importante também né ?</Link>           <br></br>
+                <Link to="/LoginScreen">Bora pro login ??</Link>             <br></br>
+                <Link to="/NewPost">Nova postagem</Link>                     <br></br>
                 <Link to="/RegisterScreen">Bora registraarr</Link>           <br></br>
             </div>
         </div>
