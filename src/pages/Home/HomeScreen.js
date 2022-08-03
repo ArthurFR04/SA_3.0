@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import { Login_user } from "../../Context"
 
 import './HomeStyle.css';
 import raio_azul from "../../assets/raio_azul.png";

@@ -29,64 +29,70 @@ let LoginScreen = () => {
 
 
     return (
-        <div className="login-container">
-
-            <div className='banner-login'>
+        
+        <div className="body">
+            
+            <div className='container' id='banner'>
+                <h1>ElTEC</h1>
             </div>
 
-            <div className='info-login'>
+            <div className="container">
 
-                <h1 className="login">
-                    LOGIN
-                </h1>
+                {/* <div className='info-login'> */}
 
-                <div className='div-input'>
-                    <div id='inpEmail'>
+                    <h1 className="login">
+                        LOGIN
+                    </h1>
 
-                        <input
-                            type="text"
-                            name="email"
-                            onChange={changeInput}
-                            className="input-login email"
-                            placeholder="  email"
-                        />
+                    <div className='div-input'>
+                        <div id='inpEmail'>
 
-                    </div>
-                    <div id='inpSenha'>
+                            <input
+                                type="text"
+                                name="email"
+                                onChange={changeInput}
+                                className="input-login email"
+                                placeholder="  email"
+                            />
 
-                        <input
-                            type="password"
-                            name="senha"
-                            onChange={changeInput}
-                            className="input-login senha"
-                            placeholder="  senha"
-                        />
-                        <div className='iconCadeado'>
-                            <RiLock2Fill id='cadeado' />
                         </div>
+                        <div id='inpSenha'>
+
+                            <input
+                                type="password"
+                                name="senha"
+                                onChange={changeInput}
+                                className="input-login senha"
+                                placeholder="  senha"
+                            />
+                            {/* <div className='iconCadeado'>
+                                <RiLock2Fill id='cadeado' />
+                            </div> */}
+                        </div>
+
+
                     </div>
 
+                    <br></br>
 
-                </div>
+                    <div className="btn">
+                        <button
+                            className="btn_entrar"
+                            onClick={salvar}
+                        >
+                            ENTRAR
+                        </button>
+                    </div>
 
-                <br></br>
+                    <p>OU</p>
 
-                <div className="btn">
-                    <button
-                        className="btn_entrar"
-                        onClick={salvar}
-                    >
-                        ENTRAR
-                    </button>
-                </div>
+                    <p onClick={alerta}>
+                        entrar com Google
+                    </p>
 
-                <p>OU</p>
-
-                <p onClick={alerta}>
-                    entrar com Google
-                </p>
-
+                {/* </div> */}
             </div>
+          
         </div>
     )
 };
