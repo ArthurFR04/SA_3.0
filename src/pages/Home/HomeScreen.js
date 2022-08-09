@@ -4,21 +4,30 @@ import { Link } from "react-router-dom";
 import { Login_user } from "../../Context"
 
 import './HomeStyle.css';
-import raio_azul from "../../assets/raio_azul.png";
 
+import { AiOutlineMenu, AiOutlineHeart, AiOutlineSearch } from "react-icons/ai";
 
 
 const HomeScreen = () => (
     <div>
 
-        <div className='barra_lateral'>
-            <div className='header_barra'>
+
+        {/* <div className='header_barra'>
                 <img src={raio_azul} className='logo' alt="Logo do site"/>
-            </div>
-        </div>
+            </div> */}
+
 
         <header>
-            Título
+            <div className='header-esquerda'>
+
+                <AiOutlineMenu className='header-itens'/>
+                <label className='header-Eltec'>Eltec</label>
+            </div>
+            <div className='header-direita'>
+
+            <AiOutlineHeart className='header-itens'/>
+            <AiOutlineSearch className='header-itens'/>
+            </div>
         </header>
 
         <div className='corpo'>
@@ -30,7 +39,7 @@ const HomeScreen = () => (
                 <Link to="/RegisterScreen">Bora registraarr</Link>           <br></br>
             </div>
         </div>
-        
+
     </div>
 );
 

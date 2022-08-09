@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { entrar, alerta } from "./LoginLogic"
 
 import './LoginStyle.css'
+import './LoginStyleAnimation.css'
 
 import { RiLock2Fill } from 'react-icons/ri';
+import { AiFillThunderbolt } from "react-icons/ai";
 
 import { Login_values } from "../../Context"
 
@@ -24,6 +26,7 @@ let LoginScreen = () => {
     const salvar = () => {
         values2 = values
         Login_values.value = values
+        document.getElementById("loading").style.display = "flex"
         entrar()
     }
 
@@ -92,7 +95,11 @@ let LoginScreen = () => {
 
                 {/* </div> */}
             </div>
-          
+            
+            <div id='loading'>
+                <AiFillThunderbolt className="loading-icon" id='foguetin'/>
+            </div>
+
         </div>
     )
 };

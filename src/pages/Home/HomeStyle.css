@@ -1,23 +1,48 @@
-
-
 body {
     margin: 0;
 }
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
     margin: 0;
-    width: 79vw;
-    height: 13vh;
-    margin-left: 21vw;
+    height: 4rem;
 
     background-color: #52796F;
     color: white;
-    font-size: 8.5vh
+    font-size: 3.3rem
 }
+
+.header-esquerda {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header-direita {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header-itens {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+
+
 
 .barra_lateral {
     position: absolute;
@@ -26,7 +51,7 @@ header {
     width: 21vw;
     height: 100%;
     /* display: none; */
-    background-color:#3f5751;
+    background-color: #3f5751;
     color: snow;
 }
 
@@ -36,12 +61,12 @@ header {
     top: 0;
     width: 100%;
     background-color: #3f5751;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .logo {
-    height:40%*1.07667;
+    height: 40%*1.07667;
     width: 40%;
     margin-top: 3vh;
 }
@@ -67,7 +92,7 @@ header {
 
 
 @media only screen and (max-device-width: 800px) {
-    
+
     header {
         margin-left: 0;
         width: 100vw;

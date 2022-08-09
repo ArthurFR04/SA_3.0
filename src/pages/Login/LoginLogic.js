@@ -19,7 +19,9 @@ let log_entrar = async () => {
 
     localLogin = JSON.parse(localStorage.getItem('Login'))
 
-    alert(letJson.message)
+    // alert(letJson.message)
+
+    window.location.href="./HomeScreen"
 
     // if (Login_values.value.email !== undefined) {
 

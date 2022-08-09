@@ -19,7 +19,7 @@ const NewPost = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container-NP'>
             <div className='editor'>
 
                 <JoditEditor
