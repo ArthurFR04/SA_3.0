@@ -11,25 +11,36 @@ header {
     margin: 0;
     height: 4rem;
 
-    background-color: #52796F;
+    background-color: #2E2E2E;
     color: white;
-    font-size: 3.3rem
+    font-size: 3.8rem
 }
 
 .header-esquerda {
     position: absolute;
     left: 0;
-    width: 50vw;
+    /* width: 50vw; */
+    height: 4rem;
 
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
+.header-eltec {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin: 0;
+    font-size: 2.3rem;
+}
+
 .header-direita {
     position: absolute;
     right: 0;
-    width: 50vw;
+    /* width: 50vw; */
+    height: 4rem;
 
     display: flex;
     justify-content: right;
@@ -37,7 +48,7 @@ header {
 }
 
 .header-itens {
-    margin-left: 7%;
+    margin-left: 9%;
     margin-right: 7%;
 }
 

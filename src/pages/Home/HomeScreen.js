@@ -20,13 +20,13 @@ const HomeScreen = () => (
         <header>
             <div className='header-esquerda'>
 
-                <AiOutlineMenu className='header-itens'/>
-                <label className='header-Eltec'>Eltec</label>
+                <AiOutlineMenu className='header-itens' />
+                <div className='header-eltec'>Eltec</div>
             </div>
             <div className='header-direita'>
 
-            <AiOutlineHeart className='header-itens'/>
-            <AiOutlineSearch className='header-itens'/>
+                <AiOutlineHeart className='header-itens' />
+                <AiOutlineSearch className='header-itens' />
             </div>
         </header>
 
