@@ -1,8 +1,6 @@
 
 // // // import { Link } from "react-router-dom";
-
-import { Login_values, Login_user } from "../../Context"
-
+import { Login_values } from "../../Context"
 
 let validado = false;
 
@@ -12,29 +10,27 @@ let letJson
 
 
 let log_entrar = async () => {
-
-    Login_user.value = letJson.data === undefined ? (null) : (letJson.data[0]) // caso o login seja valido, iguala as informacoes retornadas pelo fetch, caso nao seja, iguala a null
     
-    localStorage.setItem('Login', JSON.stringify(Login_user.value))
+    localStorage.setItem('Login', JSON.stringify(letJson.data[0]))
 
     localLogin = JSON.parse(localStorage.getItem('Login'))
+console.log(localLogin);
 
-    // alert(letJson.message)
+document.getElementById("loading").style.display = "none"
 
-    window.location.href="./HomeScreen"
+    if (localLogin.email !== undefined) {
 
-    // if (Login_values.value.email !== undefined) {
+        console.log('local ' + localLogin.email);
+        console.log(Login_values.value.email);
 
-    //     console.log('local ' + localLogin.email);
-    //     console.log(Login_values.value.email);
-
-    //     if (localLogin.email === Login_values.value.email) {
-    //         alert('Login efetuado com sucesso')
-    //     }
-    //     else {
-    //         alert('Ocorreu algum erro, por favor tente novamente')
-    //     }
-    // }
+        if (localLogin.email === Login_values.value.email) {                            // 12/08 
+            alert('Login efetuado com sucesso')
+            window.location.href="./HomeScreen"
+        }
+        else {
+            alert('Ocorreu algum erro, por favor tente novamente')
+        }
+    }
 
 }
 
@@ -43,17 +39,20 @@ let validar = () => {
     console.log('email:' + Login_values.value.email);
     console.log('senha:' + Login_values.value.senha);
 
-    if (Login_values.value.email !== false & Login_values.value.senha !== false) {
+    if (Login_values.value.email !== undefined & Login_values.value.senha !== undefined) {
         validado = true
     } else {
         alert('Preencha todos os inputs');
         validado = false
+        document.getElementById("loading").style.display = "none"
         return false
     }
+    console.log(validado);
 }
 
 export let entrar = () => {
 
+    validado = false
     validar()
     if (validado === true) {
 
@@ -70,10 +69,10 @@ export let entrar = () => {
         })
             .then((response) => response.json())
             .then((json) => {
-                // setTimeout(() => {
+
                 letJson = json
                 console.log(letJson);
-                // }, 1)
+
                 log_entrar()
             })
     }

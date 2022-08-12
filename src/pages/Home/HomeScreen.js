@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import { Login_user } from "../../Context"
+// import { Login_user } from "../../Context"
 
-import './HomeStyle.css';
+import styles from './HomeStyle.module.css';
 
-import { AiOutlineMenu, AiOutlineHeart, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineSearch } from "react-icons/ai";
 
 
 const HomeScreen = () => (
-    <div>
+    <div >
 
 
         {/* <div className='header_barra'>
@@ -18,20 +18,17 @@ const HomeScreen = () => (
 
 
         <header>
-            <div className='header-esquerda'>
-
-                <AiOutlineMenu className='header-itens' />
-                <div className='header-eltec'>Eltec</div>
+            <div className={styles.header_esquerda}>
+                <div className={styles.header_eltec}>Eltec</div>
             </div>
-            <div className='header-direita'>
+            <div className={styles.header_direita}>
 
-                <AiOutlineHeart className='header-itens' />
-                <AiOutlineSearch className='header-itens' />
+                <AiOutlineSearch className={styles.header_lupa} />
             </div>
         </header>
 
-        <div className='corpo'>
-            <div className='Textooo'>
+        <div className={styles.corpo}>
+            <div className={styles.Textooo}>
                 <h4>Home</h4>
                 <p>Aqui é o Home sabe ?</p>
                 <Link to="/LoginScreen">Bora pro login ??</Link>             <br></br>
@@ -40,6 +37,7 @@ const HomeScreen = () => (
             </div>
         </div>
 
+        <AiOutlineHeart className='header-itens' />
     </div>
 );
 

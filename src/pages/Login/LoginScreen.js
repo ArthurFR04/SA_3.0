@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import { entrar, alerta } from "./LoginLogic"
 
-import './LoginStyle.css'
-import './LoginStyleAnimation.css'
+import styles from './LoginStyle.module.css'
+import styles2 from './LoginStyleAnimation.module.css'
 
 import { RiLock2Fill } from 'react-icons/ri';
 import { AiFillThunderbolt } from "react-icons/ai";
@@ -33,42 +33,44 @@ let LoginScreen = () => {
 
     return (
         
-        <div className="body">
+        <div className={styles.body}>
             
-            <div className='container' id='banner'>
+            <div className={styles.banner}>
                 <h1>ElTEC</h1>
             </div>
 
-            <div className="container">
+            <div className={styles.container}>
 
-                {/* <div className='info-login'> */}
+                {/* <div className={styles.info}> */}
 
-                    <h1 className="login">
+                    <h1 className={styles.login}>
                         LOGIN
                     </h1>
 
-                    <div className='div-input'>
-                        <div id='inpEmail'>
+                    <div className={styles.div_input}>
+                        <div className={styles.inpEmail}>
 
                             <input
                                 type="text"
                                 name="email"
                                 onChange={changeInput}
-                                className="input-login email"
-                                placeholder="  email"
+                                className={styles.email}
+                                placeholder="email"
+                                // required
                             />
 
                         </div>
-                        <div id='inpSenha'>
+                        <div className={styles.inpSenha}>
 
                             <input
                                 type="password"
                                 name="senha"
                                 onChange={changeInput}
-                                className="input-login senha"
-                                placeholder="  senha"
+                                className={styles.senha}
+                                placeholder="senha"
+                                // required
                             />
-                            {/* <div className='iconCadeado'>
+                            {/* <div className={styles.iconCadeado}>
                                 <RiLock2Fill id='cadeado' />
                             </div> */}
                         </div>
@@ -78,9 +80,9 @@ let LoginScreen = () => {
 
                     <br></br>
 
-                    <div className="btn">
+                    <div className={styles.btn}>
                         <button
-                            className="btn_entrar"
+                            className={styles.btn_entrar}
                             onClick={salvar}
                         >
                             ENTRAR
@@ -96,8 +98,8 @@ let LoginScreen = () => {
                 {/* </div> */}
             </div>
             
-            <div id='loading'>
-                <AiFillThunderbolt className="loading-icon" id='foguetin'/>
+            <div id='loading' className={styles2.loading}>
+                <AiFillThunderbolt className={styles2.loading_icon} id='foguetin'/>
             </div>
 
         </div>

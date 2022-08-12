@@ -1,5 +1,5 @@
 
-#loading {
+.loading {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     display: none;
 }
 
-.loading-icon {
+.loading_icon {
     width: 100px;
     height: 100px;
     animation-name: spin;

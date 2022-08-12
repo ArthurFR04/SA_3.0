@@ -17,7 +17,7 @@ body {
     font-family: 'comfortaa-bold'
 }
 
-.container{
+.container , .banner{
     display: flex;
     flex-direction: column;
     width: 64vw;
@@ -30,7 +30,7 @@ body {
 
 }
 
-.info-login {
+.info {
     display:flex;
     flex-direction: column;
     position: relative;
@@ -39,7 +39,7 @@ body {
   
 }
 
-#banner {
+.banner {
     position: absolute;
     right: 0;
     width: 36vw;
@@ -49,7 +49,7 @@ body {
 
 }
 
-#banner h1{
+.banner h1 {
     display: flex;
     color: #2E2E2E;
     font-size: 50px;
@@ -62,7 +62,7 @@ body {
     justify-content: center;
 }
 
-.div-input{
+.div_input , .inpSenha {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,16 +71,16 @@ body {
 
 }
 
-/* .div-input #inpSenha{
+.inpSenha {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 
-} */
+}
 
-.iconCadeado{
+.iconCadeado {
     position: absolute;
     right: 0;
     display: flex;
@@ -92,11 +92,11 @@ body {
     border-radius: 100%;
 }
 
-#cadeado{
+#cadeado {
     color: #2E2E2E;
 }
 
-.input-login {
+.input , .email , .senha {
     width: 25vw;
     height: 5vh;
     border-radius: 6px;
@@ -110,13 +110,13 @@ body {
 
 }
 
-.input-login::placeholder {
+.input::placeholder , .email::placeholder , .senha::placeholder {
     color: #fff;
     font-size: 20px;
     margin-left: 20px;
 }
 
-.input-login:focus {
+.input:focus , .email:focus , .senha:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
@@ -160,7 +160,7 @@ p {
 
 
 @media (max-width:1024px){
-     #banner{
+     .banner{
         display: none;
      
     }
@@ -170,10 +170,9 @@ p {
         align-items: center;
         width: 100%
     }
-    .input-login{
+    .input{
         display: flex;
         width:350px;
         margin: 3vh
     }
 }
-
