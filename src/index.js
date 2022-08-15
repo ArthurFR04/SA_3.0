@@ -12,7 +12,8 @@ import {
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
-import NewPost from './pages/New Post/NewPostScreen';
+import NewPostScreen from './pages/New Post/NewPostScreen';
+import ProfileScreen from './pages/Profile/ProfileScreen';
 import { Teste1, Teste2 } from './pages/Landing/Testezin';
 
 const root = ReactDOM.createRoot(
@@ -23,13 +24,12 @@ root.render(
   <div>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate replace to="/HomeScreen" />} />
-        <Route path="HomeScreen" element={<HomeScreen />} />
-        <Route path="LoginScreen" element={<LoginScreen />} />
-        <Route path="RegisterScreen" element={<RegisterScreen />} />
-        <Route path="NewPost" element={<NewPost />} />
-        <Route path="Teste1" element={<Teste1 />} />
-        <Route path="Teste2" element={<Teste2 />} />
+        {/* <Route path="/" element={<Navigate replace to="/HomeScreen" />} /> */}
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="Login" element={<LoginScreen />} />
+        <Route path="Register" element={<RegisterScreen />} />
+        <Route path="NewPost" element={<NewPostScreen />} />
+        <Route path="Profile" element={<ProfileScreen />} />
       </Routes>
     </BrowserRouter>
   </div>
