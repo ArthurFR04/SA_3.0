@@ -43,7 +43,7 @@ const HomeScreen = () => (
         </div>
 
 
-        <Footer />
+        <Footer component="home"/>
     </div>
 );
 

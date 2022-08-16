@@ -27,12 +27,22 @@ li , .footer_itens , .footerHome , .footerProfile , .footerFavorites{
 
     background-color: #2398aa00;
     color: #2399AA;
-    border: none;
+    /* border: 0; */
     font-size: 60%;
 }
 
 li {
     width: 33.33%;
+}
+
+.footerProfile {
+    /* border-left: 20px;
+    border-right: 2px; */
+    border-style:solid;
+    border-top: 0;
+    border-left:30px;
+    border-color: snow;
+    background-color: #ff0000;
 }
 
 .footer_itens:hover {
