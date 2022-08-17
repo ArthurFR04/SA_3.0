@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 // import { Login_user } from "../../Context"
 import Footer from "../../components/Footer/Footer"
 
-import styles from './ProfileStyle.module.css';
+import styles from './FavoritesStyle.module.css';
 
 import { AiOutlineSearch } from "react-icons/ai";
 
 
-const ProfileScreen = () => (
+const FavoritesScreen = () => (
     <div>
         <header>
             <div className={styles.header_esquerda}>
@@ -31,8 +31,8 @@ const ProfileScreen = () => (
 
             <div className={styles.corpo}>
                 <div className={styles.Textooo}>
-                    <h4>Perfil</h4>
-                    <p>Aqui é o Perfil sabe ?</p>
+                    <h4>Favoritos</h4>
+                    <p>Aqui voce pode ver os seus favoritos</p>
             
                     oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
                 </div>
@@ -41,8 +41,8 @@ const ProfileScreen = () => (
         </div>
 
 
-        <Footer component="Profile"/>
+        <Footer component="Favorites"/>
     </div>
 );
 
-export default ProfileScreen;
+export default FavoritesScreen;

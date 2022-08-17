@@ -14,7 +14,7 @@ import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
 import ProfileScreen from './pages/Profile/ProfileScreen';
-import { Teste1, Teste2 } from './pages/Landing/Testezin';
+import FavoritesScreen from './pages/Favorites/FavoritesScreen';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -30,6 +30,7 @@ root.render(
         <Route path="Register" element={<RegisterScreen />} />
         <Route path="NewPost" element={<NewPostScreen />} />
         <Route path="Profile" element={<ProfileScreen />} />
+        <Route path="Favorites" element={<FavoritesScreen />} />☻
       </Routes>
     </BrowserRouter>
   </div>
