@@ -33,9 +33,9 @@ const HomeScreen = () => (
                 <div className={styles.Textooo}>
                     <h4>Home</h4>
                     <p>Aqui é o Home sabe ?</p>
-                    <Link to="/LoginScreen">Bora pro login ??</Link>             <br></br>
+                    <Link to="/Login">Bora pro login ??</Link>             <br></br>
                     <Link to="/NewPost">Nova postagem</Link>                     <br></br>
-                    <Link to="/RegisterScreen">Bora registraarr</Link>           <br></br>
+                    <Link to="/Register">Bora registraarr</Link>           <br></br>
                     oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
                 </div>
             </div>
