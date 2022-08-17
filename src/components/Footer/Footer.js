@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Footer.module.css';
-import styles2 from '../pages/Home/HomeStyle.module.css';
+import styles2 from '../../pages/Home/HomeStyle.module.css';
 
 import { AiFillHeart, AiFillHome } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";

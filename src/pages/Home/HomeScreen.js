@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 // import { Login_user } from "../../Context"
-import Footer from "../../components/Footer"
+import Footer from "../../components/Footer/Footer"
 
 import styles from './HomeStyle.module.css';
 
@@ -10,7 +10,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 
 const HomeScreen = () => (
-    <div>
+    <div className={styles.home}>
         <header>
             <div className={styles.header_esquerda}>
                 <div className={styles.header_eltec}>Eltec</div>

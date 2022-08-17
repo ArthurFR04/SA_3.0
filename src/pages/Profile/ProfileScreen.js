@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 // import { Login_user } from "../../Context"
-import Footer from "../../components/Footer"
+import Footer from "../../components/Footer/Footer"
 
 import styles from './ProfileStyle.module.css';
 

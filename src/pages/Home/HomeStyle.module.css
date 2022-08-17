@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.home {
+    width:100vw;
+    background-color: rgb(255, 255, 255);
+
+}
 
 
                                                     /* Header */
@@ -23,7 +28,6 @@ header {
 }
 
 .container {
-    background-color: rgb(255, 255, 255);
 
     height: 100vh;
 }
