@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
+import { Carousel } from '@mantine/carousel';
+
+import './CarouselStyle.css';
+
+import raioazul from '../../assets/raioazul.png'
+
 import styles from './HomeStyle.module.css';
 
 
@@ -15,9 +21,13 @@ const HomeScreen = () => (
 
         <div className={styles.container}>
 
-            {/* <div className='header_barra'>
-                <img src={raio_azul} className='logo' alt="Logo do site"/>
-            </div> */}
+        <Carousel slideSize="70%" height={200} slideGap="sm" controlsOffset="xs" controlSize={30} loop withIndicators>
+        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
+        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
+        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
+        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
+        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
+    </Carousel>
 
 
             <div className={styles.corpo}>
@@ -27,7 +37,9 @@ const HomeScreen = () => (
                     <Link to="/Login" >Bora pro login ??</Link>             <br></br>
                     <Link to="/NewPost" >Nova postagem</Link>                     <br></br>
                     <Link to="/Register" >Bora registraarr</Link>           <br></br>
-                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
                 </div>
             </div>
 

@@ -7,8 +7,6 @@ import Footer from "../../components/Footer/Footer"
 
 import styles from './ProfileStyle.module.css';
 
-import { AiOutlineSearch } from "react-icons/ai";
-
 
 const ProfileScreen = () => (
     <div>
@@ -27,6 +25,8 @@ const ProfileScreen = () => (
                     <h4>Perfil</h4>
                     <p>Aqui é o Perfil sabe ?</p>
             
+                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
                     oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
                 </div>
             </div>

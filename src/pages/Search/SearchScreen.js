@@ -11,7 +11,7 @@ import styles from './SearchStyle.module.css';
 
 
 const SearchScreen = () => (
-    <div>
+    <div className={styles.Search}>
         <Header />
 
 
