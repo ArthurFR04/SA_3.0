@@ -6,6 +6,7 @@ import styles from './LoginStyle.module.css'
 import styles2 from './LoginStyleAnimation.module.css'
 
 import { RiLock2Fill } from 'react-icons/ri';
+import { FaUserAlt } from 'react-icons/fa';
 import { AiFillThunderbolt } from "react-icons/ai";
 
 import { Login_values } from "../../Context"
@@ -32,9 +33,9 @@ let LoginScreen = () => {
 
 
     return (
-        
+
         <div className={styles.body}>
-            
+
             <div className={styles.banner}>
                 <h1>ElTEC</h1>
             </div>
@@ -43,63 +44,65 @@ let LoginScreen = () => {
 
                 {/* <div className={styles.info}> */}
 
-                    <h1 className={styles.login}>
-                        LOGIN
-                    </h1>
+                <h1 className={styles.login}>
+                    LOGIN
+                </h1>
 
-                    <div className={styles.div_input}>
-                        <div className={styles.inpEmail}>
+                <div className={styles.div_inputs}>
 
-                            <input
-                                type="text"
-                                name="email"
-                                onChange={changeInput}
-                                className={styles.email}
-                                placeholder="email"
-                                // required
-                            />
+                    <span className={styles.spanEmail}>
 
-                        </div>
-                        <div className={styles.inpSenha}>
+                        <label className={styles.circuloUser}>
+                            <FaUserAlt />
+                        </label>
 
-                            <input
-                                type="password"
-                                name="senha"
-                                onChange={changeInput}
-                                className={styles.senha}
-                                placeholder="senha"
-                                // required
-                            />
-                            {/* <div className={styles.iconCadeado}>
-                                <RiLock2Fill id='cadeado' />
-                            </div> */}
-                        </div>
+                        <input
+                            type="text"
+                            name="email"
+                            onChange={changeInput}
+                            className={styles.email}
+                            placeholder="email"
+                        />
+                    </span>
 
+                    <span className={styles.spanSenha}>
 
-                    </div>
+                        <input
+                            type="password"
+                            name="senha"
+                            onChange={changeInput}
+                            placeholder="senha"
 
-                    <br></br>
+                        />
+                        <label className={styles.circuloCadeado}>
+                            <RiLock2Fill />
+                        </label>
+                    </span>
 
-                    <div className={styles.btn}>
-                        <button
-                            className={styles.btn_entrar}
-                            onClick={salvar}
-                        >
-                            ENTRAR
-                        </button>
-                    </div>
+                </div>
 
-                    <p>OU</p>
+                <br></br>
 
-                    <p onClick={alerta}>
-                        entrar com Google
-                    </p>
+                <div className={styles.btn}>
+                    <button
+                        className={styles.btn_entrar}
+                        onClick={salvar}
+                    >
+                        ENTRAR
+                    </button>
+                </div>
+
+                <p>OU</p>
+
+                <p onClick={alerta}>
+                    entrar com Google
+                </p>
 
                 {/* </div> */}
             </div>
-            
+
             <div id='loading' className={styles2.loading}>
-                <AiFillThunderbolt className={styles2.loading_icon} id='foguetin'/>
+                <AiFillThunderbolt className={styles2.loading_icon} id='foguetin' />
             </div>
 
         </div>

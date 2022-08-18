@@ -5,7 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate
+  // Navigate
 } from "react-router-dom";
 
 // import App from './App';
@@ -14,7 +14,7 @@ import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
 import ProfileScreen from './pages/Profile/ProfileScreen';
-import FavoritesScreen from './pages/Favorites/FavoritesScreen';
+import SearchScreen from './pages/Search/SearchScreen';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -30,7 +30,7 @@ root.render(
         <Route path="Register" element={<RegisterScreen />} />
         <Route path="NewPost" element={<NewPostScreen />} />
         <Route path="Profile" element={<ProfileScreen />} />
-        <Route path="Favorites" element={<FavoritesScreen />} />☻
+        <Route path="Search" element={<SearchScreen />} />☻
       </Routes>
     </BrowserRouter>
   </div>

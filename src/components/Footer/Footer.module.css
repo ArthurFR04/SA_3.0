@@ -39,3 +39,25 @@ footer , footer a{
 .footer a:hover {
     background-color: #252525;
 }
+
+
+
+
+
+@media (min-width:1024px){
+    
+    footer {
+        /* position:absolute; */
+        /* left:0; */
+
+        height:100vh;
+        width: 4vw;
+
+        flex-direction: column;
+    }
+
+    footer a {
+        height: 33.33%;
+        width: 100%;
+    }
+}

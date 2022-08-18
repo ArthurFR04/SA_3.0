@@ -3,10 +3,12 @@
     font-family: 'comfortaa-light';
     src: url('../../assets/fonts/COMFORTAA-LIGHT.TTF');
 }
+
 @font-face {
     font-family: 'comfortaa-regular';
     src: url('../../assets/fonts/COMFORTAA-REGULAR.TTF');
 }
+
 @font-face {
     font-family: 'comfortaa-bold';
     src: url('../../assets/fonts/COMFORTAA-BOLD.TTF');
@@ -17,7 +19,8 @@ body {
     font-family: 'comfortaa-bold'
 }
 
-.container , .banner{
+.container,
+.banner {
     display: flex;
     flex-direction: column;
     width: 64vw;
@@ -31,12 +34,11 @@ body {
 }
 
 .info {
-    display:flex;
+    display: flex;
     flex-direction: column;
     position: relative;
     /* padding-top: 20vh; */
     width: 100%
-  
 }
 
 .banner {
@@ -62,79 +64,98 @@ body {
     justify-content: center;
 }
 
-.div_input , .inpSenha {
+
+.div_inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-
+    width: 90%;
 }
 
-.inpSenha {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
+.div_inputs span {
+    width: 50%;
 }
 
-.iconCadeado {
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 2em;
-    height: 2em;
-    border-radius: 100%;
-}
-
-#cadeado {
-    color: #2E2E2E;
-}
-
-.input , .email , .senha {
-    width: 25vw;
-    height: 5vh;
-    border-radius: 6px;
-    border: none;
-    /* box-shadow: rgb(22, 22, 22) 0px 5px ; */
-    
-    background-color: #2399AA;
-
-    color: #fff;
-    font-size: 20px;
-
-}
-
-.input::placeholder , .email::placeholder , .senha::placeholder {
-    color: #fff;
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.input:focus , .email:focus , .senha:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-}
-
-.email {
+.spanEmail {
     margin-top: 30px
 }
 
-.senha {
-    margin-top: 45px;
-    margin-bottom: 45px
-}
-
-
-.btn {
+.spanEmail,
+.spanSenha,
+.spanConfSenha {
     display: flex;
-    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    margin-top: 45px;
+    position: relative;
 }
+
+.div_inputs input {
+    width: 92.5%;
+    height: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    padding: 0;
+
+    margin-left: 4px;
+    box-shadow: -4px 0px #2399AA;
+
+    color: #fff;
+    font-size: 20px;
+    background-color: #2399AA;
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 15px;
+}
+
+input:focus {
+    /* box-shadow: -4px 0px #2399AA; */
+    outline: 0;
+}
+
+
+
+.circuloCadeado,
+.circuloUser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 3px;
+
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.7rem;
+
+    background-color: rgb(255, 250, 250);
+    color: #2399AA;
+    border-radius: 100%;
+}
+
+
+.spanEmail .email {
+    position: absolute;
+    right: 0;
+
+    width: 89.5%;
+    margin-left: 3px;
+
+    box-shadow: -20px 0px #2399AA;
+}
+
+.circuloUser {
+    z-index: 1;
+    left: 3px;
+}
+
 
 .btn_entrar {
     width: 150px;
@@ -142,6 +163,7 @@ body {
 
     border: none;
     border-radius: 17px;
+    margin-top: 20px;
 
     background-color: #fff;
     color: #2399AA;
@@ -150,7 +172,7 @@ body {
 
 p {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 
     margin-top: 30px;
 
@@ -159,20 +181,30 @@ p {
 }
 
 
-@media (max-width:1024px){
-     .banner{
+@media (max-width:1024px) {
+    .banner {
         display: none;
-     
+
     }
-    .container{
+
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%
+        width: 100%;
+        right: 0;
     }
-    .input{
-        display: flex;
-        width:350px;
-        margin: 3vh
+
+    .div_inputs span {
+        width: 90%;
+    }
+
+    .spanEmail .email {
+
+        width: 83.5%;
+        margin-left: 9px;
+        font-size: 18px;
+
+        box-shadow: -20px 0px #2399AA;
     }
 }

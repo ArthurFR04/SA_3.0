@@ -2,20 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 // import { Login_user } from "../../Context"
+import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 import styles from './HomeStyle.module.css';
 
-import { AiOutlineSearch } from "react-icons/ai";
-
 
 const HomeScreen = () => (
     <div className={styles.home}>
-        <header>
-            <label className={styles.eltec}>
-                ELTEC
-            </label>
-        </header>
+        <Header />
 
 
         <div className={styles.container}>

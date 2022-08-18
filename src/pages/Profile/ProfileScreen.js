@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // import { Login_user } from "../../Context"
+import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 import styles from './ProfileStyle.module.css';
@@ -11,15 +12,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const ProfileScreen = () => (
     <div>
-        <header>
-            <div className={styles.header_esquerda}>
-                <div className={styles.header_eltec}>Eltec</div>
-            </div>
-            <div className={styles.header_direita}>
-
-                <AiOutlineSearch className={styles.header_lupa} />
-            </div>
-        </header>
+        <Header />
 
 
         <div className={styles.container}>

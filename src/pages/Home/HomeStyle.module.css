@@ -4,41 +4,34 @@ body {
 
 .home {
     background-color: rgb(255, 255, 255);
-
 }
 
 
-                                                    /* Header */
+/* container */
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    position: sticky;
-    top: 0;
-    margin: 0;
-    height: 4rem;
-
-    background-color: #2E2E2E;
-    color: white;
-}
-
-.eltec {
-    font-size: 2.6rem;
-}
 
 .container {
 
-    height: 100vh;
+    height: 88rem;
 }
 
 
-                                                    /* Footer */
+                                            /* Footer */
 
 
 
+
+
+
+
+
+@media (min-width:1024px) {
+    .container {
+        position: absolute;
+        right: 0;
+        width:94.5vw;
+    }
+}
 
 /* 
 .barra_lateral {

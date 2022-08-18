@@ -1,25 +1,18 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // import { Login_user } from "../../Context"
+import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
-import styles from './FavoritesStyle.module.css';
-
-import { AiOutlineSearch } from "react-icons/ai";
+import styles from './SearchStyle.module.css';
 
 
-const FavoritesScreen = () => (
+
+
+const SearchScreen = () => (
     <div>
-        <header>
-            <div className={styles.header_esquerda}>
-                <div className={styles.header_eltec}>Eltec</div>
-            </div>
-            <div className={styles.header_direita}>
-
-                <AiOutlineSearch className={styles.header_lupa} />
-            </div>
-        </header>
+        <Header />
 
 
         <div className={styles.container}>
@@ -41,8 +34,8 @@ const FavoritesScreen = () => (
         </div>
 
 
-        <Footer component="Favorites"/>
+        <Footer component="Search"/>
     </div>
 );
 
-export default FavoritesScreen;
+export default SearchScreen;
