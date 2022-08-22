@@ -5,11 +5,8 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
-import { Carousel } from '@mantine/carousel';
-
-import './CarouselStyle.css';
-
-import raioazul from '../../assets/raioazul.png'
+import Carrossel from "../../components/Carousel/Carousel"
+// import raioazul from '../../assets/cavalos.jpg'
 
 import styles from './HomeStyle.module.css';
 
@@ -21,13 +18,7 @@ const HomeScreen = () => (
 
         <div className={styles.container}>
 
-        <Carousel slideSize="70%" height={200} slideGap="sm" controlsOffset="xs" controlSize={30} loop withIndicators>
-        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
-        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
-        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
-        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
-        <Carousel.Slide>{<img src={raioazul} />}</Carousel.Slide>
-    </Carousel>
+            <Carrossel />
 
 
             <div className={styles.corpo}>

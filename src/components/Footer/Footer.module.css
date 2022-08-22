@@ -26,7 +26,7 @@
     z-index: 1;
 
     font-size: 2.1rem;
-    box-shadow: 0px 0px 2px 0.5px rgba(255, 255, 255, 0.144);
+    /* box-shadow: 0px 0px 2px 0.5px rgba(255, 255, 255, 0.144); */
 }
 
 .footerSearch {
@@ -49,15 +49,16 @@
         flex-direction: column;
 
 
-        background-color: aqua;
         height: 92vh;
         width: 4vw;
-
-
     }
 
     .footer a {
         height: 33.33%;
         width: 100%;
+    }
+
+    .footerProfile {
+        box-shadow: 0px 0px 2px 0.5px rgba(255, 255, 255, 0.144);
     }
 }
