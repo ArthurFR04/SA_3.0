@@ -9,6 +9,9 @@ const Header = (props) => {
                         <label className={styles.eltec}>
                                 ELTEC
                         </label>
+                        <div className='azul'>
+
+                        </div>
                 </header>
         )
 }

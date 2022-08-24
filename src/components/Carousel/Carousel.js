@@ -3,12 +3,15 @@ import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
 
+import { RiArrowDropLeftLine , RiArrowDropRightLine } from "react-icons/ri";
+
+
 const useStyles = createStyles((theme, _theme, _params, getRef) => ({
   card: {
-    height: 440,
-    marginTop: 30,
-    marginLeft: 30,
-    marginRight: 30,
+    height: "100%",
+    // marginTop: 30,
+    // marginLeft: 12,
+    // marginRight: 8,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -49,6 +52,9 @@ const buttons = createStyles((_theme, _params, getRef) => ({
         },
       },
     },
+
+    
+
   }));
 
 
@@ -120,7 +126,7 @@ const data = [
 
 const Carrossel = () => {
   const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+  // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>
       <Card {...item} />
@@ -131,12 +137,21 @@ const Carrossel = () => {
   return (
     <Carousel
     //   slideSize="50%"
-      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 1 }]}
+    breakpoints={[
+      { maxWidth: 1024, slideSize: '100%' },
+      { minWidth: 1024, slideSize: '100%' },
+    ]}
+      slideSize="100%" 
+      height= "100%"
+      width= "100%"
       slideGap="xl"
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      align="center"
+      // slidesToScroll={mobile ? 1 : 2}
       loop 
       withIndicators
+      controlsOffset="xl" 
+      previousControlIcon={<RiArrowDropLeftLine size={25} />}
+      nextControlIcon={<RiArrowDropRightLine size={25} />}
       styles={{
         indicator: {
           width: 12,
@@ -148,6 +163,14 @@ const Carrossel = () => {
             backgroundColor: '#2399AA'
           },
         },
+        control: {
+          backgroundColor: '#2399AA',
+          borderColor: '#2399AA',
+          color: '#fff',
+          opacity: 1,
+          fontWeight: "bold",
+          fontSize: 80
+        }
         
       }}
       classNames={classes}

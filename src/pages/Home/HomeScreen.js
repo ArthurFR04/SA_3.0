@@ -18,7 +18,9 @@ const HomeScreen = () => (
 
         <div className={styles.container}>
 
-            <Carrossel />
+            <div className={styles.carrossel}>
+                <Carrossel />
+            </div>
 
 
             <div className={styles.corpo}>
