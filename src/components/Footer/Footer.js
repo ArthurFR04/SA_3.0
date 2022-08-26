@@ -9,7 +9,7 @@ import { FaUserAlt, FaSearch } from "react-icons/fa";
 const Footer = (props) => {
 
         return (
-                <footer>
+                <div className={styles.footer}>
 
 
                         <NavLink to="/" className={styles.footerHome} style={{ backgroundColor: props.component === "Home" ? '#252525' : '' }} >
@@ -31,7 +31,7 @@ const Footer = (props) => {
 
 
 
-                </footer>
+                </div>
         )
 }
 

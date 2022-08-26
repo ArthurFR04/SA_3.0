@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
+import Carrossel from "../../components/Carousel/Carousel"
+// import raioazul from '../../assets/cavalos.jpg'
+
 import styles from './HomeStyle.module.css';
 
 
@@ -15,9 +18,9 @@ const HomeScreen = () => (
 
         <div className={styles.container}>
 
-            {/* <div className='header_barra'>
-                <img src={raio_azul} className='logo' alt="Logo do site"/>
-            </div> */}
+            <div className={styles.carrossel}>
+                <Carrossel />
+            </div>
 
 
             <div className={styles.corpo}>
@@ -27,7 +30,9 @@ const HomeScreen = () => (
                     <Link to="/Login" >Bora pro login ??</Link>             <br></br>
                     <Link to="/NewPost" >Nova postagem</Link>                     <br></br>
                     <Link to="/Register" >Bora registraarr</Link>           <br></br>
-                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
+                    oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
                 </div>
             </div>
 

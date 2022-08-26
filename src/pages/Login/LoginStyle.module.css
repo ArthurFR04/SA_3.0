@@ -143,12 +143,12 @@ input:focus {
 }
 
 
-.spanEmail .email {
+ .spanEmail .email {
     position: absolute;
     right: 0;
 
-    width: 89.5%;
-    margin-left: 3px;
+    width: 87.5%;
+    margin-left: 110px;
 
     box-shadow: -20px 0px #2399AA;
 }
@@ -202,11 +202,11 @@ p {
     }
 
     .spanEmail .email {
-
+/* 
         width: 83.5%;
         margin-left: 9px;
         font-size: 18px;
 
-        box-shadow: -20px 0px #2399AA;
+        box-shadow: -20px 0px #2399AA; */
     }
 }
