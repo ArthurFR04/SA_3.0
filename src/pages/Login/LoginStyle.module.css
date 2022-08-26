@@ -102,10 +102,11 @@ body {
 
     margin-left: 4px;
     box-shadow: -4px 0px #2399AA;
-
+    
     color: #fff;
     font-size: 20px;
     background-color: #2399AA;
+    
 }
 
 input::placeholder {
@@ -119,6 +120,7 @@ input:focus {
     /* box-shadow: -4px 0px #2399AA; */
     outline: 0;
 }
+
 
 
 

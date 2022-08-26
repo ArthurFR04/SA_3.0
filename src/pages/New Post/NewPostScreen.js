@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import JoditEditor from 'jodit-react';
+import { TextEditor } from '../../components/TextEditor/TextEditor';
 
 import './NewPostStyle.css'
 
@@ -20,16 +20,7 @@ const NewPost = () => {
 
     return (
         <div className='container-NP'>
-            <div className='editor'>
-
-                <JoditEditor
-                    ref={editor}
-                    value={content}
-                    config={config}
-                    onBlur={handleUptade}
-                    onChange={(newContent) => { }}
-                />
-            </div>
+            <TextEditor></TextEditor>
         </div>
     )
 }
