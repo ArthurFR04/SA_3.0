@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { TextEditor } from '../../components/TextEditor/TextEditor';
+import Header from '../../components/Header/Header';
+import TextEditor from '../../components/TextEditor';
+import Footer from '../../components/Footer/Footer';
 
-import './NewPostStyle.css'
+import styles from'./NewPostStyle.css'
 
 const NewPost = () => {
 
@@ -19,8 +21,22 @@ const NewPost = () => {
     }
 
     return (
-        <div className='container-NP'>
-            <TextEditor></TextEditor>
+        <div className='tela'>
+
+                <div className={styles.headerNP}>
+                        <Header/>
+                </div>
+            <div className='container-NP'>
+
+
+                <div className='editor'>
+                    <TextEditor/>
+                </div>
+            
+            </div>
+                <div className='footerNP'>
+                    <Footer/>
+                </div>
         </div>
     )
 }

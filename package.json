@@ -7,12 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
-=======
-    "embla-carousel-react": "^7.0.0",
-    "jodit": "^3.18.7",
-    "jodit-react": "^1.3.10",
->>>>>>> 2be5c2dff04faa4325ef100b8b83b8ab0d4736d3
+    "draftjs-to-html": "^0.9.1",
     "primereact": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
