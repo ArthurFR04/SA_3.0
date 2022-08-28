@@ -1,26 +1,15 @@
 body {
     margin: 0;
 }
-.tela .container-NP{
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-    width: auto;
-    height: 100%;
-
-}
 
 .container-NP {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-
     height: 100%;
-    width: 100px;
+    width: auto;
 
     
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 
 }
 
@@ -28,18 +17,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 50%;
-    width: 50%;
-    margin-left: 5vw;
-
-    margin-top: 10vh;
+    height: 100%;
+    margin-left: 4.5vw;
+    margin-right: 0.5vw;
     
-
-background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 
-.footerNP{
-    z-index: 2;
+
+
+@media (min-width:1024px){
+  Footer{
+    position: relative;
+    bottom: 0;
+  }
 }
 

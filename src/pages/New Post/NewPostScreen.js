@@ -22,21 +22,19 @@ const NewPost = () => {
 
     return (
         <div className='tela'>
-
-                <div className={styles.headerNP}>
-                        <Header/>
-                </div>
+  
+                <Header/>
+                
             <div className='container-NP'>
-
 
                 <div className='editor'>
                     <TextEditor/>
                 </div>
             
             </div>
-                <div className='footerNP'>
-                    <Footer/>
-                </div>
+            
+                <Footer/>
+                
         </div>
     )
 }
