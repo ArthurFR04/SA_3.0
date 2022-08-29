@@ -21,7 +21,7 @@ export default class TextEditor extends Component {
     const { editorState } = this.state;
     console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())));
     return (
-      <div>
+      <div className="editor-div">
         <Editor
           editorState={editorState}
           toolbarClassName="toolbarClassName"

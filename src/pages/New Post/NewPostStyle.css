@@ -3,13 +3,16 @@ body {
 }
 
 .container-NP {
-    /* display: block; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    /* min-height: 5vh; */
-    width: auto;
+    height: 100vh;
+    /* margin-top: 20%; */
+    margin-left: 4.5vw;
+    margin-right: 0.5vw;
+    right: 0;
+    
 
     
     /* background-color: blanchedalmond; */
@@ -21,14 +24,14 @@ body {
 }
 
 .editor {
+  /* position: sticky; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
-    margin-left: 4.5vw;
-    margin-right: 0.5vw;
-    
-    /* background-color: aliceblue; */
+    width: 100%;
+    margin-top: 10%;
+    background-color: rgb(0, 136, 255);
 }
 
 button{
@@ -39,7 +42,20 @@ button{
   height: 6%;
   border-style: none;
   border-radius: 10px;
-  background-color: #2399AA;
+  background-color: #2E2E2E;
+  font-weight:700;
+  color: #2399AA;
+  box-shadow:1px 2px 3px 0px #969696 ;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #252525;
+}
+
+button:active{
+  box-shadow:0px 0px #2E2E2E ;
+
 }
 
 @media (max-width:1024px){
