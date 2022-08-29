@@ -31,6 +31,7 @@ const NewPost = () => {
                     <TextEditor/>
                 </div>
             
+                <button> ENVIAR</button>
             </div>
             
                 <Footer/>

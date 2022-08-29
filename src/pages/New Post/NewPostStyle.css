@@ -3,14 +3,21 @@ body {
 }
 
 .container-NP {
+    /* display: block; */
     display: flex;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* min-height: 5vh; */
     width: auto;
 
     
     /* background-color: blanchedalmond; */
 
+}
+
+.tela{
+  height: 100%;
 }
 
 .editor {
@@ -24,12 +31,20 @@ body {
     /* background-color: aliceblue; */
 }
 
+button{
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  width: 6%;
+  height: 6%;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #2399AA;
+}
 
-
-@media (min-width:1024px){
-  Footer{
-    position: relative;
-    bottom: 0;
+@media (max-width:1024px){
+  .container-NP{
+    min-height: 82vh;
   }
 }
 
