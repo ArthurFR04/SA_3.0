@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Header from '../../components/Header/Header';
-import TextEditor from '../../components/TextEditor';
+import TextEditor from '../../components/Text Editor/TextEditor';
 import Footer from '../../components/Footer/Footer';
 
 import styles from'./NewPostStyle.css'
