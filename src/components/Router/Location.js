@@ -11,16 +11,15 @@ let nowLocation
 let oldLocation
 
 export function visitedPages() {
-    console.warn();
     
     let Location = useLocation();
-
+    
     if (Location.pathname !== nowLocation) {
-
+        
         oldLocation = nowLocation = false ? '' : nowLocation
         nowLocation = Location.pathname
         
-        
+
         console.log('now:  ' + nowLocation);
         console.log('old:  ' + oldLocation);
     }

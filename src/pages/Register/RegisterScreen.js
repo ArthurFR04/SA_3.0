@@ -117,6 +117,7 @@ const RegisterScreen = () => (
                         type="password"
                         name="senha"
                         onChange={changeInput}
+                        className={styles.inputs}
                         placeholder="senha"
 
                     />
@@ -130,6 +131,7 @@ const RegisterScreen = () => (
                         type="password"
                         name="confirmarSenha"
                         onChange={changeInput}
+                        className={styles.inputs}
                         id={styles.confirm}
                         placeholder=" confirmar senha"
                     />

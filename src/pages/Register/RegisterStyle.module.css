@@ -92,7 +92,7 @@ body {
     position: relative;
 }
 
-input {
+.inputs , .email {
     width: 92.5%;
     height: 2.5rem;
     border-radius: 6px;
@@ -107,14 +107,14 @@ input {
     font-size: 20px;
 }
 
-input::placeholder {
+.inputs::placeholder , .email::placeholder{
     color: #fff;
     font-size: 20px;
     margin-left: 20px;
     padding: 15px;
 }
 
-input:focus {
+.inputs:focus , .email:focus{
     /* box-shadow: -4px 0px #2E2E2E; */
     outline: 0;
 }

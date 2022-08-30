@@ -1,0 +1,121 @@
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    background: rgb(0, 4, 255);
+    width: 300px;
+    color:#2399AA
+}
+
+
+.btn_entrar {
+    width: 150px;
+    Height: 40px;
+
+    border: none;
+    border-radius: 17px;
+    margin-top: 20px;
+
+    background-color: #fff;
+    color: #2399AA;
+    font-size: 20px;
+}
+
+.btn_entrar:hover {
+    background-color: #2399AA;
+    color: #ffffff;
+    transition-duration: 0.8s;
+}
+
+
+
+
+/* 
+.spanEmail {
+    margin-top: 30px
+}
+
+.spanEmail,
+.spanSenha,
+.spanConfSenha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    margin-top: 45px;
+    width: 100%;
+    height: 3rem;
+}
+
+.div_inputs input {
+
+    height: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    padding: 0;
+
+    margin-left: 4px;
+    box-shadow: -4px 0px #2399AA;
+    
+    color: #fff;
+    font-size: 20px;
+    background-color: #2399AA;
+    
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 15px;
+}
+
+input:focus {
+
+    outline: 0;
+}
+
+
+
+
+.circuloCadeado,
+.circuloUser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.7rem;
+    
+    background-color: rgb(226, 9, 9);
+    color: #2399AA;
+    border-radius: 100%;
+
+    position: absolute;
+    left: 0;
+}
+
+.email {
+    position: absolute;
+
+    left: 3rem;
+
+    width: space-between;
+
+
+    box-shadow: -20px 0px #2399AA;
+}
+
+.circuloUser {
+    z-index: 1;
+    left: 3px;
+}
+ */
+

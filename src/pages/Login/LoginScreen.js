@@ -15,6 +15,8 @@ import { Login_values } from "../../Context"
 
 import { visitedPages } from "../../components/Router/Location"
 
+import LoginForm from '../../components/Forms/Login/LoginForm';
+
 export let values2
 
 
@@ -60,11 +62,12 @@ let LoginScreen = () => {
 
                 <div className={styles.div_inputs}>
 
-                    <span className={styles.spanEmail}>
+                        <LoginForm />
+                    {/* <span className={styles.spanEmail}>
 
-                        <label className={styles.circuloUser}>
+                        <div className={styles.circuloUser}>
                             <FaUserAlt />
-                        </label>
+                        </div>
 
                         <input
                             type="text"
@@ -87,19 +90,8 @@ let LoginScreen = () => {
                         <label className={styles.circuloCadeado}>
                             <RiLock2Fill />
                         </label>
-                    </span>
+                    </span> */}
 
-                </div>
-
-                <br></br>
-
-                <div className={styles.btn}>
-                    <button
-                        className={styles.btn_entrar}
-                        onClick={salvar}
-                    >
-                        ENTRAR
-                    </button>
                 </div>
 
 

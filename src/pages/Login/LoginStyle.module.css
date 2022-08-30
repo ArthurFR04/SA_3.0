@@ -73,105 +73,6 @@ body {
     width: 90%;
 }
 
-.div_inputs span {
-    width: 50%;
-}
-
-.spanEmail {
-    margin-top: 30px
-}
-
-.spanEmail,
-.spanSenha,
-.spanConfSenha {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-
-    margin-top: 45px;
-    position: relative;
-}
-
-.div_inputs input {
-    width: 92.5%;
-    height: 2.5rem;
-    border-radius: 6px;
-    border: none;
-    padding: 0;
-
-    margin-left: 4px;
-    box-shadow: -4px 0px #2399AA;
-    
-    color: #fff;
-    font-size: 20px;
-    background-color: #2399AA;
-    
-}
-
-input::placeholder {
-    color: #fff;
-    font-size: 20px;
-    margin-left: 20px;
-    padding: 15px;
-}
-
-input:focus {
-    /* box-shadow: -4px 0px #2399AA; */
-    outline: 0;
-}
-
-
-
-
-.circuloCadeado,
-.circuloUser {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    right: 3px;
-
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.7rem;
-
-    background-color: rgb(255, 250, 250);
-    color: #2399AA;
-    border-radius: 100%;
-}
-
-
- .spanEmail .email {
-    position: absolute;
-    right: 0;
-
-    width: 87.5%;
-    margin-left: 110px;
-
-    box-shadow: -20px 0px #2399AA;
-}
-
-.circuloUser {
-    z-index: 1;
-    left: 3px;
-}
-
-
-.btn_entrar {
-    width: 150px;
-    Height: 40px;
-
-    border: none;
-    border-radius: 17px;
-    margin-top: 20px;
-
-    background-color: #fff;
-    color: #2399AA;
-    font-size: 20px;
-}
-
 p {
     display: flex;
     justify-content: center;
@@ -201,12 +102,5 @@ p {
         width: 90%;
     }
 
-    .spanEmail .email {
-/* 
-        width: 83.5%;
-        margin-left: 9px;
-        font-size: 18px;
 
-        box-shadow: -20px 0px #2399AA; */
-    }
 }

@@ -43,7 +43,6 @@ const buttons = createStyles((_theme, _params, getRef) => ({
       ref: getRef('controls'),
       transition: 'opacity 150ms ease',
       opacity: 0,
-      color: '#f34f'
     },
   
     root: {
