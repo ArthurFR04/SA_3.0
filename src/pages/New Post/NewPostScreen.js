@@ -3,9 +3,9 @@ import Header from '../../components/Header/Header';
 import TextEditor from '../../components/Text Editor/TextEditor';
 import Footer from '../../components/Footer/Footer';
 
-import styles from'./NewPostStyle.css'
+import styles from'./NewPostStyle.module.css'
 
-const NewPost = () => {
+const NewPostScreen = () => {
 
     const editor = useRef(null)
     const [content, setContent] = useState('')
@@ -21,17 +21,17 @@ const NewPost = () => {
     }
 
     return (
-        <div className='tela'>
+        <div className={styles.tela}>
   
                 <Header/>
                 
-            <div className='container-NP'>
+            <div className={styles.container}>
 
-                <div className='editor'>
+                <div className={styles.editor}>
                     <TextEditor/>
                 </div>
             
-                <button> ENVIAR</button>
+                <button className={styles.btn}> ENVIAR</button>
             </div>
             
                 <Footer/>
@@ -40,4 +40,4 @@ const NewPost = () => {
     )
 }
 
-export default NewPost
+export default NewPostScreen

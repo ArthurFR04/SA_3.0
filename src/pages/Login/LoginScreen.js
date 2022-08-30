@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { entrar, alerta } from "./LoginLogic"
+import { entrar } from "./LoginLogic"
+import { NavLink } from 'react-router-dom';
 
 import styles from './LoginStyle.module.css'
 import styles2 from './LoginStyleAnimation.module.css'
@@ -8,12 +9,18 @@ import styles2 from './LoginStyleAnimation.module.css'
 import { RiLock2Fill } from 'react-icons/ri';
 import { FaUserAlt } from 'react-icons/fa';
 import { AiFillThunderbolt } from "react-icons/ai";
+import { TiArrowBack } from "react-icons/ti";
 
 import { Login_values } from "../../Context"
 
+import { visitedPages } from "../../components/Router/Location"
+
 export let values2
 
+
+
 let LoginScreen = () => {
+    visitedPages()
 
     const [values, setValues] = useState('')
 
@@ -31,6 +38,7 @@ let LoginScreen = () => {
         entrar()
     }
 
+   
 
     return (
 
@@ -42,7 +50,9 @@ let LoginScreen = () => {
 
             <div className={styles.container}>
 
-                {/* <div className={styles.info}> */}
+                <NavLink to="/" className={styles.arrowBack} >
+                    <TiArrowBack />
+                </NavLink>
 
                 <h1 className={styles.login}>
                     LOGIN
@@ -92,13 +102,7 @@ let LoginScreen = () => {
                     </button>
                 </div>
 
-                <p>OU</p>
 
-                <p onClick={alerta}>
-                    entrar com Google
-                </p>
-
-                {/* </div> */}
             </div>
 
             <div id='loading' className={styles2.loading}>

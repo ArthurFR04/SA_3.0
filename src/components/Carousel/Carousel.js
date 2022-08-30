@@ -43,6 +43,7 @@ const buttons = createStyles((_theme, _params, getRef) => ({
       ref: getRef('controls'),
       transition: 'opacity 150ms ease',
       opacity: 0,
+      color: '#f34f'
     },
   
     root: {
@@ -148,7 +149,7 @@ const Carrossel = () => {
       align="center"
       // slidesToScroll={mobile ? 1 : 2}
       loop 
-      withIndicators
+      // withIndicators
       controlsOffset="xl" 
       previousControlIcon={<RiArrowDropLeftLine size={25} />}
       nextControlIcon={<RiArrowDropRightLine size={25} />}
