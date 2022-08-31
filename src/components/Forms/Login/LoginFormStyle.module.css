@@ -1,25 +1,77 @@
 
+.corpoForm {
+    width: 100%;
+}
+
+
 .Form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
-.email {
-    background: rgb(0, 4, 255);
-    width: 300px;
-    color:#2399AA
+.email , .senha {
+    width: 50%;
 }
 
+.senha {
+    margin-top: 70px;
+}
+
+.senha div div {
+    border: none;
+    background-color: #2399AA;
+    border-radius: 8px;
+}
+
+.email input , .senha input , .senha button{
+    width: 100%;
+    margin-top: 45px;
+
+    background-color: #2399AA;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+
+.email input::placeholder , .senha input::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+.email input:focus , .senha input:focus {
+    border: none;
+    outline: 0;
+}
+
+
+.senha input {
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.senha button {
+    margin-top: 0;
+    z-index: 2;
+}
+
+.senha button:hover {
+    background-color: #2399AA;
+    color: #fff;
+}
 
 .btn_entrar {
+    display: flex;
+    justify-content: center;
     width: 150px;
     Height: 40px;
-
+    
     border: none;
     border-radius: 17px;
-    margin-top: 20px;
+    margin-top: 70px;
 
     background-color: #fff;
     color: #2399AA;
@@ -31,6 +83,28 @@
     color: #ffffff;
     transition-duration: 0.8s;
 }
+
+.btn_entrar span {
+    width: 100%;
+}
+
+
+
+
+
+@media (max-width:1024px) {
+
+    .email , .senha{
+        width: 90%;
+    }
+
+}
+
+
+
+
+
+
 
 
 

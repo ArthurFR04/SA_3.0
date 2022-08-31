@@ -9,9 +9,6 @@ import { RiArrowDropLeftLine , RiArrowDropRightLine } from "react-icons/ri";
 const useStyles = createStyles((theme, _theme, _params, getRef) => ({
   card: {
     height: "100%",
-    // marginTop: 30,
-    // marginLeft: 12,
-    // marginRight: 8,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

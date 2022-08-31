@@ -19,8 +19,7 @@ body {
     font-family: 'comfortaa-bold'
 }
 
-.container,
-.banner {
+.container , .banner {
     display: flex;
     flex-direction: column;
     width: 64vw;
@@ -59,9 +58,23 @@ body {
 }
 
 
+.arrowBack {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    padding: 10px;
+    font-size: 35px;
+    color: #fff;
+}
+
+
 .login {
     display: flex;
     justify-content: center;
+
+    font-weight: bold;
+    font-size: 40px;
 }
 
 

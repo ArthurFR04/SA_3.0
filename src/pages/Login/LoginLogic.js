@@ -10,8 +10,8 @@ let letJson
 
 
 let log_entrar = async () => {
-    
-    localStorage.setItem('Login', JSON.stringify(letJson.data[0]))
+    console.log(letJson);
+    // localStorage.setItem('Login', JSON.stringify(letJson.length = 3 ? letJson.data[0] : null ))          31/08
 
     localLogin = JSON.parse(localStorage.getItem('Login'))
 console.log(localLogin);
@@ -20,8 +20,8 @@ document.getElementById("loading").style.display = "none"
 
     if (localLogin.email !== undefined) {
 
-        console.log('local ' + localLogin.email);
-        console.log(Login_values.value.email);
+                                                                console.log('local ' + localLogin.email);
+                                                                console.log(Login_values.value.email);
 
         if (localLogin.email === Login_values.value.email) {                            // 12/08 
             alert('Login efetuado com sucesso')
@@ -37,9 +37,9 @@ document.getElementById("loading").style.display = "none"
 let validar = () => {
 
     console.log('email:' + Login_values.value.email);
-    console.log('senha:' + Login_values.value.senha);
+    console.log('senha:' + Login_values.value.password);
 
-    if (Login_values.value.email !== undefined & Login_values.value.senha !== undefined) {
+    if (Login_values.value.email !== undefined & Login_values.value.password !== undefined) {
         validado = true
     } else {
         alert('Preencha todos os inputs');
@@ -61,7 +61,7 @@ export let entrar = () => {
             body: JSON.stringify({
 
                 email: Login_values.value.email,
-                senha: Login_values.value.senha
+                senha: Login_values.value.password
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -76,13 +76,6 @@ export let entrar = () => {
                 log_entrar()
             })
     }
-}
-
-export let alerta = () => {
-    // console.log(Login_user.value);
-    console.log(Login_values.value);
-
-    alert('Não sei fazer isso ainda ksks')
 }
 
 

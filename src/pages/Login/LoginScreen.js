@@ -11,8 +11,6 @@ import { FaUserAlt } from 'react-icons/fa';
 import { AiFillThunderbolt } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
 
-import { Login_values } from "../../Context"
-
 import { visitedPages } from "../../components/Router/Location"
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
@@ -24,20 +22,9 @@ export let values2
 let LoginScreen = () => {
     visitedPages()
 
-    const [values, setValues] = useState('')
-
-    const changeInput = (value) => {
-        setValues((prevValue) => ({
-            ...prevValue,
-            [value.target.name]: value.target.value,
-        }))
-    }
-
     const salvar = () => {
-        values2 = values
-        Login_values.value = values
-        document.getElementById("loading").style.display = "flex"
-        entrar()
+        // values2 = values
+       
     }
 
    
