@@ -6,23 +6,33 @@ import {
     useLocation
 } from "react-router-dom";
 
+let Historic = JSON.parse(localStorage.getItem('Historic'))
 
-let nowLocation
-let oldLocation
+
+let nowLocation = Historic.now !== false ? Historic.now : ''
+let oldLocation = Historic.old !== false ? Historic.old : ''
 
 export function visitedPages() {
-    
-    let Location = useLocation();
-    
-    if (Location.pathname !== nowLocation) {
-        
-        oldLocation = nowLocation = false ? '' : nowLocation
-        nowLocation = Location.pathname
-        
 
-        console.log('now:  ' + nowLocation);
-        console.log('old:  ' + oldLocation);
+    let Location = useLocation();
+
+    if (Location.pathname !== nowLocation) {
+
+        oldLocation = nowLocation
+        nowLocation = Location.pathname
+
+        localStorage.setItem('Historic', JSON.stringify(
+    
+            {
+                'now': nowLocation,
+                'old': oldLocation
+            }
+        ))
     }
+
+
+
+    // return "opa"
 }
 
 

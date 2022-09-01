@@ -6,6 +6,7 @@ import styles from './RegisterStyle.module.css';
 import { RiLock2Fill } from 'react-icons/ri';
 import { FaUserAlt } from 'react-icons/fa';
 
+
 // let validado = false
 // let inputs
 
@@ -78,70 +79,72 @@ const salvar = () => {
     // entrar()
 }
 
-const RegisterScreen = () => (
+const RegisterScreen = () => {
 
-    <div className={styles.body}>
+    return (
 
-        <div className={styles.banner}>
-            <h1>ElTEC</h1>
-        </div>
+        <div className={styles.body}>
 
-        <div className={styles.container}>
+            <div className={styles.banner}>
+                <h1>ElTEC</h1>
+            </div>
 
-            {/* <div className={styles.info}> */}
+            <div className={styles.container}>
 
-            <h1 className={styles.cadastro}>
-                CADASTRO
-            </h1>
+                {/* <div className={styles.info}> */}
 
-            <div className={styles.div_inputs}>
+                <h1 className={styles.cadastro}>
+                    CADASTRO
+                </h1>
 
-                <span className={styles.spanEmail}>
+                <div className={styles.div_inputs}>
+
+                    <span className={styles.spanEmail}>
 
                         <label className={styles.circuloUser}>
                             <FaUserAlt />
                         </label>
 
-                    <input
-                        type="text"
-                        name="email"
-                        onChange={changeInput}
-                        className={styles.email}
-                        placeholder="email"
-                    />
-                </span>
+                        <input
+                            type="text"
+                            name="email"
+                            onChange={changeInput}
+                            className={styles.email}
+                            placeholder="email"
+                        />
+                    </span>
 
-                <span className={styles.spanSenha}>
+                    <span className={styles.spanSenha}>
 
-                    <input
-                        type="password"
-                        name="senha"
-                        onChange={changeInput}
-                        className={styles.inputs}
-                        placeholder="senha"
+                        <input
+                            type="password"
+                            name="senha"
+                            onChange={changeInput}
+                            className={styles.inputs}
+                            placeholder="senha"
 
-                    />
+                        />
                         <label className={styles.circuloCadeado}>
                             <RiLock2Fill />
                         </label>
-                </span>
+                    </span>
 
-                <span className={styles.spanConfSenha}>
-                    <input
-                        type="password"
-                        name="confirmarSenha"
-                        onChange={changeInput}
-                        className={styles.inputs}
-                        id={styles.confirm}
-                        placeholder=" confirmar senha"
-                    />
+                    <span className={styles.spanConfSenha}>
+                        <input
+                            type="password"
+                            name="confirmarSenha"
+                            onChange={changeInput}
+                            className={styles.inputs}
+                            id={styles.confirm}
+                            placeholder=" confirmar senha"
+                        />
 
                         <label className={styles.circuloCadeado}>
                             <RiLock2Fill />
                         </label>
-                </span>
+                    </span>
 
-                {/* <span className={styles.spanConfSenha2}>
+                    {/* <span className={styles.spanConfSenha2}>
                     <input
                         type="password"
                         name="confirmarSenha"
@@ -156,36 +159,37 @@ const RegisterScreen = () => (
                         </label>
                 </span> */}
 
+                </div>
+
+                <br></br>
+
+                {/* <div className={styles.btn}> */}
+                <button
+                    className={styles.btn_entrar}
+                    onClick={salvar}
+                >
+                    ENTRAR
+                </button>
+                {/* </div> */}
+
+                <p>OU</p>
+
+                <p
+                // onClick={alerta}
+                >
+                    entrar com Google
+                </p>
+
+                {/* </div> */}
             </div>
 
-            <br></br>
-
-            {/* <div className={styles.btn}> */}
-            <button
-                className={styles.btn_entrar}
-                onClick={salvar}
-            >
-                ENTRAR
-            </button>
-            {/* </div> */}
-
-            <p>OU</p>
-
-            <p
-            // onClick={alerta}
-            >
-                entrar com Google
-            </p>
-
-            {/* </div> */}
-        </div>
-
-        {/* <div id='loading' className={styles2.loading}>
+            {/* <div id='loading' className={styles2.loading}>
         <AiFillThunderbolt className={styles2.loading_icon} id='foguetin'/>
     </div> */}
 
-    </div>
-);
+        </div>
+    )
+};
 
 export default RegisterScreen;
 

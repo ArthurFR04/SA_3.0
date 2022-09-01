@@ -9,27 +9,36 @@ let localLogin
 let letJson
 
 
+
+
 let log_entrar = async () => {
-    console.log(letJson);
-    // localStorage.setItem('Login', JSON.stringify(letJson.length = 3 ? letJson.data[0] : null ))          31/08
+    console.log(letJson.status);
+
+    localStorage.setItem('Login', JSON.stringify(letJson.status = 400 ? letJson.data[0] : 400 ))
 
     localLogin = JSON.parse(localStorage.getItem('Login'))
-console.log(localLogin);
 
-document.getElementById("loading").style.display = "none"
+    document.getElementById("loading").style.display = "none"
 
-    if (localLogin.email !== undefined) {
 
-                                                                console.log('local ' + localLogin.email);
-                                                                console.log(Login_values.value.email);
-
-        if (localLogin.email === Login_values.value.email) {                            // 12/08 
+    if (letJson.status == 400) {
+        alert(letJson.message)
+    }
+    else if (letJson.data[0].email !== undefined) {
+        if (letJson.data[0].email === Login_values.value.email) {
             alert('Login efetuado com sucesso')
-            window.location.href="./HomeScreen"
+
+            let Historic = JSON.parse(localStorage.getItem('Historic'))
+console.log(Historic);
+            window.location.href = Historic.old
+
         }
         else {
             alert('Ocorreu algum erro, por favor tente novamente')
         }
+    }
+    else {
+        console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
     }
 
 }

@@ -22,10 +22,6 @@ export let values2
 let LoginScreen = () => {
     visitedPages()
 
-    const salvar = () => {
-        // values2 = values
-       
-    }
 
    
 

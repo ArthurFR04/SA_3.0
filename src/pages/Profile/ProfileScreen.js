@@ -7,35 +7,42 @@ import Footer from "../../components/Footer/Footer"
 
 import styles from './ProfileStyle.module.css';
 
-
-const ProfileScreen = () => (
-    <div>
-        <Header />
+import { visitedPages } from "../../components/Router/Location"
 
 
-        <div className={styles.container}>
+const ProfileScreen = () => {
+    visitedPages()
 
-            {/* <div className='header_barra'>
+    return (
+
+        <div>
+            <Header />
+
+
+            <div className={styles.container}>
+
+                {/* <div className='header_barra'>
                 <img src={raio_azul} className='logo' alt="Logo do site"/>
             </div> */}
 
 
-            <div className={styles.corpo}>
-                <div className={styles.Textooo}>
-                    <h4>Perfil</h4>
-                    <p>Aqui é o Perfil sabe ?</p>
-            
-                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
-                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
-                    oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                <div className={styles.corpo}>
+                    <div className={styles.Textooo}>
+                        <h4>Perfil</h4>
+                        <p>Aqui é o Perfil sabe ?</p>
+
+                        oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                        oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                        oioioi <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> opa
+                    </div>
                 </div>
+
             </div>
 
+
+            <Footer component="Profile" />
         </div>
-
-
-        <Footer component="Profile"/>
-    </div>
-);
+    )
+};
 
 export default ProfileScreen;
