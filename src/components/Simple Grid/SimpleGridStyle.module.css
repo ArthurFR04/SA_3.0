@@ -1,0 +1,12 @@
+
+.grid {
+    width: 95%;
+    margin-top: 20px;
+
+}
+
+
+.grid div {
+    background-color: aqua;
+}
+

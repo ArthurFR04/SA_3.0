@@ -6,7 +6,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .carrossel {
@@ -15,6 +14,12 @@ body {
     justify-content: center;
 }
 
+.vitrine {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (min-width:1024px) {
     .container {

@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 import Carrossel from "../../components/Carousel/Carousel"
+import Grid from "../../components/Simple Grid/SimpleGrid"
 // import raioazul from '../../assets/cavalos.jpg'
 
 import styles from './HomeStyle.module.css';
@@ -29,7 +30,10 @@ const HomeScreen = () => {
                 </div>
 
 
-                <div className={styles.corpo}>
+                <div className={styles.vitrine}>
+
+                    <Grid />
+
                     <div className={styles.Textooo} >
                         <h4>Home</h4>
                         <p>Aqui é o Home sabe ?</p>
