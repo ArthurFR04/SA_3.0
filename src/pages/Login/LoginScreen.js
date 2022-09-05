@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { entrar } from "./LoginLogic"
 import { NavLink } from 'react-router-dom';
 
 import styles from './LoginStyle.module.css'
 import styles2 from './LoginStyleAnimation.module.css'
 
-import { RiLock2Fill } from 'react-icons/ri';
-import { FaUserAlt } from 'react-icons/fa';
+// import { RiLock2Fill } from 'react-icons/ri';
+// import { FaUserAlt } from 'react-icons/fa';
 import { AiFillThunderbolt } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
 

@@ -6,8 +6,7 @@ import {
     useLocation
 } from "react-router-dom";
 
-let Historic = JSON.parse(localStorage.getItem('Historic'))
-
+let Historic = JSON.parse(localStorage.getItem('Historic')) !== null ? {'now': '','old': ''} : JSON.parse(localStorage.getItem('Historic'))
 
 let nowLocation = Historic.now !== false ? Historic.now : ''
 let oldLocation = Historic.old !== false ? Historic.old : ''

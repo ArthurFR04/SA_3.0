@@ -21,7 +21,7 @@ let log_entrar = async () => {
     document.getElementById("loading").style.display = "none"
 
 
-    if (letJson.status == 400) {
+    if (letJson.status === 400) {
         alert(letJson.message)
     }
     else if (letJson.data[0].email !== undefined) {

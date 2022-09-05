@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { 
+    // useRef, useState 
+} from 'react';
 import Header from '../../components/Header/Header';
 import TextEditor from '../../components/Text Editor/TextEditor';
 import Footer from '../../components/Footer/Footer';
@@ -12,18 +14,18 @@ const NewPostScreen = () => {
     visitedPages()
 
 
-    const editor = useRef(null)
-    const [content, setContent] = useState('')
+    // const editor = useRef(null)
+    // const [content, setContent] = useState('')
 
-    const config = {
-        readonly: false,
-        height: 400,
-    }
+    // const config = {
+    //     readonly: false,
+    //     height: 400,
+    // }
 
-    const handleUptade = (event) => {
-        const editorContent = event.target.value
-        setContent(editorContent)
-    }
+    // const handleUptade = (event) => {
+    //     const editorContent = event.target.value
+    //     setContent(editorContent)
+    // }
 
     return (
         <div className={styles.tela}>

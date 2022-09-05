@@ -2,19 +2,77 @@ body {
     margin: 0;
 }
 
-
 .container {
-    width:93vw;
-    margin-left: 5vw;
+    width: 95vw;
+    margin-left: 4vw;
+}
+
+.topo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 22vh;  /* maior que a height da div: capa */
+}
+
+
+.capa {
+    width: 100%;
+    height: 15vh;
+    background-color: #2399AA;
+}
+
+.fotoPerfil {
+    position: absolute;
+    bottom: 0;
+    
+    width: 15vh; /* igual ao tamanho das divs: capa e infosUser */
+    height: 30vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /* background-color: aqua; */
+    
+}
+
+.perfil {
+    width: 18vh; 
+    height: 18vh;
+    border-radius: 9vh;
+}
+
+
+.infosUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nome , .nick{
+    display: flex;
+    justify-content: center;
+    /* font-size: 30px; */
+    margin: 0;
+}
+
+.nick {
+    color: gray;
+}
+
+.biografia {
+    text-align: center;
+    width: 90%;
+    margin-top: 20px;
 }
 
 
 
 
-
-@media (min-width:1024px) {
+@media (max-width:1024px) {
     .container {
-        width:93vw;
-        margin-left: 5vw;
+        width: 100vw;
+        margin-left: 0vw;
     }
 }

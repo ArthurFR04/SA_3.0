@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-// import { Login_user } from "../../Context"
+
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 import Carrossel from "../../components/Carousel/Carousel"
 import Grid from "../../components/Simple Grid/SimpleGrid"
-// import raioazul from '../../assets/cavalos.jpg'
+
 
 import styles from './HomeStyle.module.css';
+import '../../assets/Styles/ScrollBar.css'
 
 import { visitedPages } from "../../components/Router/Location"
 

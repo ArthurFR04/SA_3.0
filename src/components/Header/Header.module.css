@@ -14,6 +14,15 @@
     color: white;
 }
 
+.logo {
+    position: absolute;
+    left: 0;
+    width: 8vh;
+    height: 8vh;
+    background-color: aqua;
+    /* margin-top: 19vh; */
+}
+
 .eltec {
     font-size: 2.6rem;
 }

@@ -1,7 +1,15 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
-import { useMediaQuery } from '@mantine/hooks';
-import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
+// import { useMediaQuery } from '@mantine/hooks';
+import { 
+  createStyles, 
+  Paper, 
+  Text, 
+  Title, 
+  Button, 
+  // useMantineTheme 
+
+} from '@mantine/core';
 
 import { RiArrowDropLeftLine , RiArrowDropRightLine } from "react-icons/ri";
 
@@ -122,7 +130,7 @@ const data = [
 ];
 
 const Carrossel = () => {
-  const theme = useMantineTheme();
+  // const theme = useMantineTheme();
   // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>
