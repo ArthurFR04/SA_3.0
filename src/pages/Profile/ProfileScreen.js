@@ -5,11 +5,11 @@ import React from 'react';
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
-import styles from './ProfileStyle.module.css';
-
 import { visitedPages } from "../../components/Router/Location"
 
 import Perfil from '../../assets/Testes/perfil.png'
+
+import styles from './ProfileStyle.module.css';
 
 const ProfileScreen = () => {
     visitedPages()
@@ -17,7 +17,7 @@ const ProfileScreen = () => {
     return (
 
         <div>
-            <Header />
+            <Header component="Profile" />
 
 
             <div className={styles.container}>

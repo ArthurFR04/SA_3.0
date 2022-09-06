@@ -31,7 +31,7 @@ body {
     
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     /* background-color: aqua; */
     
 }
@@ -40,6 +40,9 @@ body {
     width: 18vh; 
     height: 18vh;
     border-radius: 9vh;
+    margin-bottom:5px;
+    box-shadow: 3px 3px 4px #606060;
+
 }
 
 
@@ -62,9 +65,19 @@ body {
 }
 
 .biografia {
+    display: flex;
+    align-items: center;
     text-align: center;
-    width: 90%;
+    min-width: 30%;
+    max-width: 70%;
+    min-height: 50px;
+
     margin-top: 20px;
+    padding: 10px;
+
+    background-color: #E1E1E1;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #BFBDBD;
 }
 
 

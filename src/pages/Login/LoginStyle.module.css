@@ -47,12 +47,13 @@ body {
     height: 100vh;
     background-color: #2399AA;
     align-items: center;
-
+    background-image: url(../../assets/Banner_login.png);
+    background-size: 141%;
 }
 
 .banner h1 {
     display: flex;
-    color: #2E2E2E;
+    color: #ffffff;
     font-size: 50px;
     margin-top: 20px;
 }

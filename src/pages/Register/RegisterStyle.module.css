@@ -48,12 +48,13 @@ body {
     height: 100vh;
     background-color: #2E2E2E;
     align-items: center;
-
+    background-image: url(../../assets/Banner_cadastro.png);
+    background-size: 141%;
 }
 
 .banner h1 {
     display: flex;
-    color: #2399AA;
+    color: #ffffff;
     font-size: 50px;
     margin-top: 20px;
 }

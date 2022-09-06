@@ -6,14 +6,17 @@ import {
     useLocation
 } from "react-router-dom";
 
-let Historic = JSON.parse(localStorage.getItem('Historic')) !== null ? {'now': '','old': ''} : JSON.parse(localStorage.getItem('Historic'))
 
-let nowLocation = Historic.now !== false ? Historic.now : ''
-let oldLocation = Historic.old !== false ? Historic.old : ''
+let Historic = JSON.parse(localStorage.getItem('Historic')) === null ? {'now': '','old': ''} : JSON.parse(localStorage.getItem('Historic'))
+
+
+let nowLocation = Historic.now === null ? Historic.now : ''
+let oldLocation = Historic.old !== null ? Historic.old : ''
 
 export function visitedPages() {
 
-    let Location = useLocation();
+    let Location = Router               // fiz somente para sumir com o warn que aparecia no console
+    Location = useLocation();
 
     if (Location.pathname !== nowLocation) {
 
@@ -28,12 +31,7 @@ export function visitedPages() {
             }
         ))
     }
-
-
-
-    // return "opa"
 }
-
 
 
 

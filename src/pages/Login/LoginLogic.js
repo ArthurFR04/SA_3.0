@@ -4,7 +4,7 @@ import { Login_values } from "../../Context"
 
 let validado = false;
 
-let localLogin
+// let localLogin
 
 let letJson
 
@@ -14,9 +14,9 @@ let letJson
 let log_entrar = async () => {
     console.log(letJson.status);
 
-    localStorage.setItem('Login', JSON.stringify(letJson.status = 400 ? letJson.data[0] : 400 ))
+    localStorage.setItem('Login', JSON.stringify(letJson.status === 400 ? 400 : letJson.data[0] ))
 
-    localLogin = JSON.parse(localStorage.getItem('Login'))
+    // localLogin = JSON.parse(localStorage.getItem('Login'))
 
     document.getElementById("loading").style.display = "none"
 

@@ -16,17 +16,52 @@
 
 .logo {
     position: absolute;
-    left: 0;
-    width: 8vh;
-    height: 8vh;
-    background-color: aqua;
-    /* margin-top: 19vh; */
+    left: 10px;
+    width: 7vh;
+    height: 7vh;
 }
 
 .eltec {
     font-size: 2.6rem;
 }
 
-.azul {
-    background-color: '#2399AA';
+.direita {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    right: 0;    
+    width: 40%;
+    height: 100%;
+}
+
+.azul_1 {
+    width: 8%;
+    height: 100%;
+    background-color: #2399AA;
+    margin-right: 60px;
+}
+
+.azul_1 {
+
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    -o-transform: skew(-45deg, 0deg);
+    -ms-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
+}
+
+.azul_2 {
+    width: 60%;
+    height: 100%;
+    background-color: #2399AA;
+    box-shadow: 300px 0px#2399AA
+}
+
+.azul_2 {
+
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    -o-transform: skew(-45deg, 0deg);
+    -ms-transform: skew(-45deg, 0deg);
+    transform: skew(-45deg, 0deg);
 }
