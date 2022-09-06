@@ -25,6 +25,9 @@
     font-size: 2.6rem;
 }
 
+
+@media (min-width:1024px) {
+    
 .direita {
     z-index: 2;
     position: absolute;
@@ -54,14 +57,15 @@
     width: 60%;
     height: 100%;
     background-color: #2399AA;
-    box-shadow: 300px 0px#2399AA
 }
 
 .azul_2 {
-
+    
     -moz-transform: skew(-45deg, 0deg);
     -webkit-transform: skew(-45deg, 0deg);
     -o-transform: skew(-45deg, 0deg);
     -ms-transform: skew(-45deg, 0deg);
     transform: skew(-45deg, 0deg);
+    box-shadow: 200px 0px#2399AA
+}
 }
