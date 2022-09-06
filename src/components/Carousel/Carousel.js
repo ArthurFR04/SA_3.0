@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
 // import { useMediaQuery } from '@mantine/hooks';
 import { 
@@ -65,6 +68,7 @@ const buttons = createStyles((_theme, _params, getRef) => ({
 
 
 function Card({ image, title, category }) {
+
   const { classes } = useStyles();
 
   return (
@@ -139,11 +143,13 @@ const Carrossel = () => {
   ));
   const { classes } = buttons();
 
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+
   return (
     <Carousel
     //   slideSize="50%"
     breakpoints={[
-      { maxWidth: 1024, slideSize: '100%' },
+      { maxWidth: 1024, slideSize: '100%' , textSize: '90%'},
       { minWidth: 1024, slideSize: '100%' },
     ]}
       slideSize="100%" 
@@ -153,10 +159,14 @@ const Carrossel = () => {
       align="center"
       // slidesToScroll={mobile ? 1 : 2}
       loop 
-      // withIndicators
+      withIndicators
       controlsOffset="xl" 
       previousControlIcon={<RiArrowDropLeftLine size={25} />}
       nextControlIcon={<RiArrowDropRightLine size={25} />}
+
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
       styles={{
         indicator: {
           width: 12,
