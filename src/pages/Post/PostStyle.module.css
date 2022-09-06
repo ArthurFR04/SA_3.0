@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin-left: 4vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.topo{
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    align-items: center;
+    position: relative;
+}
+
+.heartIcon{
+    width: 5%;
+    height: 5%;
+    margin-left: 2%;
+    color: #2399AA;
+    /* position: absolute;
+    right: 0; */
+}
+
+.conteudo{
+    max-width: 90%;
+}
+
+h3{
+    
+    font-weight:bold;
+}
