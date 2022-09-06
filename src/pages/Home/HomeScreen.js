@@ -10,7 +10,7 @@ import Grid from "../../components/Simple Grid/SimpleGrid"
 
 
 import styles from './HomeStyle.module.css';
-import '../../assets/Styles/ScrollBar.css'
+import '../../assets/Styles/Geral.css'
 
 import { visitedPages } from "../../components/Router/Location"
 
@@ -33,7 +33,8 @@ const HomeScreen = () => {
 
                 <div className={styles.vitrine}>
 
-                    <Grid />
+                    <Grid component="Favorites" />
+
 
                     <div className={styles.Textooo} >
                         <h4>Home</h4>

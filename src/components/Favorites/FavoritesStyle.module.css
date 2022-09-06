@@ -1,0 +1,34 @@
+.favoritas {
+    width: 90%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    background-color: #fff;
+    box-shadow: 3px 3px 5px #BFBDBD;
+
+}
+
+.titleFavorites {
+    font-size: 1.5rem;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.heartIcon {
+    font-size: 30px;
+    margin-left: 5px;
+    color: #2399AA;
+}

@@ -1,6 +1,4 @@
-body {
-    margin: 0;
-}
+
 
 .container {
     width: 95vw;
@@ -36,12 +34,12 @@ body {
     
 }
 
-.perfil {
+.fotoPerfil img {
     width: 18vh; 
     height: 18vh;
     border-radius: 9vh;
     margin-bottom:5px;
-    box-shadow: 3px 3px 4px #606060;
+    box-shadow: 1px 4px 5px #606060;
 
 }
 
@@ -72,10 +70,10 @@ body {
     max-width: 70%;
     min-height: 50px;
 
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
 
-    background-color: #E1E1E1;
+    background-color: #e4e4e4;
     border-radius: 20px;
     box-shadow: 3px 3px 5px #BFBDBD;
 }
