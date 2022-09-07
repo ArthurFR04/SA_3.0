@@ -13,7 +13,7 @@ let Historic = JSON.parse(localStorage.getItem('Historic')) === null ? {'now': '
 let nowLocation = Historic.now === null ? Historic.now : ''
 let oldLocation = Historic.old !== null ? Historic.old : ''
 
-export function visitedPages() {
+export function VisitedPages() {
 
     let Location = Router               // fiz somente para sumir com o warn que aparecia no console
     Location = useLocation();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import { visitedPages } from "../../components/Router/Location"
+import { VisitedPages } from "../../components/Router/Location"
 
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
@@ -13,7 +13,7 @@ import styles from "./PostStyle.module.css"
 {/* <AiFillHeart /> */ }
 
 let PostScreen = () => {
-    visitedPages()
+    VisitedPages()
 
     return (
         <div>

@@ -12,12 +12,12 @@ import Grid from "../../components/Simple Grid/SimpleGrid"
 import styles from './HomeStyle.module.css';
 import '../../assets/Styles/Geral.css'
 
-import { visitedPages } from "../../components/Router/Location"
+import { VisitedPages } from "../../components/Router/Location"
 
 
 const HomeScreen = () => {
 
-    visitedPages()
+    VisitedPages()
 
     return (
         <div className={styles.home}>

@@ -6,14 +6,14 @@ import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import Favorites from '../../components/Favorites/Favorites';
 
-import { visitedPages } from "../../components/Router/Location"
+import { VisitedPages } from "../../components/Router/Location"
 
 import Perfil from '../../assets/Testes/perfil.png'                                                 //excluir
 
 import styles from './ProfileStyle.module.css';
 
 const ProfileScreen = () => {
-    visitedPages()
+    VisitedPages()
 
     return (
 

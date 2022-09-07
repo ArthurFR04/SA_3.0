@@ -7,11 +7,11 @@ import Footer from '../../components/Footer/Footer';
 
 import styles from'./NewPostStyle.module.css'
 
-import { visitedPages } from "../../components/Router/Location"
+import { VisitedPages } from "../../components/Router/Location"
 
 
 const NewPostScreen = () => {
-    visitedPages()
+    VisitedPages()
 
 
     // const editor = useRef(null)

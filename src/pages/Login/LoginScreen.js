@@ -10,8 +10,6 @@ import styles2 from './LoginStyleAnimation.module.css'
 import { AiFillThunderbolt } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
 
-import { visitedPages } from "../../components/Router/Location"
-
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
 export let values2
@@ -19,7 +17,7 @@ export let values2
 
 
 let LoginScreen = () => {
-    visitedPages()
+
 
 
    
