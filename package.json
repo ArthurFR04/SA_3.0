@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mantine/carousel": "^5.2.0",
-    "@mantine/form": "^5.2.4",
-    "@mantine/notifications": "^5.2.4",
+    "@mantine/carousel": "^5.2.6",
+    "@mantine/core": "^5.2.6",
+    "@mantine/form": "^5.2.6",
+    "@mantine/notifications": "^5.2.6",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",

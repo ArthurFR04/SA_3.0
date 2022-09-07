@@ -1,8 +1,29 @@
+/* @import url('../../assets/fonts/COMFORTAA-LIGHT'); */
+@font-face {
+    font-family: 'comfortaa-light';
+    src: url('../../assets/fonts/COMFORTAA-LIGHT.TTF');
+}
+
+@font-face {
+    font-family: 'comfortaa-regular';
+    src: url('../../assets/fonts/COMFORTAA-REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'comfortaa-bold';
+    src: url('../../assets/fonts/COMFORTAA-BOLD.TTF');
+}
+
+
 body {
     margin: 0;
     background-color: #F3F3F3;
+    font-family: 'comfortaa-bold';
 }
 
+#root {
+    height:100%
+}
 
 ::-webkit-scrollbar {
     width: 1vw;

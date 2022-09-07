@@ -2,6 +2,7 @@
 
 .container {
     width: 95vw;
+    min-height: 84vh;
     margin-left: 4vw;
 }
 
@@ -66,8 +67,9 @@
     display: flex;
     align-items: center;
     text-align: center;
+    font-size: 20px;
     min-width: 30%;
-    max-width: 70%;
+    max-width: 80%;
     min-height: 50px;
 
     margin-top: 10px;

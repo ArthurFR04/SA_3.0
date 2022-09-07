@@ -17,7 +17,8 @@ const ProfileScreen = () => {
 
     return (
 
-        <div>
+        <div className={styles.profileScreen}>
+
             <Header component="Profile" />
 
 
@@ -40,7 +41,7 @@ const ProfileScreen = () => {
                         <Favorites />
 
                     </div>
-
+iuyiyui
 
             </div>
 
