@@ -38,7 +38,7 @@ console.log(Historic);
         }
     }
     else {
-        console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+        alert('Ocorreu algum erro, por favor atualize a página e tente novamente')
     }
 
 }

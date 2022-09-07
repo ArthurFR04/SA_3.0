@@ -5,10 +5,9 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  // Navigate
 } from "react-router-dom";
 
-// import App from './App';
+
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
@@ -22,7 +21,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <div  className='topzudoPah'>
+  <div>
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={<Navigate replace to="/HomeScreen" />} /> */}

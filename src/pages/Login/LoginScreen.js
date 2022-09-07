@@ -3,12 +3,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './LoginStyle.module.css'
-import styles2 from './LoginStyleAnimation.module.css'
 
 // import { RiLock2Fill } from 'react-icons/ri';
 // import { FaUserAlt } from 'react-icons/fa';
-import { AiFillThunderbolt } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
+
+import LoadingDiv from '../../components/Loading/LoadingDiv'
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
@@ -17,10 +17,6 @@ export let values2
 
 
 let LoginScreen = () => {
-
-
-
-   
 
     return (
 
@@ -43,7 +39,18 @@ let LoginScreen = () => {
                 <div className={styles.div_inputs}>
 
                         <LoginForm />
-                    {/* <span className={styles.spanEmail}>
+                   
+                </div>
+            </div>
+
+            <LoadingDiv />
+        </div>
+    )
+};
+
+export default LoginScreen;
+
+ {/* <span className={styles.spanEmail}>
 
                         <div className={styles.circuloUser}>
                             <FaUserAlt />
@@ -71,18 +78,3 @@ let LoginScreen = () => {
                             <RiLock2Fill />
                         </label>
                     </span> */}
-
-                </div>
-
-
-            </div>
-
-            <div id='loading' className={styles2.loading}>
-                <AiFillThunderbolt className={styles2.loading_icon} id='foguetin' />
-            </div>
-
-        </div>
-    )
-};
-
-export default LoginScreen;

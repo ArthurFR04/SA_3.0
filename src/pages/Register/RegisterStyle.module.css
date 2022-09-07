@@ -59,6 +59,15 @@ body {
     margin-top: 20px;
 }
 
+.arrowBack {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    padding: 10px;
+    font-size: 35px;
+    color: #fff;
+}
 
 .cadastro {
     display: flex;
