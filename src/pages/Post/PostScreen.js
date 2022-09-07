@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import { VisitedPages } from "../../components/Router/Location"
 
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import {  // AiFillHeart,    
+AiOutlineHeart } from "react-icons/ai";
 
 import styles from "./PostStyle.module.css"
 
 
-{/* <AiFillHeart /> */ }
+/* <AiFillHeart /> */ 
 
 let PostScreen = () => {
     VisitedPages()

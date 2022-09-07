@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
 
-// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import './EditorStyle.css'
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+// import './EditorStyle.css'
 import draftToHtml from "draftjs-to-html";
+
+import styles from './TextEditorStyle.module.css'
 
 export default class TextEditor extends Component {
   state = {
@@ -21,7 +23,7 @@ export default class TextEditor extends Component {
     const { editorState } = this.state;
     console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())));
     return (
-      <div className="editor-div">
+      <div className={styles.editor_div}>
         <Editor
           editorState={editorState}
           toolbarClassName="toolbarClassName"
