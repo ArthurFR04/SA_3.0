@@ -46,9 +46,11 @@
     
     .footer {
 
+        /* position: fixed; */
+        position: fixed;
+        left: 0;
+        bottom: 0;
         flex-direction: column;
-
-
         height: 92vh;
         width: 4vw;
     }
