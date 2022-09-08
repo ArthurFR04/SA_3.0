@@ -8,10 +8,44 @@ import Favorites from '../../components/Favorites/Favorites';
 
 import styles from './ProfileEditStyle.module.css';
 
-import Perfil from '../../assets/Testes/perfil.png'                                                  //excluir
 import ImageInput from '../../components/Image Input/ImageInput';
 
+import swal from 'sweetalert';
+
 let Login
+let letJson
+
+
+let updateLocal = () => {
+    let Local = JSON.parse(localStorage.getItem('Login'))
+    let newInfos = letJson.body
+
+    let infos = {
+        biografia:  newInfos.biografia === undefined ? Local.biografia : newInfos.biografia ,
+        email: Local.email ,
+        foto_perfil: newInfos.foto_perfil === undefined ? Local.foto_perfil : newInfos.foto_perfil ,
+        id: Local.id ,
+        permissao: Local.permissao ,
+        nome: newInfos.nome === undefined ? Local.nome : newInfos.nome ,
+        senha: newInfos.senha === undefined ? Local.senha : newInfos.senha ,
+        sobrenome: newInfos.sobrenome === undefined ? Local.sobrenome : newInfos.sobrenome ,
+    }
+
+    localStorage.setItem('Login', JSON.stringify( infos ))
+
+    swal ({
+        title: letJson.message,
+        icon: 'success',
+    }).then((value) => {
+
+        switch (value) {
+            default: {
+                window.location.href = '/Profile'
+            }
+        }
+    })
+}
+
 
 export let Salvar = () => {
     fetch(`https://sa-3-back.herokuapp.com/api/usuario/${Login.id}`, {
@@ -31,8 +65,9 @@ export let Salvar = () => {
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
-            // letJson = json
+            letJson = json
             // log_entrar()
+            updateLocal()   
         })
 }
 
