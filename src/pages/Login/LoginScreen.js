@@ -9,10 +9,7 @@ import '../../assets/Styles/SweetAlert.css'
 // import { FaUserAlt } from 'react-icons/fa';
 import { TiArrowBack } from "react-icons/ti";
 
-<<<<<<< HEAD
-=======
 import LoadingDiv from '../../components/Loading/LoadingDiv'
->>>>>>> ddec018264a2eb8af2d3fc7fa7c9a13b6293d0e5
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
@@ -21,12 +18,7 @@ export let values2
 
 
 let LoginScreen = () => {
-<<<<<<< HEAD
 
-
-   
-=======
->>>>>>> ddec018264a2eb8af2d3fc7fa7c9a13b6293d0e5
 
     return (
 
