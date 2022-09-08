@@ -1,12 +1,13 @@
 body {
     margin: 0;
+    /* background-color: white; */
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 95vw;
-    margin-left: 4vw;
+    width: 90vw;
+    margin-left: 8vw;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -40,7 +41,66 @@ h1{
     max-width: 90%;
 }
 
+
 h3{
-    
+    font-size:x-large;
     font-weight:bold;
+}
+
+img{
+    width: 50%;
+    height: auto;
+    box-shadow: 2px 5px 8px #888888;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.comentTopo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconAdd{
+    color: #2399AA;
+    width: 4%;
+    height: auto;
+    margin-left: 2%;
+    margin-bottom: 0.5%;
+/* 
+    width: 5%;
+    height: 5%;
+    margin-left: 2%;
+    color: #2399AA; */
+}
+
+label{
+    font-size: 2.5rem;
+}
+
+.comentBlock{
+    width: 100%;
+    min-height: 18rem;
+    background-color: white;
+    margin-top: 8%;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 2px 5px 8px #9b9b9b;
 }
