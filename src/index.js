@@ -5,15 +5,15 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  // Navigate
 } from "react-router-dom";
 
-// import App from './App';
+
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
 import ProfileScreen from './pages/Profile/ProfileScreen';
+import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
 import SearchScreen from './pages/Search/SearchScreen';
 import PostScreen from './pages/Post/PostScreen';
 
@@ -32,6 +32,7 @@ root.render(
         <Route path="NewPost" element={<NewPostScreen />} />
         <Route path="Post" element={<PostScreen />} />
         <Route path="Profile" element={<ProfileScreen />} />
+        <Route path="EditProfile" element={<ProfileEdit />} />
         <Route path="Search" element={<SearchScreen />} />
       </Routes>
     </BrowserRouter>

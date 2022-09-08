@@ -63,6 +63,10 @@
     color: #fff;
 }
 
+.labelErro {
+    font-size: 20px;
+}
+
 .btn_entrar {
     display: flex;
     justify-content: center;

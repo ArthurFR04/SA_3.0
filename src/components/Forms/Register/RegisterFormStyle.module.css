@@ -1,0 +1,121 @@
+
+.corpoForm {
+    width: 100%;
+}
+
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.nome , .email , .senha , .confSenha{
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.senha div , .confSenha div {
+    border: none;
+    border-radius: 8px;
+    background-color: #2E2E2E;
+    box-shadow: 1px 1px 4px #424242;
+
+}
+
+.senha div div div {
+    box-shadow: none;
+}
+
+
+
+.nome input , .email input , .senha input , .senha button , .confSenha input , .confSenha button{
+    width: 100%;
+    margin-top: 45px;
+
+    background-color: #2E2E2E;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+
+
+
+.nome input::placeholder , .email input::placeholder , .senha input::placeholder , .confSenha input::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+.nome input:focus , .email input:focus , .senha input:focus , .confSenha input:focus {
+    border: none;
+    outline: 0;
+}
+
+.nome input , .email input {
+    margin-top:0;
+}
+
+.senha input , .confSenha input{
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.senha button , .confSenha button {
+    margin-top: 0;
+    z-index: 2;
+}
+
+.senha button:hover , .confSenha button:hover {
+    background-color: #2E2E2E;
+    color: #fff;
+}
+
+.nome input , .email input {
+    box-shadow: 2px 2px 6px #424242;
+}
+
+.labelErro {
+    font-size: 20px;
+    color: red;
+}
+
+.btn_cadastrar {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    Height: 40px;
+    
+    border: none;
+    border-radius: 17px;
+    margin-top: 50px;
+
+    background-color: #fff;
+    color: #2E2E2E;
+    font-size: 20px;
+}
+
+.btn_cadastrar:hover {
+    background-color: #272727;
+    color: #ffffff;
+    transition-duration: 0.8s;
+}
+
+.btn_cadastrar span {
+    width: 100%;
+}
+
+
+
+
+
+@media (max-width:1024px) {
+
+    .nome , .email , .senha , .confSenha{
+        width: 90%;
+    }
+
+}

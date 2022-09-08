@@ -1,4 +1,5 @@
-.footer , .footer a{
+.footer,
+.footer a {
 
     display: flex;
     flex-direction: row;
@@ -14,7 +15,7 @@
 }
 
 
-    .footer a {
+.footer a {
     width: 33.33%;
 
     color: #2399AA;
@@ -27,6 +28,26 @@
 
     font-size: 2.1rem;
     /* box-shadow: 0px 0px 2px 0.5px rgba(255, 255, 255, 0.144); */
+}
+
+.footerEditProfile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    color: #2399AA;
+}
+
+.check {
+    margin-left: 20px;
+}
+
+.footerEditProfile:hover {
+
+    background-color: #252525;
 }
 
 .footerSearch {
@@ -42,8 +63,8 @@
 
 
 
-@media (min-width:1024px){
-    
+@media (min-width:1024px) {
+
     .footer {
 
         /* position: fixed; */
@@ -63,4 +84,18 @@
     .footerProfile {
         box-shadow: 0px 0px 2px 0.5px rgba(255, 255, 255, 0.144);
     }
+
+    .footerEditProfile {
+        height: 92vh;
+        width: 4vw;
+        transform: rotate(-90deg);
+    }
+    .footerEditProfile:hover {
+        background-color: #25252500;
+    }
+    .check {
+        position: absolute;
+        right: -100px;
+    }
+
 }

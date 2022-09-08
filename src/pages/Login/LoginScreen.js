@@ -3,13 +3,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './LoginStyle.module.css'
-import styles2 from './LoginStyleAnimation.module.css'
+import '../../assets/Styles/SweetAlert.css'
 
 // import { RiLock2Fill } from 'react-icons/ri';
 // import { FaUserAlt } from 'react-icons/fa';
-import { AiFillThunderbolt } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
 
+<<<<<<< HEAD
+=======
+import LoadingDiv from '../../components/Loading/LoadingDiv'
+>>>>>>> ddec018264a2eb8af2d3fc7fa7c9a13b6293d0e5
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
@@ -18,9 +21,12 @@ export let values2
 
 
 let LoginScreen = () => {
+<<<<<<< HEAD
 
 
    
+=======
+>>>>>>> ddec018264a2eb8af2d3fc7fa7c9a13b6293d0e5
 
     return (
 
@@ -42,8 +48,22 @@ let LoginScreen = () => {
 
                 <div className={styles.div_inputs}>
 
-                        <LoginForm />
-                    {/* <span className={styles.spanEmail}>
+                    <LoginForm />
+
+                    <NavLink to="/Register" className={styles.linkCadastro}>
+                        <p>Não possui uma conta?</p>
+                    </NavLink>
+                </div>
+            </div>
+
+            <LoadingDiv />
+        </div>
+    )
+};
+
+export default LoginScreen;
+
+/* <span className={styles.spanEmail}>
 
                         <div className={styles.circuloUser}>
                             <FaUserAlt />
@@ -70,19 +90,4 @@ let LoginScreen = () => {
                         <label className={styles.circuloCadeado}>
                             <RiLock2Fill />
                         </label>
-                    </span> */}
-
-                </div>
-
-
-            </div>
-
-            <div id='loading' className={styles2.loading}>
-                <AiFillThunderbolt className={styles2.loading_icon} id='foguetin' />
-            </div>
-
-        </div>
-    )
-};
-
-export default LoginScreen;
+                    </span> */
