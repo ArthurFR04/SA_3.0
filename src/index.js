@@ -13,7 +13,7 @@ import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
 import ProfileScreen from './pages/Profile/ProfileScreen';
-import ProfileEdit from './pages/Profile/ProfileEdit';
+import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
 import SearchScreen from './pages/Search/SearchScreen';
 import PostScreen from './pages/Post/PostScreen';
 
