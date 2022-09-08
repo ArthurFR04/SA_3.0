@@ -6,6 +6,8 @@ import { TextInput, PasswordInput, Button } from '@mantine/core';
 import { cadastrar } from "../../../pages/Register/RegisterLogic"
 
 import styles from './RegisterFormStyle.module.css'
+import '../../../assets/Styles/Geral.css'
+
 
 let RegisterForm = () => {
     const form = useForm({
