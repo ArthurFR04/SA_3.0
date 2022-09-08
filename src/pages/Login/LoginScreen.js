@@ -3,6 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './LoginStyle.module.css'
+import '../../assets/Styles/SweetAlert.css'
 
 // import { RiLock2Fill } from 'react-icons/ri';
 // import { FaUserAlt } from 'react-icons/fa';
@@ -38,8 +39,11 @@ let LoginScreen = () => {
 
                 <div className={styles.div_inputs}>
 
-                        <LoginForm />
-                   
+                    <LoginForm />
+
+                    <NavLink to="/Register" className={styles.linkCadastro}>
+                        <p>Não possui uma conta?</p>
+                    </NavLink>
                 </div>
             </div>
 
@@ -50,7 +54,7 @@ let LoginScreen = () => {
 
 export default LoginScreen;
 
- {/* <span className={styles.spanEmail}>
+/* <span className={styles.spanEmail}>
 
                         <div className={styles.circuloUser}>
                             <FaUserAlt />
@@ -77,4 +81,4 @@ export default LoginScreen;
                         <label className={styles.circuloCadeado}>
                             <RiLock2Fill />
                         </label>
-                    </span> */}
+                    </span> */

@@ -10,8 +10,8 @@ import {
 let Historic = JSON.parse(localStorage.getItem('Historic')) === null ? {'now': '','old': ''} : JSON.parse(localStorage.getItem('Historic'))
 
 
-let nowLocation = Historic.now === null ? Historic.now : ''
-let oldLocation = Historic.old !== null ? Historic.old : ''
+let nowLocation = Historic.now === null ? '' : Historic.now 
+let oldLocation = Historic.old !== null ? '' : Historic.old
 
 export function VisitedPages() {
 

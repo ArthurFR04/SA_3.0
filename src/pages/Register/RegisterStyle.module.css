@@ -14,8 +14,10 @@
 
 body {
     margin: 0;
-    font-family: 'comfortaa-bold'
+    font-family: 'comfortaa-bold';
 }
+
+
 
 .container , .banner{
     display: flex;
@@ -23,7 +25,7 @@ body {
     position: absolute;
     right: 0;
     width: 64vw;
-    height: 100vh;
+    min-height: 100vh;
     flex: 1;
     background-color: #2399AA;
     color: #fff;
@@ -32,24 +34,14 @@ body {
 
 }
 
-.info {
-    display:flex;
-    flex-direction: column;
-    position: relative;
-    /* padding-top: 20vh; */
-    width: 100%
-  
-}
-
 .banner {
     position: absolute;
     left: 0;
     width: 36vw;
-    height: 100vh;
     background-color: #2E2E2E;
-    align-items: center;
     background-image: url(../../assets/Banner_cadastro.png);
     background-size: 141%;
+    box-shadow: 0px 100px #2E2E2E
 }
 
 .banner h1 {
@@ -84,106 +76,8 @@ body {
     width: 90%;
 }
 
-.div_inputs span {
-    width: 50%;
-}
-
-.spanEmail {
-    margin-top: 30px
-}
-
-.spanEmail , .spanSenha , .spanConfSenha{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-
-    margin-top: 45px;
-    position: relative;
-}
-
-.inputs , .email {
-    width: 92.5%;
-    height: 2.5rem;
-    border-radius: 6px;
-    border: none;
-    padding: 0;
-
-    margin-left: 4px;
-    box-shadow: -4px 0px #2E2E2E;
-    
-    background-color: #2E2E2E;
-    color: #fff;
-    font-size: 20px;
-}
-
-.inputs::placeholder , .email::placeholder{
-    color: #fff;
-    font-size: 20px;
-    margin-left: 20px;
-    padding: 15px;
-}
-
-.inputs:focus , .email:focus{
-    /* box-shadow: -4px 0px #2E2E2E; */
-    outline: 0;
-}
-
-
-.circuloCadeado , .circuloUser{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    right:0px;
-
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.7rem;
-
-    background-color: rgb(255, 250, 250);
-    color: #2E2E2E;
-    border-radius: 100%;
-}
-
-
-.email {
-    position: absolute;
-    right: 0;
-
-    width: 89.5%;
-    margin-left: 3px;
-    
-    box-shadow: -20px 0px #2E2E2E;
-}
-
-.circuloUser {
-    z-index: 1;
-    left: 0;
-}
-
-
-.btn_entrar {
-    width: 150px;
-    Height: 40px;
-
-    border: none;
-    border-radius: 17px;
-    margin-top: 20px;
-
-    background-color: #fff;
-    color: #2399AA;
-    font-size: 20px;
-}
-
-p {
-    display: flex;
-    justify-content:center;
-
-    margin-top: 30px;
-
-    font-size: 18px;
+.linkLogin {
+    color: white
 }
 
 
@@ -193,20 +87,11 @@ p {
      
     }
     .container{
+        width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
         right: 0;
-    }
-
-    .div_inputs span {
-        width: 90%;
-    }
-
-    .input{
-        display: flex;
-        width: 88.8%;
-        /* margin: 3vh */
     }
 }

@@ -40,6 +40,9 @@ const RegisterScreen = () => {
 
                     <RegisterForm />
 
+                    <NavLink to="/Login" className={styles.linkLogin}>
+                        <p>Já possui uma conta?</p>
+                    </NavLink>
                 </div>
             </div>
 

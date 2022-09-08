@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm } from '@mantine/form';
 import { TextInput, PasswordInput, Button } from '@mantine/core';
-import { showNotification } from '@mantine/notifications';
 
 import styles from './LoginFormStyle.module.css'
 
@@ -13,18 +12,11 @@ let LoginForm = () => {
     const form = useForm({
         initialValues: { email: '', password: '' },
         validate: {
-            email: (value) => (/^\S+@\S+$/.test(value) ? null : 'E-mail inválido'),
-            password: (value) => (value.length < 6 ? 'A senha deve ter no mínimo 6 caracteres' : null),
+            email: (value) => (/^\S+@\S+$/.test(value) ? null : (<label className={styles.labelErro}>"E-mail inválido"</label>)),
+            password: (value) => (value.length < 6 ? (<label className={styles.labelErro}>"Deve conter no mínimo 6 caracteres"</label>) : null),
         },
     });
 
-    const handleError = (errors) => {
-        if (errors.password) {
-            showNotification({ message: 'Please fill name field', color: 'red' });
-        } else if (errors.email) {
-            showNotification({ message: 'Please provide a valid email', color: 'red' });
-        }
-    };
 
     const handleSubmit = (values) => { 
         console.log(values);
@@ -36,7 +28,7 @@ let LoginForm = () => {
     return (
         <div className={styles.corpoForm}>
 
-            <form onSubmit={form.onSubmit(handleSubmit, handleError)} className={styles.Form}>
+            <form onSubmit={form.onSubmit( handleSubmit )} className={styles.Form}>
                 {/* <TextInput label="Name" placeholder="Name" {...form.getInputProps('name')} /> */}
                 <TextInput
                     placeholder="E-mail"

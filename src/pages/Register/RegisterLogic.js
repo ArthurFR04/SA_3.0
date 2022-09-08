@@ -1,71 +1,84 @@
-// let validado = false
-// let inputs
 
-// let validar = () => {
+import swal from 'sweetalert';
 
-//     console.log('começando validação');
-//     for (let i = 0; i < inputs.length; i++) {
-//         console.log(inputs[i]);
-//         if (inputs[i].value !== false) {
-//             if (inputs[3].value === inputs[4].value) {
-//                 validado = true
-//                 return false
-//             } else {
-//                 alert('As senhas devem ser iguais')
-//                 return false
-//             }
+let letJson
 
-//         } else {
-//             alert('Preencha todos os inputs');
-//             return false
-//         }
-//     }
-// }
 
-// let cadastrar = async () => {
+let log_cadastrar = async (email) => {
 
-//     inputs = document.querySelectorAll('input');
+    document.getElementById("loading").style.display = "none"
+console.log(letJson);
+    if ( letJson.status === 400 ) {
+        swal ({
+            title: 'Mensagem de erro:',
+            text: letJson.message,
+            icon: 'error',
+        })
+    }
+    else if ( letJson.status === 200 ) {
 
-//     await validar()
+        if (letJson.body.usuario.email === email) {
+            
+            swal ({
+                title: 'Cadastro efetuado com sucesso',
+                icon: 'success',
+            }).then((value) => {
 
-//     if (validado === true) {
+                switch (value) {
+                    default: {
+                        localStorage.setItem('Login', JSON.stringify(letJson.body.usuario))
 
-//         fetch('https://sa-3-back.herokuapp.com/api/usuario', {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 nome: inputs[0].value,
-//                 sobrenome: inputs[1].value,
-//                 email: inputs[2].value,
-//                 senha: inputs[3].value
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//             },
-//         })
-//             .catch((error) => {
-//                 console.log(error)
-//             })
-//             .then((response) => response.json())
-//             .then((json) => console.log(json))
-//     }
-
-//     validado = false
-// }
-
-// const [values, setValues] = 0 // 0 USADO PARA COMENTAR O USE STATE
-// useState('')
-
-const changeInput = (value) => {
-    // setValues((prevValue) => ({
-    //     ...prevValue,
-    //     [value.target.name]: value.target.value,
-    // }))
+                        let Historic = JSON.parse(localStorage.getItem('Historic'))
+                        window.location.href = Historic.now
+                    }
+                }
+            })
+        }
+        else {
+            console.log(letJson.body.usuario.email);
+            swal ({
+                title: 'Ocorreu um erro',
+                text: 'Por favor tente novamente',
+                icon: 'error',
+            })
+        }
+    }
+    else {
+        swal ({
+            title: 'Ocorreu um erro',
+            text: 'Por favor atualize a página e tente novamente',
+            icon: 'error',
+        })
+    }
 }
 
-// let values2;                                                            let Login_values = 0; let entrar;
-const salvar = () => {
-    // values2 = values
-    // Login_values.value = values
-    // document.getElementById("loading").style.display = "flex"
-    // entrar()
+
+
+
+export let cadastrar = (values) => {
+
+    fetch('https://sa-3-back.herokuapp.com/api/usuario', {
+        method: 'POST',
+        body: JSON.stringify({
+            nome: values.name,
+            sobrenome: values.lastname,
+            email: values.email,
+            senha: values.password
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .catch((error) => {
+            console.log(error)
+        })
+        .then((response) => response.json())
+        .then((json) => {
+
+            letJson = json
+            // console.log(letJson);
+            log_cadastrar(values.email)
+        })
+
+
 }

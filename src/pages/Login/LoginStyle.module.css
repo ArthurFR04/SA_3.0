@@ -67,14 +67,10 @@
     width: 90%;
 }
 
-p {
-    display: flex;
-    justify-content: center;
-
-    margin-top: 30px;
-
-    font-size: 18px;
-
+.linkCadastro {
+    
+    margin-top:20px;
+    color: white
 }
 
 
@@ -99,6 +95,10 @@ p {
 
 }
 
+
+button {
+    background-color: #2E2E2E;
+}
 
 .loading {
     display: flex

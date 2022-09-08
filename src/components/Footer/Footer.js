@@ -5,6 +5,7 @@ import styles from './Footer.module.css';
 
 import { AiFillHome } from "react-icons/ai";
 import { FaUserAlt, FaSearch } from "react-icons/fa";
+import { RiPencilFill } from "react-icons/ri";
 
 const Footer = (props) => {
 
@@ -18,8 +19,26 @@ const Footer = (props) => {
 
 
 
-                        <NavLink to="/Profile" className={styles.footerProfile} style={{ backgroundColor: props.component === "Profile" ? '#252525' : '' }} >
-                                <FaUserAlt />
+                        <NavLink
+                                to="/Profile"
+                                className={styles.footerProfile}
+                                style={{ 
+                                        backgroundColor: props.component === "Profile" ? '#252525' : '',
+                                        display: props.component === ("Profile" || "EditProfile") ? 'none' : 'flex' 
+                                }}
+                        >
+                                <FaUserAlt/>
+                                
+                        </NavLink>
+                        <NavLink
+                                to="/EditProfile"
+                                className={styles.footerProfile}
+                                style={{
+                                        display: props.component === "Profile" ? 'flex' : 'none',
+                                        backgroundColor: props.component === "Profile" ? '#252525' : '' 
+                                }}
+                        >
+                                <RiPencilFill style={{ fontSize:40 }}/>
                         </NavLink>
 
 
