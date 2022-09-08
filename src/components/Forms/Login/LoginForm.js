@@ -8,7 +8,7 @@ import styles from './LoginFormStyle.module.css'
 import { Login_values } from "../../../Context"
 import { entrar } from "../../../pages/Login/LoginLogic"
 
-function LoginForm() {
+let LoginForm = () => {
     
     const form = useForm({
         initialValues: { email: '', password: '' },
