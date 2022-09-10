@@ -5,9 +5,12 @@ import { VisitedPages } from "../../components/Router/Location"
 
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
+import { Comments } from "../../components/Comments/Comments"
+
 import {  // AiFillHeart,    
-AiOutlineHeart} from "react-icons/ai";
-import { IoAddCircle } from "react-icons/io5";
+    AiOutlineHeart
+} from "react-icons/ai";
+
 
 import styles from "./PostStyle.module.css"
 
@@ -98,31 +101,25 @@ let PostScreen = () => {
                     <p>
                         Agora que você já tem uma lista de ferramentas básicas para fazer a manutenção, chegou a hora de ir às compras. Acesse o site da Ferramentas Kennedy e encontre os itens que você mais precisa! </p>
 
-                <div className={styles.comentarios}>
-                    <div className={styles.comentTopo}>
-                    <label>2 COMENTÁRIOS</label>
-                    <IoAddCircle className={styles.iconAdd}/>
-                    </div>
-                    <div className={styles.comentBlock}>
-                        opa tudo bem????????????
-                    
-                    </div>
-                </div>
 
-                
+
 
                 </div>
 
+
+
+
+                <Comments postID = { 1 } />
 
             </div>
 
             <Footer />
         </div>
 
-        
+
     )
 }
 
-  
+
 
 export default PostScreen

@@ -1,34 +1,146 @@
-.favoritas {
-    width: 90%;
-    min-height: 200px;
+
+
+.comentarios {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    border-radius: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom:3%;
+    border-radius: 20px;
 
-    background-color: #fff;
-    box-shadow: 3px 3px 5px #BFBDBD;
+    background-color: white;
+    box-shadow: 2px 5px 8px #9b9b9b;
 
 }
 
-.titleFavorites {
-    font-size: 1.5rem;
-    width: 100%;
-    
+.topo {
     display: flex;
+    flex-direction: row;
+    width: 100%;
     justify-content: center;
     align-items: center;
 
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 25px;
+
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
-.heartIcon {
-    font-size: 30px;
-    margin-left: 5px;
+.iconAdd{
     color: #2399AA;
+    width: 45px;
+    height: auto;
+    margin-left: 2%;
+    margin-bottom: 0.5%;
+/* 
+    width: 5%;
+    height: 5%;
+    margin-left: 2%;
+    color: #2399AA; */
+}
+
+.PostScreen label{
+    font-size: 2.5rem;
+}
+
+
+/*                                                          Style do comentario dinamico (esse não é usado diretamente)  */
+
+
+.individual {
+    position: relative;
+    box-sizing:border-box;                  /*Ajuda a não quebrar, não deixa o elemente ser maior que o elemento-pai*/
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 98%;
+    min-height: 150px;
+    
+    margin-bottom: 3%;
+
+    border-radius: 20px;
+    box-shadow: 2px 5px 8px #a5a5a5;
+    background-color: rgb(234, 234, 234);
+}
+
+.userInfos {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50%;
+
+    margin-top: 10px;
+}
+
+.fotoPerfil {
+    box-sizing:border-box;
+
+
+    width: 10%;
+    height: auto;
+
+    /* background-color:blueviolet */
+}
+
+.headerComentario {
+    
+    box-sizing:border-box;
+    width: 80%;
+    height: 100%;
+    background-color:rgb(26, 255, 0);
+    
+    /* width: 90%;          usada quando não tem fotoPerfil*/
+}
+
+.nomes {
+    box-sizing: border-box;
+    width: 100%;
+    /* margin-right: 10px; */
+    padding-right: 4%;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.infoPostComment {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.email , .data{
+    margin: 0;
+    margin-top: 10px;
+    color: gray
+}
+
+.texto {
+    
+    width: 88%;
+    height: 50%;
+
+    margin: 2%
+
+}
+
+
+@media (max-width:1024px) {
+    
+    .comentarios {
+        width: 90%;
+    }
+
+    .individual {
+        width: 94%;
+        margin-bottom: 6%;
+    }
 }
