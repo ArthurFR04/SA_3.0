@@ -13,26 +13,25 @@ import LoadingDiv from '../../components/Loading/LoadingDiv'
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
-export let values2
-
-
 
 let LoginScreen = () => {
 
+    let backPage = () => {
+        let Historic = JSON.parse(localStorage.getItem('Historic'))
+        window.location.href = Historic.now
+    }
 
     return (
 
-        <div className={styles.body}>
+        <div className={styles.LoginScreen}>
 
             <div className={styles.banner}>
                 <h1>ElTEC</h1>
             </div>
 
             <div className={styles.container}>
-
-                <NavLink to="/" className={styles.arrowBack} >
-                    <TiArrowBack />
-                </NavLink>
+             
+                    <TiArrowBack onClick={backPage} className={styles.arrowBack}/>
 
                 <h1 className={styles.login}>
                     LOGIN

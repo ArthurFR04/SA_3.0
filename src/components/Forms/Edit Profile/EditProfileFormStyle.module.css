@@ -1,0 +1,32 @@
+
+
+.nameInps {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    margin-top: 10px;
+}
+
+.sobrenome {
+    width: 68%;
+    margin-left: 2%;
+}
+
+.nome input , .sobrenome input {
+    width: 100%;
+
+
+    background-color: #ffffff;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #2399AA;
+}
+
+.nome:focus , .sobrenome:focus {
+    outline: none;
+}
+
+.labelErro {
+    font-size: 20px
+}

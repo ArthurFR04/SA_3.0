@@ -14,7 +14,7 @@ body {
     
 }
 
-h1{
+.PostScreen h1{
     font-size: 3rem;
 }
 
@@ -42,12 +42,12 @@ h1{
 }
 
 
-h3{
+.PostScreen h3{
     font-size:x-large;
     font-weight:bold;
 }
 
-img{
+.PostScreen img{
     width: 50%;
     height: auto;
     box-shadow: 2px 5px 8px #888888;
@@ -91,7 +91,7 @@ img{
     color: #2399AA; */
 }
 
-label{
+.PostScreen label{
     font-size: 2.5rem;
 }
 

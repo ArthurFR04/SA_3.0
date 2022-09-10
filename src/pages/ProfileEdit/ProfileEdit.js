@@ -5,35 +5,42 @@ import React from 'react';
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import Favorites from '../../components/Favorites/Favorites';
+import ImageInput from '../../components/Image Input/Edit Profile/EP_ImageInput';
+import LoadingDiv from '../../components/Loading/LoadingDiv'
+import EditProfileForm from '../../components/Forms/Edit Profile/EditProfileForm'
+
+
 
 import styles from './ProfileEditStyle.module.css';
 
-import ImageInput from '../../components/Image Input/ImageInput';
 
 import swal from 'sweetalert';
+
 
 let Login
 let letJson
 
 
 let updateLocal = () => {
+
     let Local = JSON.parse(localStorage.getItem('Login'))
+
     let newInfos = letJson.body
 
     let infos = {
-        biografia:  newInfos.biografia === undefined ? Local.biografia : newInfos.biografia ,
-        email: Local.email ,
-        foto_perfil: newInfos.foto_perfil === undefined ? Local.foto_perfil : newInfos.foto_perfil ,
-        id: Local.id ,
-        permissao: Local.permissao ,
-        nome: newInfos.nome === undefined ? Local.nome : newInfos.nome ,
-        senha: newInfos.senha === undefined ? Local.senha : newInfos.senha ,
-        sobrenome: newInfos.sobrenome === undefined ? Local.sobrenome : newInfos.sobrenome ,
+        biografia: newInfos.biografia === undefined ? Local.biografia : newInfos.biografia,
+        email: Local.email,
+        foto_perfil: newInfos.foto_perfil === undefined ? Local.foto_perfil : newInfos.foto_perfil,
+        id: Local.id,
+        permissao: Local.permissao,
+        nome: newInfos.nome === undefined ? Local.nome : newInfos.nome,
+        senha: newInfos.senha === undefined ? Local.senha : newInfos.senha,
+        sobrenome: newInfos.sobrenome === undefined ? Local.sobrenome : newInfos.sobrenome,
     }
 
-    localStorage.setItem('Login', JSON.stringify( infos ))
+    localStorage.setItem('Login', JSON.stringify(infos))
 
-    swal ({
+    swal({
         title: letJson.message,
         icon: 'success',
     }).then((value) => {
@@ -48,6 +55,10 @@ let updateLocal = () => {
 
 
 export let Salvar = () => {
+
+    Login = JSON.parse(localStorage.getItem('Login'))
+    let inps = document.querySelectorAll('input')
+
     fetch(`https://sa-3-back.herokuapp.com/api/usuario/${Login.id}`, {
         method: 'PUT',
         body: JSON.stringify({
@@ -67,13 +78,17 @@ export let Salvar = () => {
             console.log(json);
             letJson = json
             // log_entrar()
-            updateLocal()   
+            updateLocal()
         })
+
+    document.getElementById("loading").style.display = "flex"
 }
 
 const ProfileEdit = () => {
 
     Login = JSON.parse(localStorage.getItem('Login'))
+
+    let inps = document.querySelectorAll('input')
 
 
     return (
@@ -91,10 +106,7 @@ const ProfileEdit = () => {
                     </div>
                 </div>
                 <div className={styles.infosUser}>
-                    <div className={styles.nameInps}>
-                        <input id='nomeUser' placeholder="Nome" className={styles.nome} />
-                        <input id='sobrenomeUser' placeholder="Sobrenome" className={styles.sobrenome} />
-                    </div>
+                    <EditProfileForm />
 
                     <h2 className={styles.email}>
                         {Login.email}
@@ -102,14 +114,16 @@ const ProfileEdit = () => {
 
                     <textarea id='biografiaUser' className={styles.biografia} />
 
-                    <Favorites
-                    // component={Login.id} 
-                    />
+                    
 
                 </div>
             </div>
 
-            <Footer component="EditProfile" />
+            {/* <Footer component="EditProfile"/> */}
+            <button>
+                Salvar
+            </button>
+            <LoadingDiv />
         </div>
     )
 

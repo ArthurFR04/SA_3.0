@@ -1,0 +1,150 @@
+
+.TextEditor_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.TextEditor_titulo {
+  width: 80%;
+  height:50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0;
+  
+  border: none;
+  border-radius: 10px;
+  border-bottom: 4px solid #2399AA;
+  outline: none;
+
+  font-size: 35px;
+  text-align: center;
+}
+
+
+
+
+/*                                                    Mexendo direto no css do próprio editor de texto */
+
+.rdw-editor-wrapper {
+  /* position: absolute; */
+  /* top: 10vh; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 5px; */
+  /* margin-top: 11vw; */
+}
+
+.toolbarClassName{
+  
+
+
+
+}
+
+.rdw-editor-main  /* espécie de "background" do texto */ {
+  
+  height: 300px;
+  width: 100%;
+  /* margin-top: 20vh; */
+
+  background-color: rgb(208, 91, 91);
+}
+
+.DraftEditor-root {
+  height: 90%;
+}
+
+.public-DraftStyleDefault-ltr span {
+  max-width: 100%;
+  white-space:pre-wrap;
+}
+
+.TextEditor_textarea {
+  margin-top: 500px;
+  display: none;
+}
+
+
+
+.TextEditor_btn {
+  /* position: fixed;
+  top: 90%;
+  left: 90%; */
+  width: 100px;
+  height: 50px;
+
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #676767 ;
+  outline: none;
+
+  background-color: #2E2E2E;
+  color: #2399AA;
+  font-size: 25px;
+  font-weight:700;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.TextEditor_btn:hover {
+  cursor: pointer;
+  background-color: #222222;
+}
+
+.TextEditor_btn:active {
+  box-shadow: 0px 1px #2E2E2E ;
+  transition: 0.0s;
+
+}
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+/* .TextEditor_ {
+
+} */
+
+

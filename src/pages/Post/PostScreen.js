@@ -19,7 +19,7 @@ let PostScreen = () => {
     VisitedPages()
 
     return (
-        <div>
+        <div className={styles.PostScreen}>
             <Header />
 
             <div className={styles.container}>

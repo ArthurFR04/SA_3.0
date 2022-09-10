@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { FileButton, Button, Group, Text } from '@mantine/core';
 
-import styles from './ImageInputStyle.module.css'
+import styles from './EP_ImageInputStyle.module.css'
 
 let ImageInput = () => {
 

@@ -76,7 +76,6 @@ export let entrar = () => {
             letJson = json
             log_entrar()
         })
-
 }
 
 

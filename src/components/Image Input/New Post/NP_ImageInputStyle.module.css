@@ -1,0 +1,68 @@
+
+
+.btns {
+    position: relative;
+    /* width:150%; */
+    display:flex;
+    justify-content: center;
+}
+
+.SearchBtn {
+    position: relative;
+    width: 18vh; 
+    height: 18vh;
+    border-radius: 9vh;
+    margin-bottom:5px;
+    box-shadow: 1px 4px 5px #606060;
+    background-color: #2E2E2E;
+}
+
+.SearchBtn p{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size:20px
+}
+
+.SearchBtn:hover{
+    background-color: #232323;
+
+}
+
+.DeleteBtn {
+    position: absolute;
+    /* right: 0; */
+    height: 6vh;
+    width: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20%; */
+    
+
+    background-color: rgba(248, 37, 37, 0.939);
+    border-radius:50%;
+}
+
+.DeleteBtn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+
+.nomeImg {
+    position: absolute;
+    top: 0;
+
+    left: 25%;
+    width: 18vh; 
+    height: 18vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    color: #fff;
+    background-color: #2E2E2E;
+    border-radius: 50%
+}
