@@ -34,15 +34,86 @@
     height: auto;
     margin-left: 2%;
     margin-bottom: 0.5%;
-/* 
-    width: 5%;
-    height: 5%;
-    margin-left: 2%;
-    color: #2399AA; */
+    cursor: pointer;
 }
 
-.PostScreen label{
-    font-size: 2.5rem;
+.iconAdd:active {
+    color: #107787;
+}
+
+
+
+.newComment {
+    position: relative;
+    box-sizing:border-box;                  /*Ajuda a não quebrar, não deixa o elemente ser maior que o elemento-pai*/
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    width: 98%;
+    min-height: 150px;
+    
+    margin-bottom: 3%;
+
+    border-radius: 20px;
+    box-shadow: 2px 5px 8px #a5a5a5;
+    background-color: rgb(234, 234, 234);
+}
+
+.conteudo {
+    box-sizing:border-box;
+    resize: none;
+    width: 98%;
+    min-height: 100px;
+    margin: 2%;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+
+    font-size:20px
+}
+
+.comentarBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    Height: 40px;
+    
+    border: none;
+    border-radius: 17px;
+    margin-top: 70px;
+
+    background-color: #2399AA;
+    color: #fff;
+    font-size: 20px;
+    
+    z-index: 2;
+}
+
+.comentarBtn:hover {
+    cursor: pointer;
+    background-color: #128697;
+}
+
+
+.Allcomentarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom:3%;
+    border-radius: 20px;
+
+
+
 }
 
 

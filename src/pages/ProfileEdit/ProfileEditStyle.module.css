@@ -1,7 +1,7 @@
 
 
 .container {
-    width: 95vw;
+    width: 96vw;
     min-height: 84vh;
     margin-left: 4vw;
 }
@@ -42,68 +42,6 @@
     align-items: center;
     width: 100%;
 }
-
-.nameInps {
-    display: flex;
-    flex-direction: row;
-    width: 98%;
-    margin-top: 10px;
-}
-
-.nome , .sobrenome {
-    height: 30px;
-    width: 30%;
-
-    font-size:25px;
-    border: 0;
-    border-bottom: 2px solid #2399AA;
-    border-radius:5px
-}
-
-.nome:focus , .sobrenome:focus {
-
-    border: 0;
-    outline: 0;
-    border-bottom: 2px solid #2399AA;
-
-}
-
-.sobrenome {
-    width: 68%;
-
-    margin-left: 2%;
-}
-
-.email {
-    display: flex;
-    justify-content: center;
-    
-    margin: 0;
-    margin-top: 10px;
-    color: gray;
-}
-
-.biografia {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font-size: 20px;
-    width: 80%;
-    min-height: 50px;
-
-    margin-top: 10px;
-    padding: 10px;
-
-    background-color: #e4e4e4;
-    border: 0;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px #BFBDBD;
-}
-
-.biografia:focus {
-    outline: none;
-}
-
 
 
 

@@ -13,10 +13,10 @@ import styles from './HomeStyle.module.css';
 import '../../assets/Styles/Geral.css'
 
 import { VisitedPages } from "../../components/Router/Location"
-
+import { relogar } from "../Login/LoginLogic"
 
 const HomeScreen = () => {
-
+    relogar()
     VisitedPages()
 
     return (

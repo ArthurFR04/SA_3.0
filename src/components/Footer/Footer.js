@@ -8,15 +8,13 @@ import { FaUserAlt, FaSearch } from "react-icons/fa";
 import { RiPencilFill } from "react-icons/ri";
 import { ImCheckmark } from "react-icons/im";
 
-import { Salvar } from "../../pages/ProfileEdit/ProfileEdit"
+import { validation_EditProfile } from "../../pages/ProfileEdit/ProfileEdit"
 
 const Footer = (props) => {
         if (props.component === "EditProfile") {
                 return (
-                        <div className={styles.footer}
-                                style={{ display: props.component === "EditProfile" ? 'flex' : 'none' }}
-                        >
-                                <div className={styles.footerEditProfile} onClick={Salvar}>
+                        <div className={styles.footerEditProfile} onClick={validation_EditProfile} >
+                                <div className={styles.EditProfileDiv} >
                                                 Salvar
                                                 <ImCheckmark className={styles.check} />
                                 </div>
@@ -26,9 +24,8 @@ const Footer = (props) => {
 
         else {
                 return (
-                        <div className={styles.footer}
-                                style={{ display: props.component === "EditProfile" ? 'none' : 'flex' }}
-                        >
+                        <div className={styles.footer}>
+                                
                                 <NavLink to="/" className={styles.footerHome} style={{ backgroundColor: props.component === "Home" ? '#252525' : '' }} >
                                         <AiFillHome />
                                 </NavLink>

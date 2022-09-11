@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 
+import { relogar } from "../Login/LoginLogic"
 import { VisitedPages } from "../../components/Router/Location"
 
 import Header from "../../components/Header/Header"
@@ -17,21 +18,31 @@ import styles from "./PostStyle.module.css"
 
 
 /* <AiFillHeart /> */
+let Post = JSON.parse(localStorage.getItem('PostInfos'))
+
+
+let PrintConteudo = () => {
+    
+    document.getElementById('conteudoPost').innerHTML=`aaaaaaaaaaaaa${Post.descricao}`
+}
+
 
 let PostScreen = () => {
+    relogar()
     VisitedPages()
-
+    PrintConteudo()
+console.log(Post);
     return (
         <div className={styles.PostScreen}>
             <Header />
 
             <div className={styles.container}>
                 <div className={styles.topo}>
-                    <h1 id='titulo' >Ferramentas para Manutenção</h1>
+                    <h1 id='titulo' >{Post.titulo}</h1>
                     <AiOutlineHeart className={styles.heartIcon} />
                 </div>
-                <div className={styles.conteudo}>
-                    <p>É sempre bom ter a ferramenta certa em mãos quando mais precisamos, não é mesmo? Seja para trocar a resistência do chuveiro, instalar uma prateleira ou fixar um quadro novo na parede. Por isso mesmo, é importante estar preparado e contar com algumas ferramentas básicas.
+                <div id='conteudoPost'className={styles.conteudo} >
+                    {/* <p>É sempre bom ter a ferramenta certa em mãos quando mais precisamos, não é mesmo? Seja para trocar a resistência do chuveiro, instalar uma prateleira ou fixar um quadro novo na parede. Por isso mesmo, é importante estar preparado e contar com algumas ferramentas básicas.
                         Confira a lista de itens que não podem faltar na sua caixa de ferramentas e mantenha-se sempre preparado!
                     </p>
                     <h3>1. Trena</h3>
@@ -99,17 +110,17 @@ let PostScreen = () => {
                         <img src='https://philco.vteximg.com.br/arquivos/ids/183474-1000-1000/PPF03_01.jpg?v=637459974394030000'></img>
                     </div>
                     <p>
-                        Agora que você já tem uma lista de ferramentas básicas para fazer a manutenção, chegou a hora de ir às compras. Acesse o site da Ferramentas Kennedy e encontre os itens que você mais precisa! </p>
+                        Agora que você já tem uma lista de ferramentas básicas para fazer a manutenção, chegou a hora de ir às compras. Acesse o site da Ferramentas Kennedy e encontre os itens que você mais precisa! </p> */}
 
 
-
+                    
 
                 </div>
 
 
 
 
-                <Comments postID = { 1 } />
+                <Comments postID = { Post.id } />
 
             </div>
 

@@ -4,80 +4,82 @@ import styles from './CommentsStyle.module.css';
 
 import { IoAddCircle } from "react-icons/io5";
 
+import OtherProfileScreen from '../../pages/Profile/OtherProfileScreen'
 
-
-let AllComentarios
 
 let PostID
 
-let ArrayComentarios = []
+let AllComentarios = []
 
-let AllUsers = new Array
-let Fetch = () => {
+let AllUsers = []
 
-    fetch('https://sa-3-back.herokuapp.com/api/comentario', {
 
+
+let UsersFetch = () => {
+
+    fetch(`https://sa-3-back.herokuapp.com/api/usuario`, {
         method: 'GET'
     })
         .then((response) => response.json())
         .then((json) => {
-
-            AllComentarios = json.data
+            AllUsers = json.data
 
             filtrar()
         })
 }
 
-let searchUser = (UserID) => {
-    console.log(UserID);
-    fetch(`https://sa-3-back.herokuapp.com/api/usuario/${UserID}}`, {
+
+let CommentsFetch = () => {
+
+    fetch('https://sa-3-back.herokuapp.com/api/comentario', {
         method: 'GET'
     })
         .then((response) => response.json())
         .then((json) => {
+            AllComentarios = json.data
 
-            AllUsers = json.data
+            UsersFetch()
         })
 }
 
+
+
+
+
 let filtrar = () => {
 
+    document.getElementById('frontComments').innerHTML = ''
 
     for (let i = 0; i < AllComentarios.length; i++) {
 
-        if (AllComentarios[i].postagenId === PostID) {
+        if (AllComentarios[i].postagenId === PostID) {    // Só renderiza os comentários que possuem o idPostagem correspondende ao da página
 
-            ArrayComentarios.push(AllComentarios[i])
-            if ( AllComentarios[i].usuarioId == AllUsers[i].id) {
+            for (let j = 0; j < AllUsers.length; j++) {
 
-                // searchUser()
-                console.log('dfsfsdesfsdf');
+                if (AllUsers[j].id === AllComentarios[i].usuarioId) {    // Só renderiza os comentários que possuem o idPostagem correspondende ao da página
+
+                    imprimirComments(i, j)
+                }
             }
 
-            // console.log(AllComentarios[i]);
-            // console.log(AllComentarios[i].usuarioId);
         }
     }
-
-    imprimirComments()
 }
 
 
 
 
 
-let imprimirComments = () => {
+let imprimirComments = (comenPos, userPos) => {
 
-    if (ArrayComentarios.length > 0) {
+    let commentDate = `
+        ${AllComentarios[comenPos].dt_comentario.slice(8,10)}   /
+        ${AllComentarios[comenPos].dt_comentario.slice(5,7)}   /
+        ${AllComentarios[comenPos].dt_comentario.slice(0,4)}
+    `
 
-        for (let i = 0; i < ArrayComentarios.length; i++) {
-
-            if ( 2+2
-                // ArrayComentarios[i].id == Users[i].id
-                ) {
-
-                document.getElementById('frontComments').innerHTML += `
-                    <div className={styles.individual} style="
+    document.getElementById('frontComments').innerHTML += `
+                    <div id='${AllComentarios[comenPos].id}' className={styles.individual} style="
                             position: relative;
                             box-sizing:border-box;
                             display: flex;
@@ -114,14 +116,18 @@ let imprimirComments = () => {
                                     width: 80%;
                                     height: 100%;
                             ">
-                                <h3 className={styles.nomes} style="
+                                <h3 
+                                    className={styles.nomes} 
+                                    style="
                                         box-sizing: border-box;
                                         width: 100%;
                                         padding-right: 4%;
                                         margin-top: 10px;
                                         margin-bottom: 0;
-                                ">
-                                    // ${'User.nome'} ${'User.sobrenome'}
+                                    "
+                                    onClick={<OtherProfileScreen id="${AllUsers[userPos].id}"}
+                                />
+                                    ${AllUsers[userPos].nome} ${AllUsers[userPos].sobrenome}
                                 </h3>
                                 <div className={styles.infoPostComment} style="
                                         display: flex;
@@ -134,14 +140,14 @@ let imprimirComments = () => {
                                             margin-top: 10px;
                                             color: gray
                                     ">
-                                        arthur@eltec.com
+                                        ${AllUsers[userPos].email}
                                     </h4>
                                     <h4 className={styles.data} style="
                                             margin: 0;
                                             margin-top: 10px;
                                             color: gray
                                     ">
-                                        12/22/2022
+                                        ${commentDate}
                                     </h4>
                                 </div>
                             </div>
@@ -151,33 +157,79 @@ let imprimirComments = () => {
                             height: 50%;
                             margin: 2%
                         ">
-                            aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa
+                            ${AllComentarios[comenPos].conteudo}
                         </div>
 
                     </div>
                 `
-            }
-            else {
-                console.log(ArrayComentarios[0].id);
-            }
-        }
-    }
-    else {
-        document.getElementById('frontComments').innerHTML += `Não tem comentário`
-    }
+}
+
+let showNewComment = () => {
+    document.getElementById('NewComment').style.display = 'flex'
+}
+
+let comentar = () => {
+    console.log('começando a comentar');
+    let Login = JSON.parse(localStorage.getItem('Login'))
+
+    let today = new Date(),
+    Hoje = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
+
+    let conteudo = document.getElementById('TextAreaNewComment').value
+
+    fetch('https://sa-3-back.herokuapp.com/api/comentario', {
+        method: 'POST',
+        body: JSON.stringify({
+            usuarioId: Login.id,
+            dt_comentario: Hoje,
+            conteudo: conteudo,
+            postagenId: PostID
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .catch((error) => {
+            console.log(error)
+        })
+        .then((response) => response.json())
+        .then((json) => {
+
+            let comJson = json
+            document.getElementById('TextAreaNewComment').value = ''
+            CommentsFetch()
+            window.location.href=`#${(comJson.body.comentario.id)-1}`
+        })
+
+    
 }
 
 export const Comments = (props) => {
 
     PostID = props.postID
 
-    Fetch()
+    CommentsFetch()
 
     return (
-        <div className={styles.comentarios} id='frontComments'>
+        <div className={styles.comentarios}>
             <div className={styles.topo}>
                 <label>2 COMENTÁRIOS</label>
-                <IoAddCircle className={styles.iconAdd} />
+                <IoAddCircle
+                    className={styles.iconAdd}
+                    onClick={showNewComment}
+                />
+
+            </div>
+            <div id='NewComment' className={styles.newComment}>
+                <textarea id='TextAreaNewComment' className={styles.conteudo} placeholder='Escreva aqui o seu comentário.'>
+
+                </textarea>
+                <button className={styles.comentarBtn} onClick={comentar}>
+                    Comentar
+                </button>
+            </div>
+            <div className={styles.Allcomentarios} id='frontComments'>
+
             </div>
         </div>
     )

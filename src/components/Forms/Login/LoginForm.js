@@ -25,15 +25,10 @@ let LoginForm = () => {
         entrar()
     };
 
-    const handleSubmit2 = (values) => { 
-        console.log(values);
-
-    }
-
     return (
         <div className={styles.corpoForm}>
 
-            <form onSubmit={form.onSubmit( handleSubmit )} onChange={handleSubmit2} className={styles.Form}>
+            <form onSubmit={form.onSubmit( handleSubmit )} className={styles.Form}>
                 {/* <TextInput label="Name" placeholder="Name" {...form.getInputProps('name')} /> */}
                 <TextInput
                     placeholder="E-mail"

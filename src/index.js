@@ -13,7 +13,11 @@ import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
 import ProfileScreen from './pages/Profile/ProfileScreen';
-import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
+
+// import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
+
+import ProfileEdit from './pages/ProfileEdit/testeIMG';
+import OtherProfileScreen from './pages/Profile/OtherProfileScreen';
 import SearchScreen from './pages/Search/SearchScreen';
 import PostScreen from './pages/Post/PostScreen';
 
@@ -33,6 +37,7 @@ root.render(
         <Route path="Post" element={<PostScreen />} />
         <Route path="Profile" element={<ProfileScreen />} />
         <Route path="EditProfile" element={<ProfileEdit />} />
+        <Route path="OProfile" element={<OtherProfileScreen />} />
         <Route path="Search" element={<SearchScreen />} />
       </Routes>
     </BrowserRouter>

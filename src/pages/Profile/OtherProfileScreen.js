@@ -11,35 +11,39 @@ import { VisitedPages } from "../../components/Router/Location"
 
 import styles from './ProfileStyle.module.css';
 
-import LoginDone from '../../components/Alert/LoginDone'
-
-import Perfil from '../../assets/Testes/perfil.png'                                                  //excluir
-
 import swal from 'sweetalert';
 
-const ProfileScreen = () => {
+const OtherProfileScreen = (props) => {
     relogar()
-    VisitedPages()
 
-    let Login = JSON.parse(localStorage.getItem('Login'))
+    if (props.id !== true) {
+        swal({
+            title: 'Página não encontrada',
+            icon: 'warning',
+        }).then((value) => {
 
-    let logado
-
-    if (Login !== null) {
-
-        if (Login.email) { logado = true }
-        else if (Login === 400) { logado = false }
-        else {
-            swal({
-                title: 'Ocorreu um erro',
-                text: 'Por favor reinicie a página.\n\nSe o erro persistir, volte para a página anterior e tente novamente.',
-                icon: 'error',
-            })
-        }
+            switch (value) {
+                default: {
+                    let Historic = JSON.parse(localStorage.getItem('Historic'))
+                    window.location.href = Historic.now
+                }
+            }
+        })
     }
-    else { logado = false }
+    else {
+        window.location.href = '/OProfile'
+    
+        VisitedPages()
 
-    if (logado === true) {
+        let Perfil
+
+        fetch(`https://sa-3-back.herokuapp.com/api/usuario/${props.id}`, {
+            method: 'GET'
+        })
+            .then((response) => response.json())
+            .then((json) => {
+                Perfil = json.data
+            })
 
         return (
             <div className={styles.profileScreen} >
@@ -58,17 +62,17 @@ const ProfileScreen = () => {
                     <div className={styles.infosUser}>
 
                         <h1 id='nomeUser' className={styles.nome}>
-                            {Login.nome} {Login.sobrenome}
+                            {Perfil.nome} {Perfil.sobrenome}
                         </h1>
                         <h2 className={styles.email}>
-                            {Login.email}
+                            {Perfil.email}
                         </h2>
 
                         <label className={styles.biografia}>
-                            {Login.biografia}
+                            {Perfil.biografia}
                         </label>
 
-                        <Favorites component={Login.id} />
+                        <Favorites component={Perfil.id} />
 
                     </div>
                 </div>
@@ -77,13 +81,7 @@ const ProfileScreen = () => {
             </div>
         )
     }
-    else if (logado === false) {
-
-        return (
-
-            <LoginDone />
-        );
-    }
 }
 
-export default ProfileScreen;
+
+export default OtherProfileScreen;

@@ -1,32 +1,102 @@
-
+.EditProfileForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .nameInps {
     display: flex;
     flex-direction: row;
-    width: 98%;
+    width: 96%;
     margin-top: 10px;
 }
 
+.nome,
+.sobrenome {
+    height: 30px;
+    width: 30%;
+
+    font-size: 25px;
+    border: 0;
+    border-bottom: 2px solid #2399AA;
+    border-radius: 5px;
+    outline: 0;
+}
+
+
 .sobrenome {
     width: 68%;
+
     margin-left: 2%;
 }
 
-.nome input , .sobrenome input {
-    width: 100%;
+.email {
+    display: flex;
+    justify-content: center;
 
-
-    background-color: #ffffff;
-    color: #000;
-    font-size: 18px;
-    border: none;
-    border-bottom: 2px solid #2399AA;
+    margin: 0;
+    margin-top: 25px;
+    color: gray;
 }
 
-.nome:focus , .sobrenome:focus {
+.biografia {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    width: 80%;
+    min-height: 50px;
+    resize: vertical;
+
+
+    margin-top: 10px;
+    padding: 10px;
+
+    background-color: #e4e4e4;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #BFBDBD;
+}
+
+.biografia:focus {
     outline: none;
 }
 
-.labelErro {
-    font-size: 20px
+.senha,
+.confSenha {
+    height: 30px;
+    width: 35%;
+
+    font-size: 25px;
+    border: 0;
+    border-bottom: 2px solid #2399AA;
+    border-radius: 5px;
+    outline: 0;
+
+    margin-top: 20px;
+}
+
+.confSenha {
+    margin-bottom: 10%;
+}
+
+.senha input,
+.confSenha input {
+
+    width: 100%;
+}
+
+.senha div div button,
+.confSenha div div button {
+
+    background-color: #fff
+}
+
+@media (max-width:1024px) {
+
+    .senha,
+    .confSenha {
+        width: 85%;
+    }
 }

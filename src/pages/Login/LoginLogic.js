@@ -79,3 +79,29 @@ export let entrar = () => {
 }
 
 
+
+
+export let relogar = () => {
+
+    let Login = JSON.parse(localStorage.getItem('Login'))
+
+    if (Login) {
+        
+        fetch('https://sa-3-back.herokuapp.com/api/login', {
+            method: 'POST',
+            body: JSON.stringify({
+
+            email: Login.email,
+            senha: Login.senha
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => {
+            
+            localStorage.setItem('Login', JSON.stringify(json.data[0]))
+        })
+    }
+}
