@@ -21,6 +21,15 @@ import OtherProfileScreen from './pages/Profile/OtherProfileScreen';
 import SearchScreen from './pages/Search/SearchScreen';
 import PostScreen from './pages/Post/PostScreen';
 
+
+if (JSON.parse(localStorage.getItem('Login'))) {
+  console.log();
+}
+else {
+  localStorage.setItem('Login', JSON.stringify({permissao: 3}))
+}
+
+
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
