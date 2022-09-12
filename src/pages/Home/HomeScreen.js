@@ -15,9 +15,14 @@ import '../../assets/Styles/Geral.css'
 import { VisitedPages } from "../../components/Router/Location"
 import { relogar } from "../Login/LoginLogic"
 
+let vitrine = () => {
+   
+}
+
 const HomeScreen = () => {
     relogar()
     VisitedPages()
+    vitrine()
 
     return (
         <div className={styles.home}>
@@ -33,19 +38,8 @@ const HomeScreen = () => {
 
                 <div className={styles.vitrine}>
 
-                    <Grid component="Favorites" />
+                        <Grid />
 
-
-                    <div className={styles.Textooo} >
-                        <h4>Home</h4>
-                        <p>Aqui é o Home sabe ?</p>
-                        <Link to="/Login" >Bora pro login ??</Link>             <br></br>
-                        <Link to="/NewPost" >Nova postagem</Link>                     <br></br>
-                        <Link to="/Register" >Bora registraarr</Link>           <br></br>
-                        oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
-                        oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
-                        oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>oioioi <br></br><br></br>
-                    </div>
                 </div>
 
             </div>

@@ -16,8 +16,12 @@ import {
 
 import { RiArrowDropLeftLine , RiArrowDropRightLine } from "react-icons/ri";
 
+import { PostSearch } from '../../pages/Post/PostLogic'
 
-const useStyles = createStyles((theme, _theme, _params, getRef) => ({
+import styles from './Carousel.module.css'
+
+
+const useStyles = createStyles((theme, _theme, _params) => ({
   card: {
     height: "100%",
     display: 'flex',
@@ -30,18 +34,15 @@ const useStyles = createStyles((theme, _theme, _params, getRef) => ({
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
-    lineHeight: 1.2,
-    fontSize: 32,
+    fontWeight: 1000,
+    // color: theme.white,
+    color: '#2399AA',
+    lineHeight: 1.5,
+    fontSize: 40,
     marginTop: theme.spacing.xs,
-  },
-
-  category: {
-    color: theme.white,
-    opacity: 0.7,
-    fontWeight: 700,
-    textTransform: 'uppercase',
+    backgroundColor: 'rgba(255,255,255,0.63)',
+    padding: 5,
+    borderRadius: 10
   },
 
 }));
@@ -66,72 +67,53 @@ const buttons = createStyles((_theme, _params, getRef) => ({
   }));
 
 
+  let Card = ({ id, foto, titulo }) => {
 
-function Card({ image, title, category }) {
+    let GoPost = () => {
+      PostSearch(id)
+    }
+    const { classes } = useStyles();
+  
+    return (
+      <Paper
+        shadow="md"
+        p="xl"
+        radius="md"
+        sx={{ backgroundImage: `url(${JSON.parse(localStorage.getItem(foto))})` }}
+        className={classes.card}
+        onClick={GoPost}
+      >
+        <div styles=" width: 100%; heigth: 100% ">
+        {/* <img src={JSON.parse(localStorage.getItem(foto)) } styles="box-sizing: border-box; width: 100%"/> */}
+          <Title order={3} className={classes.title} >
+            {titulo}
+          </Title>
+        </div>
+        <Button className={styles.botao}>
+        </Button>
+      </Paper>
+    );
+  }
 
-  const { classes } = useStyles();
+  let data
 
-  return (
-    <Paper 
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
-      </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
-    </Paper>
-  );
-}
-
-const data = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    category: 'nature',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    category: 'beach',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Aurora in Norway: when to visit for best experience',
-    category: 'nature',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best places to visit this winter',
-    category: 'tourism',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Active volcanos reviews: travel at your own risk',
-    category: 'nature',
-  },
-];
+  if ( JSON.parse(localStorage.getItem('data')) ) {
+    data = JSON.parse(localStorage.getItem('data'))
+  }
+  else { 
+    data = []
+  }
+  
+  fetch('https://sa-3-back.herokuapp.com/api/postagem', {
+    method: 'GET'
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      data = json.data
+      localStorage.setItem('data', JSON.stringify(data))
+      
+    })
+  
 
 const Carrossel = () => {
   // const theme = useMantineTheme();
@@ -147,6 +129,7 @@ const Carrossel = () => {
 
   return (
     <Carousel
+    className={styles.carousel}
     //   slideSize="50%"
     breakpoints={[
       { maxWidth: 1024, slideSize: '100%' , textSize: '90%'},

@@ -13,8 +13,14 @@ import { PostSearch } from '../../pages/Post/PostLogic'
 
 import styles from './SimpleGridStyle.module.css'
 
+let data
 
-let data = [];
+if ( JSON.parse(localStorage.getItem('data')) ) {
+  data = JSON.parse(localStorage.getItem('data'))
+}
+else { 
+  data = []
+}
 
 fetch('https://sa-3-back.herokuapp.com/api/postagem', {
   method: 'GET'
@@ -22,8 +28,10 @@ fetch('https://sa-3-back.herokuapp.com/api/postagem', {
   .then((response) => response.json())
   .then((json) => {
     data = json.data
-    console.log(data);
+    localStorage.setItem('data', JSON.stringify(data))
+    
   })
+
 
 
 const useStyles = createStyles((theme, _theme, _params) => ({
@@ -39,11 +47,15 @@ const useStyles = createStyles((theme, _theme, _params) => ({
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
-    lineHeight: 1.2,
-    fontSize: 32,
+    fontWeight: 1000,
+    // color: theme.white,
+    color: '#2399AA',
+    lineHeight: 1.5,
+    fontSize: 40,
     marginTop: theme.spacing.xs,
+    backgroundColor: '#fff',
+    padding: 5,
+    borderRadius: 10
   },
 
 }));
@@ -60,11 +72,12 @@ let Card = ({ id, foto, titulo }) => {
       shadow="md"
       p="xl"
       radius="md"
-      sx={{ backgroundImage: `url(${foto})` }}
+      sx={{ backgroundImage: `url(${JSON.parse(localStorage.getItem(foto))})` }}
       className={classes.card}
     >
-      <div>
-        <Title order={3} className={classes.title}>
+      <div styles=" width: 100%; heigth: 100% ">
+      {/* <img src={JSON.parse(localStorage.getItem(foto)) } styles="box-sizing: border-box; width: 100%"/> */}
+        <Title order={3} className={classes.title} >
           {titulo}
         </Title>
       </div>
@@ -99,5 +112,6 @@ let Grid = (props) => {
     </SimpleGrid>
   )
 }
+
 
 export default Grid

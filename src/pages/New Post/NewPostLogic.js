@@ -3,11 +3,11 @@ import swal from 'sweetalert';
 import { PostSearch } from '../../pages/Post/PostLogic'
 
 
+
 export let enviar = () => {
 
-    
-let Login = JSON.parse(localStorage.getItem('Login'))
 
+let Login = JSON.parse(localStorage.getItem('Login'))
 
 let today = new Date(),
     Hoje = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
@@ -26,7 +26,7 @@ fetch('https://sa-3-back.herokuapp.com/api/postagem', {
     body: JSON.stringify({
         titulo: Titulo,
         descricao: Descricao,
-        // foto: 'teste',
+        foto: document.getElementById('imgName').innerHTML,
         dt_postagem: Hoje,
         usuarioId: Login.id
     }),
@@ -49,6 +49,7 @@ fetch('https://sa-3-back.herokuapp.com/api/postagem', {
 
             switch (value) {
                 default: {
+                    document.getElementById('titulo').value = ''
                     PostSearch(letJson.body.postagem.id)
                 }
             }

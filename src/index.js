@@ -7,7 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 
-
+// import App from './App'
 import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
@@ -30,7 +30,7 @@ root.render(
   <div>
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Navigate replace to="/HomeScreen" />} /> */}
+        {/* <Route path="/" element={<App />} /> */}
         <Route path="/" element={<HomeScreen />} />
         <Route path="Login" element={<LoginScreen />} />
         <Route path="Register" element={<RegisterScreen />} />

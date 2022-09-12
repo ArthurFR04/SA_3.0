@@ -25,7 +25,7 @@ let Post = JSON.parse(localStorage.getItem('PostInfos'))
 
 let PrintConteudo = () => {
 
-    document.getElementById('conteudoPost').innerHTML = `aaaaaaaaaaaaa`
+    document.getElementById('conteudoPost').innerHTML = Post.descricao
     document.getElementById("loading").style.display = "none"
 }
 
@@ -40,15 +40,16 @@ let PostScreen = () => {
     VisitedPages()
     StartPrint()
 
-    console.log(Post);
+    // console.log(Post);
     return (
         <div className={styles.PostScreen}>
             <Header />
 
             <div className={styles.container}>
                 <div className={styles.topo}>
-                    <h1 id='titulo' >{Post.titulo}</h1>
-                    <AiOutlineHeart className={styles.heartIcon} />
+                    <img src={JSON.parse(localStorage.getItem(Post.foto))} className={styles.capa}/>
+                    <h1 id='titulo' className={styles.titulo}>{Post.titulo} <AiOutlineHeart className={styles.heartIcon} /></h1>
+                    
                 </div>
                 <div id='conteudoPost' className={styles.conteudo} >
                     {/* <p>É sempre bom ter a ferramenta certa em mãos quando mais precisamos, não é mesmo? Seja para trocar a resistência do chuveiro, instalar uma prateleira ou fixar um quadro novo na parede. Por isso mesmo, é importante estar preparado e contar com algumas ferramentas básicas.
