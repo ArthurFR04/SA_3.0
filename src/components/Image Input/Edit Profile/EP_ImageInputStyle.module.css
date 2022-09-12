@@ -30,8 +30,10 @@
 }
 
 .DeleteBtn {
+    z-index: 2;
     position: absolute;
     right: 0;
+    bottom: 0;
     height: 6vh;
     width: 6vh;
     display: flex;
@@ -52,17 +54,27 @@
 .nomeImg {
     position: absolute;
     top: 0;
-
-    left: 25%;
-    width: 18vh; 
-    height: 18vh;
+    left: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 20px;
+    width: 18vh; 
+    height: 18vh;
+
     color: #fff;
-    background-color: #2E2E2E;
-    border-radius: 50%
+    background-color: #2e2e2e00;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+/* #imgName img{
+    width: auto;
+    height: 18vh;
+} */
+
+.image {
+    height: 18vh;
+    width: auto;
 }

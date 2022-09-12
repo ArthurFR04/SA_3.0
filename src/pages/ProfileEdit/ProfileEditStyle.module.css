@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 22vh;  /* maior que a height da div: capa */
+    height: 24vh;  /* maior que a height da div: capa */
     width: 100%;
 }
 
@@ -26,14 +26,16 @@
     position: absolute;
     bottom: 0;
     
-    width: 35vh; /* igual ao tamanho das divs: capa e infosUser */
-    height: 30vh;
+    width: 18vh; /* igual ao tamanho das divs: capa e infosUser */
+    height: 18vh;
     
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* background-color: aqua; */
+    align-items: center;
+
+    border-radius: 50%;
     
+    margin-top: 11vh;
 }
 
 .infosUser {

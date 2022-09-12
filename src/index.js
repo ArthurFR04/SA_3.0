@@ -12,12 +12,11 @@ import HomeScreen from './pages/Home/HomeScreen';
 import LoginScreen from './pages/Login/LoginScreen';
 import RegisterScreen from './pages/Register/RegisterScreen';
 import NewPostScreen from './pages/New Post/NewPostScreen';
+
 import ProfileScreen from './pages/Profile/ProfileScreen';
 import ProfileAdmScreen from './pages/ProfileAdm/ProfileAdmScreen';
+import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
 
-// import ProfileEdit from './pages/ProfileEdit/ProfileEdit';
-
-import ProfileEdit from './pages/ProfileEdit/testeIMG';
 import OtherProfileScreen from './pages/Profile/OtherProfileScreen';
 import SearchScreen from './pages/Search/SearchScreen';
 import PostScreen from './pages/Post/PostScreen';

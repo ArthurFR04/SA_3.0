@@ -7,7 +7,7 @@ import styles from './EP_ImageInputStyle.module.css'
 let showImage = () => {
     let img = document.getElementById('image');
     img.src = JSON.parse(localStorage.getItem('image'))
-} 
+}
 
 let ImageInput = () => {
 
@@ -22,12 +22,12 @@ let ImageInput = () => {
 
     reader.addEventListener("load", function () {
         // convert image file to base64 string and save to localStorage
-        localStorage.setItem("image", JSON.stringify( reader.result));
+        localStorage.setItem("image", JSON.stringify(reader.result));
         showImage()
     }, false);
 
     if (imgPath) {
-        reader.readAsDataURL(imgPath);  
+        reader.readAsDataURL(imgPath);
     }
 
     return (
@@ -43,13 +43,14 @@ let ImageInput = () => {
 
             {file && (
                 <Text size="sm" align="center" mt="sm" >
-                    <span className={styles.nomeImg} >
-                        <p id='imgName'>{file.name}</p>
+                    <span id='nomeImg' className={styles.nomeImg} >
+                        {/* <p id='imgName'>{file.name} */}
+                            <img id='image' className={styles.image}/>
+                        {/* </p> */}
                     </span>
                 </Text>
 
             )}
-            <img id='image' />
 
 
 

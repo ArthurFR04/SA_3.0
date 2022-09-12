@@ -85,7 +85,7 @@ let imprimirComments = (comenPos, userPos) => {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            width: 98%;
+                            width: 96%;
                             min-height: 150px;
                             margin-bottom: 3%;
                             border-radius: 20px;

@@ -73,7 +73,7 @@ const ProfileAdmScreen = () => {
                     </div>
                 </div>
 
-                <Footer component="Profile" />
+                <Footer component="Adm" />
             </div>
         )
     }

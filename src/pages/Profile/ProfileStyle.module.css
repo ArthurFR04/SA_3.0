@@ -24,24 +24,26 @@
 
 .fotoPerfil {
     position: absolute;
-    bottom: 0;
-    
-    width: 15vh; /* igual ao tamanho das divs: capa e infosUser */
-    height: 30vh;
-    
+    top: 0;
+
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* background-color: aqua; */
+    align-items: center;
+
+    width: 18vh; 
+    height: 18vh;
+
+    color: #fff;
+    background-color: #2e2e2e00;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-top: 2vh;
     
 }
 
 .fotoPerfil img {
-    width: 18vh; 
     height: 18vh;
-    border-radius: 9vh;
-    margin-bottom:5px;
-    box-shadow: 1px 4px 5px #606060;
+    width: auto;
 
 }
 

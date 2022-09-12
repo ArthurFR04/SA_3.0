@@ -21,6 +21,8 @@ const ProfileScreen = () => {
     relogar()
     VisitedPages()
 
+    let imageP = JSON.parse(localStorage.getItem('image'))
+
     let Login = JSON.parse(localStorage.getItem('Login'))
 
     let logado
@@ -52,7 +54,7 @@ const ProfileScreen = () => {
                     <div className={styles.topo}>
                         <div className={styles.capa}>   </div>
                         <div className={styles.fotoPerfil}>
-                            <img src={Perfil} alt='foto de perfil do usuário' />
+                            <img src={imageP} alt='foto de perfil do usuário' />
                         </div>
                     </div>
                     <div className={styles.infosUser}>
