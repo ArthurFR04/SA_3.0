@@ -21,7 +21,7 @@
 
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size:20px
+    font-size:1rem
 }
 
 .SearchBtn:hover{
@@ -38,15 +38,13 @@
     justify-content: center;
     align-items: center;
     /* margin-top: 20%; */
-    
-
-    background-color: rgba(248, 37, 37, 0.939);
+    color: #fff;
     border-radius:50%;
 }
 
 .DeleteBtn:hover {
     cursor: pointer;
-    background-color: rgb(255, 0, 0);
+    background-color: #232323;
 }
 
 .nomeImg {
