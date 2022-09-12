@@ -53,32 +53,3 @@ let LoginScreen = () => {
 };
 
 export default LoginScreen;
-
-/* <span className={styles.spanEmail}>
-
-                        <div className={styles.circuloUser}>
-                            <FaUserAlt />
-                        </div>
-
-                        <input
-                            type="text"
-                            name="email"
-                            onChange={changeInput}
-                            className={styles.email}
-                            placeholder="email"
-                        />
-                    </span>
-
-                    <span className={styles.spanSenha}>
-
-                        <input
-                            type="password"
-                            name="senha"
-                            onChange={changeInput}
-                            placeholder="senha"
-
-                        />
-                        <label className={styles.circuloCadeado}>
-                            <RiLock2Fill />
-                        </label>
-                    </span> */

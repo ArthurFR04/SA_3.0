@@ -8,6 +8,9 @@ import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import { Comments } from "../../components/Comments/Comments"
 
+import LoadingDiv from '../../components/Loading/LoadingDiv'
+
+
 import {  // AiFillHeart,    
     AiOutlineHeart
 } from "react-icons/ai";
@@ -20,18 +23,24 @@ import styles from "./PostStyle.module.css"
 /* <AiFillHeart /> */
 let Post = JSON.parse(localStorage.getItem('PostInfos'))
 
-
 let PrintConteudo = () => {
-    
-    document.getElementById('conteudoPost').innerHTML=`aaaaaaaaaaaaa${Post.descricao}`
+
+    document.getElementById('conteudoPost').innerHTML = `aaaaaaaaaaaaa`
+    document.getElementById("loading").style.display = "none"
+}
+
+let StartPrint = () => {
+
+    setTimeout(PrintConteudo, 500)
 }
 
 
 let PostScreen = () => {
     relogar()
     VisitedPages()
-    PrintConteudo()
-console.log(Post);
+    StartPrint()
+
+    console.log(Post);
     return (
         <div className={styles.PostScreen}>
             <Header />
@@ -41,7 +50,7 @@ console.log(Post);
                     <h1 id='titulo' >{Post.titulo}</h1>
                     <AiOutlineHeart className={styles.heartIcon} />
                 </div>
-                <div id='conteudoPost'className={styles.conteudo} >
+                <div id='conteudoPost' className={styles.conteudo} >
                     {/* <p>É sempre bom ter a ferramenta certa em mãos quando mais precisamos, não é mesmo? Seja para trocar a resistência do chuveiro, instalar uma prateleira ou fixar um quadro novo na parede. Por isso mesmo, é importante estar preparado e contar com algumas ferramentas básicas.
                         Confira a lista de itens que não podem faltar na sua caixa de ferramentas e mantenha-se sempre preparado!
                     </p>
@@ -113,18 +122,19 @@ console.log(Post);
                         Agora que você já tem uma lista de ferramentas básicas para fazer a manutenção, chegou a hora de ir às compras. Acesse o site da Ferramentas Kennedy e encontre os itens que você mais precisa! </p> */}
 
 
-                    
+
 
                 </div>
 
 
 
-
-                <Comments postID = { Post.id } />
+                <Comments postID={Post.id} />
 
             </div>
 
             <Footer />
+
+            <LoadingDiv flex='true' />
         </div>
 
 
