@@ -13,7 +13,7 @@ import LoadingDiv from '../../components/Loading/LoadingDiv'
 
 import LoginForm from '../../components/Forms/Login/LoginForm';
 
-import dataFun from '../../components/Simple Grid/dataFun'
+// import dataFun from '../../components/Simple Grid/dataFun'
 
 
 let LoginScreen = () => {
@@ -22,7 +22,7 @@ let LoginScreen = () => {
         let Historic = JSON.parse(localStorage.getItem('Historic'))
         window.location.href = Historic.now
     }
-    dataFun()
+    // dataFun()
 
     return (
 

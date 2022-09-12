@@ -4,7 +4,7 @@ import React from 'react';
 // import { Login_user } from "../../Context"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
-import Favorites from '../../components/Favorites/Favorites';
+import Postagens from '../../components/Favorites/Postagens';
 
 import { relogar } from "../Login/LoginLogic"
 import { VisitedPages } from "../../components/Router/Location"
@@ -68,7 +68,7 @@ const ProfileAdmScreen = () => {
                             {Login.biografia}
                         </label>
 
-                        <Favorites component={Login.id} />
+                        <Postagens />
 
                     </div>
                 </div>
